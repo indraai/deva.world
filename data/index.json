@@ -2,7 +2,7 @@
   "key": "data",
   "name": "DATA",
   "describe": "LISTING OF DATA IN THE SYSTEM.",
-  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
+  "copyright": "Copyright (c)2024 Quinn Michaels. All rights reserved.",
   "DATA": {
     "agent": "/data/agent.json",
     "vars": "/data/vars.json",
