@@ -2,18 +2,17 @@
 //  Main Devas include file wheere all the necessary Devas are included.
 const DEVA = {
   data: require('./data'), // data agent
-  log: require('../../Devas/LogDeva'), // logging agent
-  error: require('../../Devas/ErrorDeva'), // error agent
-  feecting: require('../../Devas/FeectingDeva'), // feecting language agent
+  log: require('@indra.ai/logdeva'), // logging agent
+  error: require('@indra.ai/errordeva'), // error agent
+  feecting: require('@indra.ai/feectingdeva'), // feecting language agent
   socket: require('@indra.ai/socketdeva'), // socket agent
   docs: require('@indra.ai/docsdeva'), // documents agent
 
   support: require('@indra.ai/supportdeva'), // support agent
   services: require('@indra.ai/servicesdeva'), // services agent
   security: require('@indra.ai/securitydeva'), // security agent
-
-  open: require('../../Devas/OpenDeva'), // open ai agent
-  veda: require('../../Devas/VedaDeva'), // agent providing Vedic Knowledge
+  veda: require('@indra.ai/vedadeva'), // agent providing Vedic 
+  open: require('@indra.ai/opendeva'), // open ai agent
 };
 module.exports = DEVA;
 
