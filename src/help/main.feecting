@@ -1,0 +1,91 @@
+::begin:center
+image: /public/devas/::agent_key::/main.png
+::end:center
+
+# ::agent_name::
+
+p: To get started using deva.world there are a few beginning commands that will get you started.
+
+## uid
+p: Generate random id for various purposes.
+example: /uid
+
+## hash
+p: Md5 hash a string.
+example: /hash [string]
+
+## ciper
+p: Encrypt a data string
+exmaple: /cipher [string]
+
+## client
+p: Will return the client name and id.
+example: /client
+
+## agent
+p: Return the agent name and id.
+example: /agent
+
+## question
+p: Relay a question to 'open chat'
+example: /question [string]
+
+## devas
+p: Return as list of active Devas.
+example: /devas
+
+## states
+p: Return list of system states.
+example: /states
+
+## actions
+p: Return list of system actions.
+example: /actions
+
+## features
+p: Return list of system features.
+example: /features
+
+## zones
+p: Return list of system zones.
+example: /zones
+
+## contexts
+p: Return list of system contexts.
+example: /contexts
+
+---
+
+## Profile
+
+::profile::
+
+::begin:Security
+talk:#docs view devas/main:security
+::end:Security
+
+::begin:FEECTING
+talk:#docs view algos/feecting:data
+::end:FEECTING
+
+::begin:IndraMind
+talk:#docs view algos/indramind:data
+::end:IndraMind
+
+::begin:b593
+talk:#docs view algos/b593:data
+::end:b593
+
+::begin:VedicThreefoldAlgorithm
+talk:#docs view algos/vta:data
+::end:VedicThreefoldAlgorithm
+
+---
+
+copyright: (c)2024 Quinn Michaels
+
+::begin:hidden
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+::end:hidden

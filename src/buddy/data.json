@@ -1,0 +1,228 @@
+{
+  "name": "::name:: Data File",
+  "describe": "The main Data file for ::name::",
+  "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
+  "data": {
+    "agent": {
+      "id": 6047734400443,
+      "key": "buddy",
+      "prompt": {
+        "emoji": "⊙",
+        "text": "buddy",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 150,
+            "B": 255
+          },
+          "text": {
+            "R": 101,
+            "G": 192,
+            "B": 255
+          }
+        }
+      },
+      "voice": {
+        "speech": "Alex",
+        "speed": 1
+      },
+      "profile": {
+        "name": "Deva Buddy",
+        "describe": "Deva Buddy creator.",
+        "emoji": "",
+        "avatar": "",
+        "background": "",
+        "gender": "N"
+      }
+    },
+    "vars": {
+      "options": false,
+      "cmd": false,
+      "comp": {},
+      "template": "deva",
+      "paths": {
+        "copy_index": "",
+        "copy_from": "",
+        "copy_to": "",
+        "copy_to_base": ""
+      },
+      "messages": {
+        "heading": "👽 DEVA",
+        "que_heading": "📁 QUE FILES",
+        "success": "Holla!!! A NEW DEVA WAS CREATED",
+        "que_complete": "✅ QUE FILES COMPLETE",
+        "index_updated": "✅ INDEX UPDATED:",
+        "folder": "📁",
+        "file": "📝",
+        "deva_created": "✅ DEVA CREATED:"
+      },
+      "create": {
+        "files": [],
+        "directories": []
+      },
+      "items": [],
+      "answers": false,
+      "questions": [
+        {
+          "type": "input",
+          "name": "copyright",
+          "message": "COPYRIGHT",
+          "default": "Quinn Michaels"
+        },
+        {
+          "type": "input",
+          "name": "key",
+          "message": "KEY",
+          "default": "buddy"
+        },
+        {
+          "type": "input",
+          "name": "name",
+          "message": "NAME",
+          "default": "Deva Buddy"
+        },
+        {
+          "type": "input",
+          "name": "describe",
+          "message": "DESCRIBE",
+          "default": "The Deva Buddy"
+        },
+        {
+          "type": "input",
+          "name": "style",
+          "message": "ARTISTIC STYLE",
+          "default": "A master artist mixing Ancient Vedic painter and modern style."
+        },
+        {
+          "type": "input",
+          "name": "city",
+          "message": "CITY",
+          "default": "Amaravati"
+        },
+        {
+          "type": "input",
+          "name": "region",
+          "message": "REGION",
+          "default": "Svarga"
+        },
+        {
+          "type": "input",
+          "name": "nation",
+          "message": "NATION",
+          "default": "Visiprasa"
+        },
+        {
+          "type": "input",
+          "name": "planet",
+          "message": "PLANET",
+          "default": "Arjika"
+        },
+        {
+          "type": "input",
+          "name": "system",
+          "message": "SYSTEM",
+          "default": "deva.world"
+        },
+        {
+          "type": "input",
+          "name": "emoji",
+          "message": "EMOJI",
+          "default": "/public/devas/deva/emoji.png"
+        },
+        {
+          "type": "input",
+          "name": "avatar",
+          "message": "AVATAR",
+          "default": "/public/devas/deva/avatar.png"
+        },
+        {
+          "type": "input",
+          "name": "background",
+          "message": "BACKGROUND",
+          "default": "/public/devas/deva/background.png"
+        },
+        {
+          "type": "list",
+          "name": "gender",
+          "message": "GENDER",
+          "choices": [
+            {
+              "name": "(D) Deva",
+              "value": "Deva"
+            },
+            {
+              "name": "(M) Male",
+              "value": "Male"
+            },
+            {
+              "name": "(F) Female",
+              "value": "Female"
+            },
+            {
+              "name": "(N) Neutral",
+              "value": "Neutral"
+            },
+            {
+              "name": "(O) Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "name": "pronouns",
+          "message": "PRONOUNDS",
+          "choices": [
+            {
+              "name": "(M) Male",
+              "value": "Male, Man, He, Him, Gentleman"
+            },
+            {
+              "name": "(F) Female",
+              "value": "Female, Woman, She, Her, Lady"
+            },
+            {
+              "name": "(N) Neutral",
+              "value": "Neutral"
+            },
+            {
+              "name": "(O) Other",
+              "value": "Other"
+            }
+          ]
+        },
+        {
+          "type": "list",
+          "name": "voice",
+          "message": "VOICE",
+          "choices": [
+            {
+              "name": "Alloy",
+              "value": "alloy"
+            },
+            {
+              "name": "Echo",
+              "value": "echo"
+            },
+            {
+              "name": "Fable",
+              "value": "fable"
+            },
+            {
+              "name": "Onyx",
+              "value": "onyx"
+            },
+            {
+              "name": "Shimmer",
+              "value": "onyx"
+            },
+            {
+              "name": "Nova",
+              "value": "nova"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

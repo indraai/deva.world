@@ -1,0 +1,100 @@
+{
+  "name": "::name:: Data File",
+  "describe": "The main Data file for ::name::",
+  "copyright": "Copyright (c)::year:: ::copyright::. All rights reserved.",
+  "DATA": {
+    "agent": {
+      "id": "::id::",
+      "key": "::key::",
+      "prompt": {
+        "emoji": "⊙",
+        "text": "::key::",
+        "colors": {
+          "label": {
+            "R": 0,
+            "G": 150,
+            "B": 255
+          },
+          "text": {
+            "R": 101,
+            "G": 192,
+            "B": 255
+          }
+        }
+      },
+      "profile": {
+        "name": "::name::",
+        "mention": "::mention::",
+        "tags": "::tags::",
+        "gender": "::gender::",
+        "pronouns": "::pronouns::",
+        "describe": "::describe::",
+
+        "creator": "::copyright::",
+        "created": "::date::",
+        "city": "::city::",
+        "region": "::region::",
+        "nation": "::nation::",
+        "planet": "::planet::",
+        "system": "::system::",
+
+        "emoji": "::emoji::",
+        "avatar": "::avatar::",
+        "background": "::background::",
+        "color": "#333333",
+        "bgcolor": "#ffffff",
+        "voice": "::voice::",
+        "style": "::style::"
+      }
+    },
+    "vars": {
+      "messages": {
+        "init": "🟠 INIT",
+        "start": "🔵 START",
+        "enter": "🟢 ENTER",
+        "stop": "🔴 STOP",
+        "exit": "🟡 EXIT",
+        "done": "🟣 DONE",
+        "error": "💣 ERROR!"
+      },
+      "live": {
+        "profile": "deva",
+        "max_tokens": 50,
+        "words": 25,
+        "history": [],
+        "max_chats": 10,
+        "page_token": ""
+      },
+      "ask": {
+        "max_tokens": 500,
+        "words": 200,
+        "history": []
+      },
+      "reply": {
+        "profile": "deva",
+        "max_tokens": 300,
+        "words": 100,
+        "history": []
+      },
+      "comment": {
+        "profile": "deva",
+        "max_tokens": 300,
+        "words": 100,
+        "history": []
+      },
+      "art": {
+        "history": []
+      },
+      "context": {
+        "uid": "::name:: is creating a uid",
+        "status": "::name:: is viewing the status",
+        "help": "::name:: is viewing the help",
+        "artist": "::name:: creating",
+        "live": "::name:: livechat",
+        "ask": "::name:: asking",
+        "reply": "::name:: reply",
+        "comment": "::name:: comment"
+      }
+    }
+  }
+}
