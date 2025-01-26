@@ -1,6 +1,7 @@
 # Logs
 logs/*
 data/features/*
+data/features/**/*.json
 private/*
 data/client.json
 

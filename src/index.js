@@ -4,19 +4,19 @@ const Deva = require('@indra.ai/deva');
 const chalk = require('chalk');
 const {vars, agent} = require('../data');
 
-const package = require('../package.json');
+const pkg = require('../package.json');
 const info = {
-  id: package.id,
-  name: package.name,
-  version: package.version,
-  author: package.author,
-  describe: package.description,
+  id: pkg.id,
+  name: pkg.name,
+  version: pkg.version,
+  author: pkg.author,
+  describe: pkg.description,
   dir: __dirname,
-  url: package.homepage,
-  git: package.repository.url,
-  bugs: package.bugs.url,
-  license: package.license,
-  copyright: package.copyright,
+  url: pkg.homepage,
+  git: pkg.repository.url,
+  bugs: pkg.bugs.url,
+  license: pkg.license,
+  copyright: pkg.copyright,
 };
 
 const DEVA = new Deva({

@@ -3,16 +3,17 @@
 // Main Deva Agent for deva.world
 
 // setup main variables
-const package = require('./package.json');
-const path = require('path');
-const fs = require('fs');
-const os = require('os');
-const needle = require('needle');
+import chalk from 'chalk';
+import pkg from './package.json' with {type:'json'};
+import data from './data';
+import path from 'path';
+import fs from 'fs';
+import os from 'os';
+import needle from 'needle';
 
 // load agent configuration file
 const {vars,agent,client} = require('./data');
 
-const chalk = require('chalk');
 const fast = require('fastify')({
   logger:false,
 });
@@ -89,13 +90,13 @@ ${line_break}
 👤 CLIENT:    ${opts.client.profile.name} (${opts.client.id})
 👤 AGENT:     ${opts.agent.profile.name} (${opts.agent.id})
 
-📛 name:      ${package.name},
-💚 ver:       ${package.version},
-✍️  author:     ${package.author},
-📝 describe:  ${package.description},
-🔗 url:       ${package.homepage},
-👨‍💻 git:       ${package.repository.url}
-🪪  license:    ${package.license}
+📛 name:      ${pkg.name},
+💚 ver:       ${pkg.version},
+✍️  author:     ${pkg.author},
+📝 describe:  ${pkg.description},
+🔗 url:       ${pkg.homepage},
+👨‍💻 git:       ${pkg.repository.url}
+🪪  license:    ${pkg.license}
 
 ${line_break}
 
@@ -104,7 +105,7 @@ ${opts.ip}
 💹 avail mem:   ${os.freemem()}
 ✅ total mem:   ${os.totalmem()}
 
-Copyright ©${package.copyright}
+Copyright ©${pkg.copyright}
 ${line_break}`;
 
 // create the static routes for the local server.
