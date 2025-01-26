@@ -1,7 +1,8 @@
 # Logs
 logs/*
-data/features/*
-data/features/*/*.json
+data/features/security/*
+data/features/support/*
+data/features/services/*
 private/*
 data/client.json
 
@@ -108,11 +109,3 @@ dist
 # TernJS port file
 .tern-port
 
-# ignore the client file json
-client.json
-
-
-# Logs
-logs/*
-data/features/*
-private/*
