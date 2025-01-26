@@ -1,43 +1,18 @@
 // Copyright (c)2022 Quinn Michaels
 //  Main Devas include file wheere all the necessary Devas are included.
 const DEVA = {
-  data: require('./data'), // data agent
-  log: require('@indra.ai/logdeva'), // logging agent
-  error: require('@indra.ai/errordeva'), // error agent
-  feecting: require('@indra.ai/feectingdeva'), // feecting language agent
-  socket: require('@indra.ai/socketdeva'), // socket agent
-  docs: require('@indra.ai/docsdeva'), // documents agent
+  data:     require('./data'),                    // data agent
+  log:      require('@indra.ai/deva.log'),        // logging agent
+  error:    require('@indra.ai/deva.error'),      // error agent
+  feecting: require('@indra.ai/deva.feecting'),   // feecting agent
+  socket:   require('@indra.ai/deva.socket'),     // socket agent
+  docs:     require('@indra.ai/deva.docs'),       // documents agent
+  content:     require('@indra.ai/deva.content'), // content agent
 
-  support: require('@indra.ai/supportdeva'), // support agent
-  services: require('@indra.ai/servicesdeva'), // services agent
-  security: require('@indra.ai/securitydeva'), // security agent
-  veda: require('@indra.ai/vedadeva'), // agent providing Vedic 
-  open: require('@indra.ai/opendeva'), // open ai agent
+  support:  require('@indra.ai/deva.support'),    // support agent
+  services: require('@indra.ai/deva.services'),   // services agent
+  security: require('@indra.ai/deva.security'),   // security agent
+  veda:     require('@indra.ai/deva.veda'),       // agent providing Vedic 
+  chat:     require('@indra.ai/deva.chat'),       // open ai agent
 };
 module.exports = DEVA;
-
-// bug: require('./bug'), // bug reporting agent
-// gemini: require('../../Devas/GeminiDeva'), // provides gemini connectivity.
-// qr: require('@indra.ai/qrdeva'), // QR Deva for QR Codes
-// wiki: require('@indra.ai/wikideva'), // connects to wikipedia
-//
-// telnet: require('../../Devas/TelnetDeva'), // telnet agent
-// mud: require('../../Devas/MudDeva'), // Deva.cloud access
-// space: require('../../Devas/SpaceDeva'), // Deva.space access
-//
-// youtube: require('@indra.ai/youtubedeva'), // provides youtube connectivity.
-// deva: require('./deva'), // deva agent
-// indu: require('./indu'), // indu agent
-// indra: require('./indra'), // indra agent
-// soma: require('./soma'), // soma agent
-// agni: require('./agni'), // agni agent
-// vasu: require('./vasu'), // zephyr agent
-// quinn: require('./quinn'), // quinn agent
-// romanov: require('./romanov'), // romanov agent
-// aria: require('@indra.ai/ariadeva'), // aria agent
-// zephyr: require('./zephyr'), // zephyr agent
-// web: require('@indra.ai/webdeva'),
-// money: require('./money'),
-// market: require('./market'),
-
-//npm i @indra.ai/logdeva@latest @indra.ai/errordeva@latest @indra.ai/feectingdeva@latest @indra.ai/securitydeva@latest @indra.ai/supportdeva@latest @indra.ai/servicesdeva@latest @indra.ai/systemsdeva@latest @indra.ai/solutionsdeva@latest @indra.ai/researchdeva@latest @indra.ai/developmentdeva@latest @indra.ai/businessdeva@latest @indra.ai/assistantdeva@latest --save-dev

@@ -27,31 +27,33 @@
     "url": "https://github.com/indraai/deva.world/issues"
   },
   "dependencies": {
-    "@fastify/static": "^8.0.4",
-    "@indra.ai/deva": "^1.2.23",
-    "@indra.ai/errordeva": "^0.1.58",
-    "@indra.ai/feectingdeva": "^0.1.68",
-    "@indra.ai/logdeva": "^0.0.92",
-    "@indra.ai/opendeva": "^0.0.49",
-    "@indra.ai/securitydeva": "^0.0.58",
-    "@indra.ai/servicesdeva": "^0.0.38",
-    "@indra.ai/socketdeva": "^0.0.34",
-    "@indra.ai/spacedeva": "^0.0.31",
-    "@indra.ai/supportdeva": "^0.0.44",
-    "@polygon.io/client-js": "^7.3.2",
-    "chalk": "^4.1.0",
-    "fastify": "^4.11.0",
-    "inquirer": "^8.2.4",
-    "mongodb": "^6.1.0",
-    "needle": "^3.2.0",
-    "socket.io-client": "^4.6.1",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^5.0.0",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "@fastify/static": "^8.0.4",          // Static used for http/https
+    "@indra.ai/deva": "^1.2.23",          // deva the main module
+    "@indra.ai/deva.error": "^0.0.1",     // deva.error management
+    "@indra.ai/feectingdeva": "^0.0.1",  // deva.feecting language
+    "@indra.ai/logdeva": "^0.0.1",       // deva.log
+    "@indra.ai/deva.chat": "^0.0.1",      // deva.chat interface
+    "@indra.ai/deva.security": "^0.0.1",  // deva.security feature
+    "@indra.ai/deva.services": "^0.0.1",  // deva.services feature
+    "@indra.ai/deva.socket": "^0.0.1",    // deva.socket interface
+    "@indra.ai/deva.support": "^0.0.1",   // Support feature
+    "@indra.ai/deva.docs": "^0.0.1",   // deva.content interactions
+    "@indra.ai/deva.content": "^0.0.1",   // deva.content interactions
+    "@indra.ai/deva.veda": "^0.0.1",      // Vedic knowledge
+    "chalk": "^4.1.0",                    // Chalk for color prompts
+    "fastify": "^4.11.0",                 // Fastify web server
+    "inquirer": "^8.2.4",                 // Inquirer for prompts
+    "mongodb": "^6.1.0",                  // Mongodb for database 
+    "needle": "^3.2.0",                   // Fast http/https requests
+    "socket.io-client": "^4.6.1",         // Socket client
+    "stylus": "^0.54.8",                  // Stylus css langage
+    "stylus-loader": "^5.0.0",            // Stylus Webpack loader
+    "webpack": "^5.74.0",                 // Webpack for development
+    "webpack-cli": "^4.10.0"              // Webpack cli interface
   },
   "engines": {
     "npm": ">=10.2.0",
     "node": ">=20.10.0"
-  }
+  },
+  "homepage": "https://deva.world"
 }
