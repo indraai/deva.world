@@ -3,30 +3,34 @@
 // Main Deva Agent for deva.world
 
 // setup main variables
-import chalk from 'chalk';
-import pkg from './package.json' with {type:'json'};
-import data from './data';
 import path from 'path';
 import fs from 'fs';
 import os from 'os';
 import needle from 'needle';
+import chalk from 'chalk';
+
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+import pkg from './package.json' with {type:'json'};
 
 // load agent configuration file
-const {vars,agent,client} = require('./data');
-
-const fast = require('fastify')({
+import data from './data/index.js';
+const {vars, agent, client} = data;
+import fastify from 'fastify';
+const fast = fastify({
   logger:false,
 });
-const fastStatic = require('@fastify/static');
+import fastStatic from '@fastify/static';
 
-const readline = require('readline');
+import readline from 'readline';
 const shell = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-const DEVA = require('./src'); // set the deva object
-DEVA.config.dir = __dirname; // set the base config directory
+import DEVA from './src/index.js';
 
 function setPrompt(pr) {
   // console.log('PROMPT', pr);
@@ -92,11 +96,11 @@ ${line_break}
 
 📛 name:      ${pkg.name},
 💚 ver:       ${pkg.version},
-✍️  author:     ${pkg.author},
+✍️ author:    ${pkg.author},
 📝 describe:  ${pkg.description},
 🔗 url:       ${pkg.homepage},
 👨‍💻 git:       ${pkg.repository.url}
-🪪  license:    ${pkg.license}
+🪪 license:   ${pkg.license}
 
 ${line_break}
 
@@ -188,7 +192,7 @@ routes.forEach(rt => {
 });
 
 // launch fast server to listen to the port rom the vars scope
-fast.listen({port:vars.ports.api}).then(() => {
+fast.listen({port:data.vars.ports.api}).then(() => {
   // log the main server information to the console
   console.log(chalk.green(devaFlash({
     client,

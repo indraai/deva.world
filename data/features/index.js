@@ -1,8 +1,10 @@
 // these feature settings are linked to the core feature settings
 // inside deva these are not the agent/deva links those are below.
-
-module.exports = {
-  security: require('./security'),
-  support: require('./support'),
-  services: require('./services'),
+import * as security from './security/index.js';
+import * as support from './support/index.js';
+import * as services from './services/index.js';
+export default {
+  security,
+  support,
+  services,
 };

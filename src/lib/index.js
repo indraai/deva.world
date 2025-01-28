@@ -1,19 +1,17 @@
-// Copyright (c)2022 Quinn Michaels
+// Copyright (c)2025 Quinn Michaels
 // Distributed under the MIT software license, see the accompanying
 // file LICENSE.md or http://www.opensource.org/licenses/mit-license.php.
-
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs'
 
 class Node {
   constructor(opts) {
     for (let opt in opts) this[opt] = opts[opt];
   }
 }
-
-module.exports = {
+const LIB = {
   Node,
-  // HELP FUNCTION TO ACCESS THE HELP MARKDOWN FILES.
+  // HELP FUNCTION TO ACCESS THE HELP FEECTING FILES.
   help(msg, help_dir) {
     return new Promise((resolve, reject) => {
       const params = msg.split(' ');
@@ -29,3 +27,4 @@ module.exports = {
     });
   },
 };
+export default LIB

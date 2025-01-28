@@ -1,27 +1,31 @@
 // Copyright (c)2023 Quinn Michaels
 // Data Deva
 
-const Deva = require('@indra.ai/deva');
-const { MongoClient, ObjectId } = require("mongodb");
+import Deva from '@indra.ai/deva'
+import { MongoClient, ObjectId } from 'mongodb'
 
-const package = require('../../package.json');
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+import pkg from '../../package.json' with {type:'json'};
+import data from './data.json' with {type:'json'};
+const {agent, vars} = data.DATA;
 const info = {
-  id: package.id,
-  name: package.name,
-  version: package.version,
-  author: package.author,
-  describe: package.description,
+  id: pkg.id,
+  name: pkg.name,
+  version: pkg.version,
+  author: pkg.author,
+  describe: pkg.description,
   dir: __dirname,
-  url: package.homepage,
-  git: package.repository.url,
-  bugs: package.bugs.url,
-  license: package.license,
-  copyright: package.copyright
+  url: pkg.homepage,
+  git: pkg.repository.url,
+  bugs: pkg.bugs.url,
+  license: pkg.license,
+  copyright: pkg.copyright
 };
 
-const {agent,vars} = require('./data.json').DATA;
-
-const DATA = new Deva({
+const DEVA = new Deva({
   info,
   agent,
   vars,
@@ -620,7 +624,7 @@ const DATA = new Deva({
     return this.start(data);
   },
   onError(err) {
-    console.log('DATA ERROR', err);
+    console.log('🚨 DEVA ERROR\n', err);
   }
 });
-module.exports = DATA
+export default DEVA

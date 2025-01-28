@@ -1,10 +1,18 @@
-// COPYRIGHT (C)2022 QUINN MICHAELS. ALL RIGHTS RESERVED.
+// COPYRIGHT (C)2025 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Load DEVA CORE Mind into Deva
-const Deva = require('@indra.ai/deva');
-const chalk = require('chalk');
-const {vars, agent} = require('../data');
+import Deva from '@indra.ai/deva';
+import pkg from '../package.json' with {type:'json'};
+import agent from '../data/agent.json' with {type:'json'};
+import client from '../data/client.json' with {type:'json'};
+import vars from '../data/vars.json' with {type:'json'};
+// import features from '../data/features/index.js'
 
-const pkg = require('../package.json');
+import chalk from 'chalk';
+
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const info = {
   id: pkg.id,
   name: pkg.name,
@@ -21,19 +29,19 @@ const info = {
 
 const DEVA = new Deva({
   info,
-  agent,
-  vars,
+  agent: agent.DATA,
+  vars: vars.DATA,
   config: {
     dir: false,
-    ports: vars.ports,
+    ports: false,
   },
-  lib: require('./lib'),
+  lib: import('./lib/index.js'),
   utils: {
     translate(input) {return input.trim();},
     parse(input) {return input.trim();},
     process(input) {return input.trim();}
   },
-  devas: require('../devas'),
+  devas: import('../devas/index.js'),
   listeners: {},
   modules: {
     mind: false,
@@ -306,4 +314,4 @@ const DEVA = new Deva({
   },
 });
 
-module.exports = DEVA;
+export default DEVA;
