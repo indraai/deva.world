@@ -2,18 +2,30 @@
 //  Main Devas include file wheere all the necessary Devas are included.
 import data from './data/index.js';
 import log from '@indra.ai/deva.log';
+import error from '@indra.ai/deva.error';
+import feecting from '@indra.ai/deva.feecting';
+import socket from '@indra.ai/deva.socket';
+import security from '@indra.ai/deva.security';
+import support from '@indra.ai/deva.support';
+import services from '@indra.ai/deva.services';
+import systems from '@indra.ai/deva.systems';
+import chat from '@indra.ai/deva.chat';
+
 const DEVA = {
+  error, // error agent
   data,  // data agent
   log,   // logging agent
-//   error:    import('@indra.ai/deva.error'),      // error agent
-//   feecting: import('@indra.ai/deva.feecting'),   // feecting agent
+  feecting, // feecting language agent
+  socket, // socket agent
+  security,   // security agent
+  support,    // support agent
+  services,   // services agent
+  systems,   // systems agent
+  chat, // chatgpt agent
 //   socket:   import('@indra.ai/deva.socket'),     // socket agent
 //   docs:     import('@indra.ai/deva.docs'),       // documents agent
 //   content:  import('@indra.ai/deva.content'),    // content agent
 // 
-//   support:  import('@indra.ai/deva.support'),    // support agent
-//   services: import('@indra.ai/deva.services'),   // services agent
-//   security: import('@indra.ai/deva.security'),   // security agent
 //   veda:     import('@indra.ai/deva.veda'),       // agent providing Vedic 
 //   chat:     import('@indra.ai/deva.chat'),       // open ai agent
 };

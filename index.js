@@ -206,6 +206,7 @@ fast.listen({port:data.vars.ports.api}).then(() => {
 
   setPrompt(DEVA.client());
 
+  console.log('listener set')
   // cli prompt listener for relaying from the deva to the prompt.
   DEVA.listen('cliprompt', ag => {
     setPrompt(ag);
