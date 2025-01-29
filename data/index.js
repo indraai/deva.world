@@ -1,11 +1,6 @@
-import vars from './vars.json' with {type:'json'};
-import agent from './agent.json' with {type:'json'};
-import client from './client.json' with {type:'json'};
-import features from './features/index.js'
-
-
-export default {
-  agent: agent.DATA,
-  client: client.DATA,
-  vars: vars.DATA,
+module.exports = {
+  agent: require('./agent.json').DATA,
+  client: require('./client.json').DATA,
+  vars: require('./vars.json').DATA,
+  features: require('./features/index.js');
 };

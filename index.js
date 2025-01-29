@@ -3,14 +3,14 @@
 // Main Deva Agent for deva.world
 
 // setup main variables
-import path from 'path';
-import fs from 'fs';
-import os from 'os';
-import needle from 'needle';
-import chalk from 'chalk';
+const path = require('path');
+const fs = require('fs');
+const os = require('os');
+const needle = require('needle');
+const chalk = require('chalk');
 
-import {dirname} from 'node:path';
-import {fileURLToPath} from 'node:url';    
+const {dirname} = path;
+const {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 import pkg from './package.json' with {type:'json'};
@@ -206,9 +206,10 @@ fast.listen({port:data.vars.ports.api}).then(() => {
 
   setPrompt(DEVA.client());
 
-  console.log('listener set')
   // cli prompt listener for relaying from the deva to the prompt.
   DEVA.listen('cliprompt', ag => {
+    console.log('set prompt')
+
     setPrompt(ag);
   });
 

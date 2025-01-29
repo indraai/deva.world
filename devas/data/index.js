@@ -1,16 +1,12 @@
 // Copyright (c)2023 Quinn Michaels
 // Data Deva
 
-import Deva from '@indra.ai/deva'
-import { MongoClient, ObjectId } from 'mongodb'
+const Deva = require('@indra.ai/deva')
+const { MongoClient, ObjectId } = require('mongodb')
 
-import {dirname} from 'node:path';
-import {fileURLToPath} from 'node:url';    
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const pkg = require('../../package.json');
+const {agent, vars} = require('./data.json').DATA;
 
-import pkg from '../../package.json' with {type:'json'};
-import data from './data.json' with {type:'json'};
-const {agent, vars} = data.DATA;
 const info = {
   id: pkg.id,
   name: pkg.name,
@@ -627,4 +623,4 @@ const DEVA = new Deva({
     console.log('🚨 DEVA ERROR\n', err);
   }
 });
-export default DEVA
+module.exports = DEVA
