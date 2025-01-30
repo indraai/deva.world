@@ -4,10 +4,10 @@
   "copyright": "Copyright (c)2025 Quinn Michaels. All rights reserved.",
   "DATA": {
     "id": 5380514963421,
-    "key": "buddy",
+    "key": "deva",
     "prompt": {
-      "emoji": "🎩",
-      "text": "buddy",
+      "emoji": "🤖",
+      "text": "deva",
       "colors": {
         "label": {
           "R": 255,

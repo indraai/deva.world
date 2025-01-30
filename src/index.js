@@ -6,8 +6,10 @@ import {fileURLToPath} from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 import chalk from 'chalk';
-import Deva from '../../deva/index.js';
+import Deva from '@indra.ai/deva';
 
+import devas from '../devas/index.js';
+import lib from './lib/index.js';
 import pkg  from '../package.json' with {type:'json'};
 import Agent from '../data/agent.json' with {type:'json'};
 import Client from '../data/client.json' with {type:'json'};
@@ -39,13 +41,13 @@ const DEVA = new Deva({
     dir: false,
     ports: vars.ports,
   },
-  lib: import('./lib/index.js'),
+  lib,
   utils: {
     translate(input) {return input.trim();},
     parse(input) {return input.trim();},
     process(input) {return input.trim();}
   },
-  devas: import('../devas/index.js'),
+  devas,
   listeners: {},
   modules: {
     mind: false,
@@ -77,10 +79,7 @@ const DEVA = new Deva({
       return new Promise((resolve, reject) => {
         try {
           const devas = [
-            `::begin:center:logo`,
-            `image: /public/symbol.png`,
-            `::end:center`,
-            '::begin:menu:devas',
+            '::begin:devas',
           ];
           for (let deva in this.devas) {
             // console.log('DEVA', this.devas[deva]);
@@ -88,12 +87,9 @@ const DEVA = new Deva({
             const {prompt, key, profile} = d.agent();
             devas.push(`button[${prompt.emoji} ${profile.name}]:${this.askChr}${key} help`);
           }
-          devas.push(`::end:menu:${this.hash(devas)}`);
-          devas.push(`::begin:hidden`);
-          devas.push(`#color = ::agent_color::`);
-          devas.push(`::end:hidden`);
+          devas.push(`::end:devas:${this.hash(devas)}`);
 
-          this.question(`${this.askChr}feecting parse:devas ${devas.join('\n')}`).then(parsed => {
+          this.question(`${this.askChr}feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
               text:parsed.a.text,
               html:parsed.a.html,
@@ -112,12 +108,20 @@ const DEVA = new Deva({
           const items = this[item]();
           const _items = [
             `::begin:${items.key}`,
-            `## ${items.key}`,
           ];
           for (let item in items.value) {
             _items.push(`${item}: ${items.value[item]}`);
           }
-          _items.push(`::end:${items.key}`);
+          _items.push(`::end:${items.key}:${this.hash(items)}`);
+
+          this.question(`${this.askChr}feecting parse ${_items.join('\n')}`).then(parsed => {
+            return resolve({
+              text:parsed.a.text,
+              html:parsed.a.html,
+              data:parsed.a.data,
+            });
+          }).catch(reject)
+
           return resolve({
             text: _items.join('\n'),
             html: false,
@@ -132,30 +136,6 @@ const DEVA = new Deva({
     }
   },
   methods: {
-    /**************
-    method: md5 hash
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    hash(packet) {
-      this.context('hash');
-      this.action('method', 'hash');
-      const hash = this.hash(packet.q.text, 'md5');
-      return Promise.resolve(hash);
-    },
-
-    /**************
-    method: md5 cipher
-    params: packet
-    describe: Return system md5 hash for the based deva.
-    ***************/
-    cipher(packet) {
-      this.context('cipher');
-      this.action('method', 'cipher');
-      const data = this.cipher(packet.q.text);
-      const cipher = `cipher: ${data.encrypted}`;
-      return Promise.resolve(cipher);
-    },
 
     /**************
     method: client
@@ -187,7 +167,6 @@ const DEVA = new Deva({
     describe: Method to relaty to question function with packet information.
     ***************/
     question(packet) {
-      console.log('QUESTION');
       this.context('question');
       this.action('method', 'question');
       return new Promise((resolve, reject) => {
@@ -301,10 +280,8 @@ const DEVA = new Deva({
     this.listen('devacore:prompt', packet => {
       this.func.cliprompt(packet);
     });
-
     // load the devas
     for (let x in this.devas) {
-      this.prompt(`Load: ${x}`);
       this.devas[x].init(data.client);
     }
     return resolve(data);

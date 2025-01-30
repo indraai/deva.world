@@ -1,11 +1,17 @@
 // Copyright (c)2025 Quinn Michaels
-//  Main Devas include file wheere all the necessary Devas are included.
+//  Main Devas include file where all the necessary Devas are included.
 
+import data from './data/index.js';
+import error from '@indra.ai/deva.error';
+import log from '@indra.ai/deva.log';
+import feecting from '@indra.ai/deva.feecting';
+import socket from '@indra.ai/deva.socket';
 const DEVA = {
-  // data: require('./data/index.js'),
-  // error: require('@indra.ai/deva.error'), // error agent
-  // log: require('@indra.ai/deva.log'),   // logging agent
-  // feecting: require('@indra.ai/deva.feecting'), // feecting language agent
+  data,
+  error,
+  log,
+  feecting,
+  socket,
 };
 export default DEVA;
 

@@ -1,10 +1,11 @@
-import agent from './agent.json' with {type:'json'};
-import client from './client.json' with {type:'json'};
-import vars from './vars.json' with {type:'json'};
+import Agent from './agent.json' with {type:'json'};
+import Client from './client.json' with {type:'json'};
+import Vars from './vars.json' with {type:'json'};
 import features from './features/index.js';
-export default {
-  agent: agent.DATA,
-  client: client.DATA,
-  vars: vars.DATA,
-  features,
-};
+
+const agent = Agent.DATA;
+const client = Client.DATA;
+client.features = features;
+const vars = Vars.DATA;
+
+export default {agent, client, vars};
