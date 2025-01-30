@@ -1,13 +1,9 @@
-// Copyright (c)2025 Quinn Michaels; All rights reserved.
-const path = require('path');
-const systems = require('./main.json').DATA
+// copyright (c) 2025 Quinn Michaels
+import path from 'node:path';
+import systems from './main.json' with {type:'json'};
 
 const thePath = path.join('/Users/quinnmichaels/Dev/deva.space/devas/deva.systems', 'feature', 'methods.js');
 systems.methods = import(thePath);
 
-// systems.devas = {
-// 	data: require('./data.json').DATA,
-// 	log: require('./log.json').DATA,
-// 	chat: require('./chat.json').DATA,
-// }
-module.exports = systems;
+systems.devas = {}
+export default systems;

@@ -2,7 +2,7 @@
 //  Main Devas include file wheere all the necessary Devas are included.
 
 const DEVA = {
-  data: require('./data/index.js'),
+  // data: require('./data/index.js'),
   // error: require('@indra.ai/deva.error'), // error agent
   // log: require('@indra.ai/deva.log'),   // logging agent
   // feecting: require('@indra.ai/deva.feecting'), // feecting language agent

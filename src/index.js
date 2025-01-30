@@ -1,17 +1,21 @@
 // COPYRIGHT (C)2025 QUINN MICHAELS. ALL RIGHTS RESERVED.
 // Load DEVA CORE Mind into Deva
-import Deva from '@indra.ai/deva';
-import pkg from '../package.json' with {type:'json'};
-import agent from '../data/agent.json' with {type:'json'};
-import client from '../data/client.json' with {type:'json'};
-import vars from '../data/vars.json' with {type:'json'};
-// import features from '../data/features/index.js'
-
-import chalk from 'chalk';
-
+// set the __dirname
 import {dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+import chalk from 'chalk';
+import Deva from '../../deva/index.js';
+
+import pkg  from '../package.json' with {type:'json'};
+import Agent from '../data/agent.json' with {type:'json'};
+import Client from '../data/client.json' with {type:'json'};
+import Vars from '../data/vars.json' with {type:'json'};
+
+const agent = Agent.DATA
+const client = Client.DATA
+const vars = Vars.DATA
 
 const info = {
   id: pkg.id,
@@ -29,11 +33,11 @@ const info = {
 
 const DEVA = new Deva({
   info,
-  agent: agent.DATA,
-  vars: vars.DATA,
+  agent,
+  vars,
   config: {
     dir: false,
-    ports: false,
+    ports: vars.ports,
   },
   lib: import('./lib/index.js'),
   utils: {
@@ -104,25 +108,26 @@ const DEVA = new Deva({
 
     lists(item) {
       return new Promise((resolve, reject) => {
-        const items = this[item]();
-        const _items = [
-          `::begin:${items.key}`,
-          `## ${items.key}`,
-        ];
-        for (let item in items.value) {
-          _items.push(`${item}: ${items.value[item]}`);
-        }
-        _items.push(`::end:${items.key}`);
-        this.question(`${this.askChr}feecting parse ${_items.join('\n')}`).then(feecting => {
+        try {
+          const items = this[item]();
+          const _items = [
+            `::begin:${items.key}`,
+            `## ${items.key}`,
+          ];
+          for (let item in items.value) {
+            _items.push(`${item}: ${items.value[item]}`);
+          }
+          _items.push(`::end:${items.key}`);
           return resolve({
-            text: feecting.a.text,
-            html: feecting.a.html,
+            text: _items.join('\n'),
+            html: false,
             data: {
               items,
-              feecting: feecting.a.data,
             }
-          })
-        }).catch(reject)
+          });          
+        } catch (e) {
+          return this.error(e, item, reject);
+        }
       });
     }
   },
@@ -182,6 +187,7 @@ const DEVA = new Deva({
     describe: Method to relaty to question function with packet information.
     ***************/
     question(packet) {
+      console.log('QUESTION');
       this.context('question');
       this.action('method', 'question');
       return new Promise((resolve, reject) => {
@@ -290,7 +296,7 @@ const DEVA = new Deva({
       return Promise.resolve(ret);
     },
   },
-  onDone(data) {
+  onReady(data, resolve) {
     // listen for core prompt and forawrd to cliprompt function
     this.listen('devacore:prompt', packet => {
       this.func.cliprompt(packet);
@@ -301,7 +307,7 @@ const DEVA = new Deva({
       this.prompt(`Load: ${x}`);
       this.devas[x].init(data.client);
     }
-    return Promise.resolve(data);
+    return resolve(data);
   },
   onError(err) {
     console.log('MAIN ERROR', err);

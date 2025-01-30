@@ -623,4 +623,4 @@ const DEVA = new Deva({
     console.log('🚨 DEVA ERROR\n', err);
   }
 });
-module.exports = DEVA
+export default DEVA

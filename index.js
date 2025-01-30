@@ -3,26 +3,27 @@
 // Main Deva Agent for deva.world
 
 // setup main variables
-const path = require('path');
-const fs = require('fs');
-const os = require('os');
-const needle = require('needle');
-const chalk = require('chalk');
+import path from 'node:path';
+import fs from 'node:fs';
+import os from 'node:os';
+import needle from 'needle';
+import chalk from 'chalk';
 
-const {dirname} = path;
-const {fileURLToPath} from 'node:url';    
+import pkg from './package.json' with {type:'json'}
+
+// set the __dirname
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-import pkg from './package.json' with {type:'json'};
 
 // load agent configuration file
 import data from './data/index.js';
 const {vars, agent, client} = data;
-import fastify from 'fastify';
-const fast = fastify({
+import Fastify from 'fastify';
+const fast = Fastify({
   logger:false,
 });
-import fastStatic from '@fastify/static';
+// const {fastStatic} = import('@fastify/static');
 
 import readline from 'readline';
 const shell = readline.createInterface({
@@ -31,15 +32,15 @@ const shell = readline.createInterface({
 });
 
 import DEVA from './src/index.js';
+DEVA.config.dir = __dirname;
 
 function setPrompt(pr) {
-  // console.log('PROMPT', pr);
   shell.prompt();
   if (!pr) return;
   else if (!pr.prompt) return;
   else {
     const {colors} = pr.prompt;
-    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} ${pr.prompt.text}: `);
+    const setPrompt = chalk.rgb(colors.label.R, colors.label.G, colors.label.B)(`${pr.prompt.emoji} ${pr.prompt.text} `);
 
     // const setPrompt = `${pr.prompt.emoji} ${pr.key}: `;
     shell.setPrompt(setPrompt);
@@ -47,26 +48,18 @@ function setPrompt(pr) {
   }
 }
 
-function devaQuestion(q) {
+async function devaQuestion(q) {
   // the event that fires when a new command is sent through the shell.
   if (q.toLowerCase() === '/exit') return shell.close();
-
-  return new Promise((resolve, reject) => {
-    // insert the question into history
-
-    // ask a question to the deva ui and wait for an answer.
-    DEVA.question(q).then(answer => {
+  const answer = await DEVA.question(q);
       // sen the necessary returned values to the shell prompt.
-      setPrompt(answer.a.agent);
-      console.log(chalk.rgb(answer.a.agent.prompt.colors.text.R, answer.a.agent.prompt.colors.text.G, answer.a.agent.prompt.colors.text.B)(answer.a.text));
-      setPrompt(answer.a.client);
-      // if (answer.a.data) console.log(answer.a.data);
-      DEVA.talk(`data:history`, answer);
-      return resolve(answer);
-    }).catch(e => {
-      return reject(e);
-    });
-  });
+  setPrompt(answer.a.agent);
+  console.log(chalk.rgb(answer.a.agent.prompt.colors.text.R, answer.a.agent.prompt.colors.text.G, answer.a.agent.prompt.colors.text.B)(answer.a.text));
+
+  setPrompt(answer.a.client);
+  // if (answer.a.data) console.log(answer.a.data);
+  DEVA.talk(`data:history`, answer);
+  return answer;
 }
 
 // get network interfaces
@@ -112,24 +105,24 @@ ${opts.ip}
 Copyright ©${pkg.copyright}
 ${line_break}`;
 
-// create the static routes for the local server.
-// public is used to deliver local assets
-const staticRoutes = [
-  {
-    root: path.join(__dirname, 'public'),
-    prefix: '/public/',
-    prefixAvoidTrailingSlash: true,
-    list: {
-      format: 'json',
-      names: ['index', 'index.json', '/', '']
-    },
-  },
-]
-
-// register static routes with the fast server.
-staticRoutes.forEach(rt => {
-  fast.register(fastStatic, rt);
-})
+// // create the static routes for the local server.
+// // public is used to deliver local assets
+// const staticRoutes = [
+//   {
+//     root: path.join(__dirname, 'public'),
+//     prefix: '/public/',
+//     prefixAvoidTrailingSlash: true,
+//     list: {
+//       format: 'json',
+//       names: ['index', 'index.json', '/', '']
+//     },
+//   },
+// ]
+// 
+// // register static routes with the fast server.
+// staticRoutes.forEach(rt => {
+//   fast.register(fastStatic, rt);
+// })
 
 // deliver the default index.html file for the interface.
 const routes = [
@@ -192,26 +185,22 @@ routes.forEach(rt => {
 });
 
 // launch fast server to listen to the port rom the vars scope
-fast.listen({port:data.vars.ports.api}).then(() => {
+fast.listen({port:vars.ports.api}).then(() => {
   // log the main server information to the console
   console.log(chalk.green(devaFlash({
     client,
     agent,
     ip: ipv4.map(ip => `${ip}:${vars.ports.api}`).join('\n\r'),
   })));
-
-}).then(_init => {
   // initialize the DEVA
-  DEVA.init(client);
-
-  setPrompt(DEVA.client());
-
-  // cli prompt listener for relaying from the deva to the prompt.
-  DEVA.listen('cliprompt', ag => {
-    console.log('set prompt')
-
-    setPrompt(ag);
+  DEVA.init(client).then(_init => {
+    setPrompt(DEVA.client());  
+    // cli prompt listener for relaying from the deva to the prompt.
+    DEVA.listen('cliprompt', ag => {
+      setPrompt(ag);
+    });
   });
+
 
   // run operation when new line item in shell.
   shell.on('line', question => {
