@@ -282,7 +282,9 @@ const DEVA = new Deva({
     });
     // load the devas
     for (let x in this.devas) {
-      this.devas[x].init(data.client);
+      this.devas[x].init(data.client).then(init => {
+        console.log('methods', x, Object.keys(this.devas[x].methods));
+      });
     }
     return resolve(data);
   },

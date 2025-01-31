@@ -5,13 +5,23 @@ import data from './data/index.js';
 import error from '@indra.ai/deva.error';
 import log from '@indra.ai/deva.log';
 import feecting from '@indra.ai/deva.feecting';
+import docs from '@indra.ai/deva.docs';
 import socket from '@indra.ai/deva.socket';
+import security from '@indra.ai/deva.security';
+import services from '@indra.ai/deva.services';
+import support from '@indra.ai/deva.support';
+import systems from '@indra.ai/deva.systems';
 const DEVA = {
   data,
   error,
   log,
   feecting,
+  docs,
   socket,
+  security,
+  services,
+  support,
+  systems,
 };
 export default DEVA;
 

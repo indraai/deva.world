@@ -3,6 +3,7 @@ logs/*
 data/features/security/*
 data/features/support/*
 data/features/services/*
+data/features/systems/*
 private/*
 data/client.json
 

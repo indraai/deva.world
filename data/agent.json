@@ -1,13 +1,13 @@
 {
-  "name": "Deva World",
-  "describe": "The Deva World data file.",
+  "name": "Deva.world",
+  "describe": "The Deva.world data file.",
   "copyright": "Copyright (c)2025 Quinn Michaels. All rights reserved.",
   "DATA": {
     "id": 5380514963421,
     "key": "deva",
     "prompt": {
-      "emoji": "🤖",
-      "text": "deva",
+      "emoji": "⚡️",
+      "text": "Deva",
       "colors": {
         "label": {
           "R": 255,
