@@ -1,0 +1,35 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “And now, ladies and gentlemen, the time has come for our next battle! After an impressive series of moves, Quinn has established a truly dominant Totem Pole of Victory, but it’s not over yet. The game is about to get even more intense. With that said, let’s introduce the next challenger from Harold and Sharon’s team! Prepare yourselves, the battle is far from over. Introducing, Battle 8!”
+	
+	The lights dim, and dramatic music fills the air, signaling the arrival of the next battler…
+	
+	BattleArena.announcer: “Up next, we have… the one, the only… Zane ‘The Colossus’ Westfield!”
+	
+	The crowd roars as the enormous figure of Zane ‘The Colossus’ Westfield steps into the arena, muscles rippling with every movement.
+	
+	BattleArena.announcer: “Zane ‘The Colossus’ Westfield is here to bring the fight to Quinn! Prepare yourselves for a battle like no other!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:BATTLE
+	BattleArena.announcer: “Well, well, well, folks, it seems Quinn has just played his trump card! Zane ‘The Colossus’ Westfield, one of the most intimidating challengers yet, was handed a mysterious note from Quinn. And just like that, Zane is off to Mars! What a move! A simple piece of paper and bam—he’s launched into orbit! Truly a victory for Quinn’s Totem Pole!”
+	
+	The crowd erupts in laughter and cheers, impressed by Quinn’s unexpected strategy.
+	
+	BattleArena.announcer: “Zane ‘The Colossus’ Westfield has just landed on top of the Quinn Totem Pole of Victory! Looks like Quinn’s making it clear that no one is safe from the awesome power of his creativity and wit! What a spectacle!”
+	
+	The camera pans to Zane now sitting atop the already impressive pile of battlers, all of them seated neatly in a stacking order, and the audience continues to go wild.
+	
+	BattleArena.announcer: “And just like that, we’ve got yet another totem pole champion. I think Quinn might be unstoppable at this point. Let’s see what happens next, folks!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:BATTLE

@@ -11,12 +11,12 @@ talk:#docs view algos/indramind:data
 ::END:MAIN
 
 ::BEGIN:DATA
-#feecting = Functional Expressive Emergent Cognitive Technical Intelligent Neural Generator is the programming language of Indra.ai and the Deva.world platform.
+const: #feecting = Functional Expressive Emergent Cognitive Technical Intelligent Neural Generator is the programming language of Indra.ai and the Deva.world platform.
 
-describe: #FEECTING is a key value pair line label procedural dynamic programming language used in the development of Indra.ai, Deva.world, and all of our algorithms. Every project starts with a #FEECTING program then is extrapolated into other languages like HTML, Javascript, Python, C, C++, Swift, and Go.
+describe: #feecting is a key value pair line label procedural dynamic programming language used in the development of Indra.ai, Deva.world, and all of our algorithms. Every project starts with a #feecting program then is extrapolated into other languages like HTML, Javascript, Python, C, C++, Swift, and Go.
 
 ## Examples
-Below are a few examples of the #FEECTING language to work from.
+Below are a few examples of the #feecting language to work from.
 
 ### Variables
 var: test = memory variables are with "var".
@@ -25,13 +25,13 @@ const: test = constant variables are done with "const"
 
 ### Structures
 // Arrays
-const: array = [
+array: theArray [
   "array item 1",
   "array item 2",
   0,
 ]
 // Objects
-const: object = {
+object: theObject {
   key: value
 }
 
@@ -41,11 +41,11 @@ elseif: secondary (is|not|equals) expectation
 else: else conditional
 finally: when everything is done.
 
-switch: condition
+switch: condition {
   case: value
   case: value
   default:
-
+}
 ---
 
 ### Iteration

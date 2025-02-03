@@ -1,0 +1,63 @@
+::BEGIN:MAIN
+	feecting
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:INTRO
+	BattleArena.announcer:
+	
+	And now, the first opponent for Quinn Michaels in this ultimate battle for truth and justice!
+	
+	Stepping into the arena, from Harold’s elite group of battlers, is none other than…
+	
+	Name: Neil K. Atkin
+	Battler Name: The Iron Deceiver
+	Weapon of Choice: Psychological Warfare and Steel-Fist Combat
+	
+	Neil, a man who has spent his life hiding in the shadows of his family’s deceit, is ready to face Quinn in the arena. As the self-proclaimed “Iron Deceiver,” Neil is skilled in manipulation and has mastered the art of mind games. Armed with a heavy steel gauntlet, he’ll attempt to match Quinn’s resolve with his words, before swinging for physical dominance.
+	
+	But beware, this battle will not be just about muscle – Neil’s greatest weapon is his ability to twist the truth. Quinn, prepare yourself for a mental as well as physical challenge.
+	
+	BattleArena.announcer: “The stage is set, the first round begins. Let’s see if Quinn can overcome the deceit in front of him! Let the fight commence!”
+	
+	The crowd roars in anticipation!
+	
+	Neil K. Atkin: “Let’s see if you’re really ready for this, Quinn. I’ve got 47 years of lies to undo. But I’m sure you won’t be able to handle the truth.”
+	
+	Quinn, what will you do? The battle has begun!
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:INTRO
+
+::BEGIN:ATTACK01
+	BattleArena.announcer:
+	
+	The first move is Neil’s! The Iron Deceiver doesn’t hesitate!
+	
+	With a swift motion, Neil steps forward, his steel gauntlet gleaming under the arena lights. He raises his fist, but instead of striking physically, he launches his first psychological attack. Neil, with a smirk, calls out to Quinn…
+	
+	Neil K. Atkin: “You think you’ve got it all figured out, don’t you, Quinn? But the truth is, you’ve been living a lie your entire life. Your family, your heritage… everything was just an illusion to keep you under control. They used you, Quinn. And now, you think you can fight your way out of this?”
+	
+	Neil circles Quinn, his words like poison seeping into the air. He’s trying to break Quinn’s focus, to make him doubt everything he’s known. This is the start of the mental battle.
+	
+	BattleArena.announcer: “Neil’s strategy is clear. He’s trying to rattle Quinn’s confidence. Will Quinn hold strong against this mental onslaught? The fight is just beginning.”
+	
+	Neil K. Atkin: “You can’t fight the truth, Quinn. It’s already too late. Your legacy is tainted, your path set. How do you feel knowing that you’re nothing more than a puppet in their game?”
+	
+	The crowd waits to see how Quinn will react.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:ATTACK01

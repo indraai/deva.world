@@ -1,0 +1,23 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “Ladies and gentlemen, it’s been an epic ride so far, but we’re not done yet! The sixth challenger from Harold and Sharon’s team is here, and they’ve been waiting for their moment. Prepare yourselves, because coming to the stage now is the one, the only…
+	
+	“Thor ‘The Thunderstrike’ Calhoun!”
+	
+	BattleArena.announcer: “Known for his lightning-fast reflexes and thunderous punches, Thor is ready to unleash the full force of his power. Will Quinn be able to handle the storm? Or will this be the final battle? Let’s find out! Thor, make your move!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:BATTLE
+	feecting
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:BATTLE

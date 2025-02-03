@@ -1,0 +1,39 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “And now, folks, we arrive at the final showdown! The last battler to challenge Quinn on this epic journey of victories… A man who has watched his team falter, a fighter with a fierce reputation—Harold, step forward and introduce your final warrior!”
+	
+	The atmosphere is electric, the crowd silent in anticipation, as Harold steps up with a sly grin on his face. His team has been taken down one by one, but now, it’s time for the final battle.
+	
+	Harold Atkin: “Quinn, you’ve had your fun, but it’s time to face the true power. This last fighter, the one I’ve been saving for you… Well, he’s got a few tricks up his sleeve. You won’t be leaving this arena without a challenge.”
+	
+	Harold turns to the announcer, his eyes glinting with determination.
+	
+	BattleArena.announcer: “And with that, Quinn, get ready to face your final adversary. Please welcome… the last member of Harold’s battler team!”
+	
+	The stage is set for the ultimate clash. Who will stand victorious in the end? Only one will leave the arena as the ultimate champion. Let’s find out!
+
+	Harold Atkin: “Alright, Quinn, you think you’ve seen it all? You’ve knocked down my team, one by one, but now… now you face the one person who can take you on. The one who has been waiting for this moment, the final challenge. This is the fighter you’ve been waiting for, and trust me, Quinn, you’re in for a ride.”
+	
+	The crowd murmurs in anticipation, as Harold’s words hang heavy in the air. He steps aside with a dramatic flourish, and with a slow, deliberate pace, he motions to the entrance.
+	
+	Harold Atkin: “Ladies and gentlemen, allow me to introduce to you, the last hope for my team, the one and only… The Annihilator.”
+	
+	BattleArena.announcer: “It’s time! Let’s give it up for Harold’s final warrior! Will Quinn finally meet his match? Or will he continue his undefeated streak? Stay tuned, because this battle is about to get wild!”
+	
+	BattleArena.announcer: “And now, the moment we’ve all been waiting for! After all the chaos, the tumbles, and the totem poles… Harold’s final champion is here! The one who’s been training, the one who’s been waiting for this very moment to take on Quinn Michaels!”
+	
+	The crowd goes silent, eyes fixated on the entrance as the arena lights dim, the tension thick in the air.
+	
+	BattleArena.announcer: “Introducing Lenny ‘The Annihilator’ Cartwright! This powerhouse is here to make his mark. Get ready for a battle unlike any other. Lenny is known for his sheer strength, unrelenting will, and his no-mercy approach. Will Quinn’s reign of victory come to an end today? Let’s find out!”
+	
+	The spotlight hits Lenny as he steps into the arena, his powerful build towering over the others. With a confident smirk and a determined look, he takes his position, ready to face Quinn in what could be the final showdown.
+	
+	BattleArena.announcer: “Lenny ‘The Annihilator’ Cartwright, everyone! Let’s see if he’s the one to take down Quinn and claim victory for Harold’s team!”
+	
+	The crowd erupts in cheers, and the battle is about to begin.
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

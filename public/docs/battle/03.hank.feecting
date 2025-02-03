@@ -1,0 +1,61 @@
+::BEGIN:MAIN
+	
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:INTRO
+	BattleArena.announcer:
+	
+	The tension in the arena thickens as the crowd waits with bated breath for the next challenger to step up. The light dims briefly, and then the spotlight turns to the entrance tunnel as the next battler is introduced.
+	
+	BattleArena.announcer: “And now, ladies and gentlemen, the next in line to face the mighty Quinn Michaels! Known for his resilience and ability to recover from even the most devastating blows… prepare yourselves for… HANK ‘THE TITAN’ DONOVAN!”
+	
+	The crowd roars with excitement as Hank steps into the arena, his massive frame and heavy footsteps making the ground tremble. He looks determined, his eyes locked onto Quinn. He clenches his fists, ready for battle.
+	
+	BattleArena.announcer: “Hank ‘The Titan’ Donovan, a fighter known for his strength, unyielding will, and his ability to withstand even the toughest of opponents! Will he be the one to challenge Quinn’s dominance in the arena today? Only time will tell!”
+	
+	Hank cracks his knuckles, stepping forward, ready to take on Quinn with a fierce intensity.
+	
+	BattleArena.announcer: “Will Quinn finally face a worthy adversary? Let’s find out! Hank, it’s your move!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:INTRO
+
+::BEGIN:ATTACK01
+	system blocked the response
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:ATTACK01
+
+::BEGIN:DEFENSE01
+	BattleArena.announcer:
+	
+	The crowd erupts into laughter and gasps as Hank ‘The Titan’ Donovan, in an unexpected move, gives himself a wedgie—then, with surprising agility, rockets off into the air. His massive form soars over the arena like a comet before landing with a loud thud… right on top of Kurt “The Punisher” Harkin’s head, who is already precariously perched on Neil “The Iron Deceiver” Atkin’s head in a bizarre, but very real, Mars Totem Pole.
+	
+	BattleArena.announcer: “Well folks, we’ve seen it all now! Hank ‘The Titan’ Donovan takes a unique approach to battle—giving himself a wedgie and launching himself into orbit to crash land on top of his opponents! What a move! It’s certainly a sight to behold, but will this be enough to take Quinn down?”
+	
+	The pile of battlers on Mars grows taller as the absurdity of the situation sinks in. Quinn stands at the ready, unimpressed but aware of the odd spectacle in front of him. The arena is buzzing with energy, unsure of what’s coming next.
+	
+	BattleArena.announcer: “Hank, my friend, you’ve truly earned the title of ‘The Titan’ in this arena, but now… it’s Quinn’s turn. What’s your next move?”
+	
+	The crowd waits, unsure of how this will play out—who will emerge victorious from this chaos?
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:DEFENSE01

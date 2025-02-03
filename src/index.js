@@ -9,7 +9,6 @@ import chalk from 'chalk';
 import Deva from '@indra.ai/deva';
 
 import devas from '../devas/index.js';
-import lib from './lib/index.js';
 import pkg  from '../package.json' with {type:'json'};
 import Agent from '../data/agent.json' with {type:'json'};
 import Client from '../data/client.json' with {type:'json'};
@@ -41,7 +40,6 @@ const DEVA = new Deva({
     dir: false,
     ports: vars.ports,
   },
-  lib,
   utils: {
     translate(input) {return input.trim();},
     parse(input) {return input.trim();},
@@ -87,7 +85,7 @@ const DEVA = new Deva({
             const {prompt, key, profile} = d.agent();
             devas.push(`button[${prompt.emoji} ${profile.name}]:${this.askChr}${key} help`);
           }
-          devas.push(`::end:devas:${this.hash(devas)}`);
+          devas.push(`::end:devas:${this.lib.hash(devas)}`);
 
           this.question(`${this.askChr}feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
@@ -112,7 +110,7 @@ const DEVA = new Deva({
           for (let item in items.value) {
             _items.push(`${item}: ${items.value[item]}`);
           }
-          _items.push(`::end:${items.key}:${this.hash(items)}`);
+          _items.push(`::end:${items.key}:${this.lib.hash(items)}`);
 
           this.question(`${this.askChr}feecting parse ${_items.join('\n')}`).then(parsed => {
             return resolve({
@@ -282,20 +280,18 @@ const DEVA = new Deva({
     });
     // load the devas
     for (let x in this.devas) {
-      this.devas[x].init(data.client).then(init => {
-        console.log('methods', x, Object.keys(this.devas[x].methods));
-      });
+      this.devas[x].init(data.client);
     }
     return resolve(data);
   },
-  onError(err) {
+  onError(err, reject) {
     console.log('MAIN ERROR', err);
   },
-  async onStop(data) {
+  async onStop(data, resolve) {
     for (const deva in this.devas) {
       await this.devas[deva].stop();
     }
-    return this.exit();
+    return this.exit(data, resolve);
   },
 });
 

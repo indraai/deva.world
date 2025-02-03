@@ -1,10 +1,7 @@
 # Logs
-logs/*
-data/features/security/*
-data/features/support/*
-data/features/services/*
-data/features/systems/*
-private/*
+logs/
+data/features/
+private/
 data/client.json
 
 *.log

@@ -58,6 +58,7 @@ class DevaInterface {
       'security',
       'support',
       'services',
+      'systems'
     ];
     this.history_count = 25;
   }
@@ -78,27 +79,6 @@ class DevaInterface {
     $('#DataPanel article').html(_html);
   }
 
-  _logAlert(data) {
-    if (this._alerts.length > this.history_count) {
-      this._alerts = [];
-      $('#Alerts .item').last().remove();
-    }
-    this._alerts.unshift(data);
-
-    const { label, text } = data.agent.prompt.colors;
-    const _html = [
-      `<div class="item alert" data-id="${data.id}">`,
-      `<span class="label" style="color:rgb(${label.R},${label.G},${label.B})">`,
-      `${data.agent.prompt.emoji} #${data.agent.key}:`,
-      '</span>',
-      `<span class="value" style="color: rgb(${text.R}, ${text.G}, ${text.B})">`,
-      `${data.text}`,
-      '</span>',
-      '</div>'
-    ].join('');
-    $('#Alerts').prepend(_html);
-  }
-
   _scrollTop(elem) {
     return setTimeout(() => {
       const so = document.getElementById(elem);
@@ -106,15 +86,7 @@ class DevaInterface {
     }, 100);
   }
 
-  Question(q, log=true) {
-
-    const text = q.length > 100 ? [
-      `<p>${q}</p>`,
-      `<div class="box buttons">`,
-      `<button class="btn button" data-button="#open speech:${this.client.profile.voice} ${q}">🗣️ Speak</button>`,
-      `<button class="btn button" data-button="#open image ${q}">🎨 Art</button>`,
-      `</div>`,
-    ].join('\n') : q;
+  Question(text, log=true) {
 
     if (log) this.Console({
       type: 'question',
@@ -123,12 +95,11 @@ class DevaInterface {
       agent: this.client,
     });
 
-    $('event-panel').html(''); // clear the event panels
     
     return new Promise((resolve, reject) => {
       // this.Clear(q);
       axios.post('/question', {
-        question: q,
+        question: text,
       }).then(response => {
         const answer = response.data;
         this._logData({[answer.id]: answer});
@@ -269,41 +240,10 @@ class DevaInterface {
     $(selector).prepend(html)
   }
 
-
-  async data(packet) {
-    if (packet.meta.method === 'history') {
-      const data = packet.data.reverse();
-      for (let x of data) {
-        this.Console({
-          type: x.q.meta.key,
-          method: x.q.meta.method,
-          agent: x.q.client,
-          meta: x.q.meta,
-          text: x.q.html ? x.q.html : x.q.text,
-        });
-        this.Console({
-          type: x.a.meta.key,
-          method: x.a.meta.method,
-          agent: x.a.agent,
-          meta: x.a.meta,
-          text: x.a.html ? x.a.html : x.a.text,
-        });
-        console.log('DATA', x);
-      }
-      return;
-    }
-    return this.Console({
-      type: packet.meta.key,
-      method: packet.meta.method,
-      agent: packet.agent,
-      meta: packet.meta,
-      text: packet.html ? packet.html : packet.text,
-    });
-  }
   docs(data) {
     console.log('DOCS DATA', data);
     if (data.meta.method === 'view') {
-      if (data.meta.params[1] && data.meta.params[1] === 'panel') $('#Panel').html(data.html)
+      if (data.meta.params[2] && data.meta.params[2] === 'panel') $('#Panel').html(data.html)
       else this.Viewer(data.html);
       return;
     }
@@ -315,142 +255,14 @@ class DevaInterface {
       text: data.html ? data.html : data.text,
     });
   }
-  space(data) {
-    console.log('DOCS DATA', data);
-    if (['agent','object','place'].includes(data.meta.method)) {
-      return this.Viewer(data.html);
-    }
-    this.Console({
-      type: data.meta.key,
-      method: data.meta.method,
-      agent: data.agent,
-      meta: data.meta,
-      text: data.html ? data.html : data.text,
-    });
-  }
 
   veda(data) {
-    const {method, key} = data.meta;
     console.log('DOCS DATA', data);
-    switch (method) {
-      case "books":
-      case "book":
-        const {colors} = data.agent.prompt;
-        const panel = document.getElementById('Panel');
-        panel.style.color = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;
-        panel.innerHTML = data.html;
-        return;
-      case 'hymn':
-        this.Viewer(data.html);
-      break
-      default:
-        return this.Console({
-          type: key,
-          method,
-          agent: data.agent,
-          meta: data.meta,
-          text: data.html ? data.html : data.text,
-        });
+    if (data.meta.method === 'hymn') {
+      // if (data.meta.params[2] && data.meta.params[2] === 'panel') $('#Panel').html(data.html)
+      return this.Viewer(data.html);
     }
-  }
-
-  youtube(data) {
-    console.log('YOUTUBE DATA', data);
-    this.Console({
-      type: data.meta.key,
-      method: data.meta.method,
-      agent: data.agent,
-      meta: data.meta,
-      text: data.html ? data.html : data.text,
-    });
-  }
-
-  // parses coordinates from a string
-  coordinates(txt, adv) {
-    const coord = /coordinates:(.+)\[(.+)\|(.+)\]/g;
-    const coordinates = coord.exec(txt);
-    if (!coordinates) return;
-    const nameS = coordinates[1].split('-');
-    const name = nameS && nameS[1] ? nameS[1] : 'main';
-    const _map = `/asset/${adv}/map/${nameS[0]}/${name}`;
-    if (_map !== this.map) {
-      this.map = _map;
-      $('.controls').css({'background-image': `url(${this.map})`});
-    }
-    $('.controls').css({'background-position': `${coordinates[2]}px ${coordinates[3]}px`});
-    return;
-  }
-
-  mud(data) {
-    this.coordinates(data.text, data.meta.adventure.key);
-
-    const _func = {
-      exits(opts) {
-        $(`#MudExits .btn.active`).removeClass('active');
-        $(`#MudMap .grid .dots.active`).removeClass('active');
-        const exits = opts.text.split('\n');
-        exits.forEach(ex => {
-          const bt = ex.match(/exit\[(.+)\]:(.+)/);
-          if (!bt) return;
-          $(`.btn.exit.${bt[1]} span`).text(bt[2]);
-          $(`[data-navigate="${bt[1]}"]`).addClass('active');
-        });
-        return;
-      },
-    }
-    switch (data.meta.method) {
-      case "look":
-      case "north":
-      case "south":
-      case "east":
-      case "west":
-      case "northwest":
-      case "southhwest":
-      case "northeast":
-      case "southheast":
-      case "up":
-      case "down":
-        this.Viewer(data.html);
-        this.Question('#mud exits', false);
-        break;
-      case "exits":
-        _func.exits(data);
-        break;
-      default:
-        this.Console({
-          type: data.meta.key,
-          method: data.meta.method,
-          agent: data.agent,
-          meta: data.meta,
-          text: data.html ? data.html : data.text,
-        });
-
-    }
-  }
-
-  buddy(data) {
-    switch (data.meta.method) {
-      case 'devas':
-        $('#Panel').html(data.html)
-        break;
-      default:
-        this.Console({
-          type: data.meta.key,
-          method: data.meta.method,
-          agent: data.agent,
-          meta: data.meta,
-          text: data.html ? data.html : data.text,
-        });
-
-    }
-  }
-
-  feature(data) {
-    this.Viewer(data.html);
-  }
-
-  services(data) {
-    this.Console({
+    return this.Console({
       type: data.meta.key,
       method: data.meta.method,
       agent: data.agent,
@@ -461,6 +273,7 @@ class DevaInterface {
 
   processor(data) {
     if (!data.text) return;
+    console.log('processor', data);
     const { meta } = data;
     const metaKey = meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
@@ -481,204 +294,8 @@ class DevaInterface {
       text: data.html ? data.html : data.text,
     });
 
-    // if (!data.a.text && !data.a.html) return;
-    // if (!data.a.meta) return this.general(data);
-    // const type = data.a.meta.type ? data.a.meta.type : false;
-    // if (typeof this[type] === 'function') return this[type](data);
-    //
-    // const states = ['connected', 'editor']
-    // if (data.state && states.includes(data.state.key)) this._setState(data.state.key);
-    // if (this.state === 'editor') return this.general(data);
-    //
-    //
   }
 
-  MudPatterns(data) {
-    console.log('MUD PATTERN', data);
-
-    const trigger = data.state.split(':')[0].toLowerCase();
-    const self = this;
-    const triggers = {
-      room(data) {
-        $('#WatchRoom').html(`<span>${data.text}</span>`);
-        return;
-      },
-      bars(opts) {
-        let {bid, bclass, bmin, bmax} = opts;
-        let bar = Math.floor((bmin / bmax) * 100);
-        if (bar > 100) bar = 100
-
-        if (bar < 30) bclass += ' warning';
-        if (bar < 15) bclass += ' alert';
-        $(`#${bid} .bar`).removeClass('warning').removeClass('alert').addClass(bclass).attr('style', `--bar-width: ${bar}%;`);
-      },
-      hit(data) {
-        this.bars({
-          bid: 'MudStatsHit',
-          bclass: 'hit',
-          bmin: data.pattern.matched[2],
-          bmax: data.pattern.matched[3],
-        });
-      },
-      mana(data) {
-        this.bars({
-          bid: 'MudStatsMana',
-          bclass: 'mana',
-          bmin: data.pattern.matched[2],
-          bmax: data.pattern.matched[3],
-        });
-      },
-
-      move(data) {
-        this.bars({
-          bid: 'MudStatsMove',
-          bclass: 'mana',
-          bmin: data.pattern.matched[2],
-          bmax: data.pattern.matched[3],
-        });
-      },
-
-      hunger(data) {
-        this.bars({
-          bid: 'MudStatsHunger',
-          bclass: 'hunger',
-          bmin: data.pattern.matched[2],
-          bmax: data.pattern.matched[3],
-        });
-      },
-
-      thirst(data) {
-        this.bars({
-          bid: 'MudStatsThirst',
-          bclass: 'hunger',
-          bmin: data.pattern.matched[2],
-          bmax: data.pattern.matched[3],
-        });
-      },
-
-      equipment(data) {
-        const equip = (/equipment:(.+):(.+)/g).exec(data.text);
-        $('#MudEquipment').append(`<div class="item equipment">${emojis[equip[1].toLowerCase()]} ${equip[2]}</div>`);
-      },
-
-      inventory(data) {
-        $('#MudInventory').append(`<div class="item inventory">${data.pattern.matched[2]}</div>`);
-      },
-
-      current(data) {
-        $('#q').val(data.text.replace(/\ncurrent:\s?(.+)/, `#mud > $1`));
-        document.getElementById('Prompt').focus();
-      },
-
-      fight(data) {
-        const {matched} = data.pattern;
-        $('#MudAlerts').prepend(`<div class="item fight">${emojis[matched[1].toLowerCase()]} ${matched[2]}</div>`);
-      },
-
-      save(data) {
-        $('#ShellOutput').html('')
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-
-      info(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-
-      error(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-
-      alert(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      door(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      player(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      arrive(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      depart(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      gold(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      exp(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      pos(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      key(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      drink(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      eat(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      put(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      get(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      weather(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      trigger(data) {
-        const {matched} = data.pattern;
-        return self.PanelConsole(matched[1],matched[2]);
-      },
-      time(data) {
-        const {matched} = data.pattern;
-        const time = matched[2].split(':');
-        const hour = time[0] < 10 ? `0${time[0]}` : time[0];
-        const minute = time[1] < 10 ? `0${time[1]}` : time[1];
-        $('#WatchHour').html(`<span>${hour}:${minute}</span>`);
-      },
-      date(data) {
-        const {matched} = data.pattern;
-        const DoW = matched[2].split(' - ');
-        $('#WatchDay').html(`<span>${DoW[0].trim()}</span>`);
-        $('#WatchDate').html(`<span>${DoW[1].trim()}</span>`);
-      },
-      gui(data) {
-        // split the gui command from string
-        const parse = data.text.split(':');
-        const label = parse.shift();
-        const cmd = parse.length > 1 ? parse.join(':') : parse[0];
-        self.Question(cmd, false);
-      }
-    }
-    if (triggers[trigger] && typeof triggers[trigger] === 'function') return triggers[trigger](data);
-    const split_for_emoji = data.text.split(':');
-    const the_emoji = split_for_emoji.shift().toLowerCase().trim();
-    const _emoji = emojis[the_emoji];
-    if (_emoji) data.text = `${_emoji} ${split_for_emoji.join(':')}`;
-    $('#MudAlerts').prepend(`<div class="item alert">${data.text}</div>`);
-  }
 
 
   Init(socket) {
@@ -739,10 +356,6 @@ class DevaInterface {
 
       socket.on('socket:global', data => {
         return this.processor(data.a);
-      });
-
-      socket.on('mud:pattern', data => {
-        this.MudPatterns(data.data);
       });
 
       socket.on('socket:devacore', data => {

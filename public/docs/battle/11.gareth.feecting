@@ -1,0 +1,31 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “And now, folks, it’s time for the next challenger! Harold and Sharon are down to their final warriors. Will ‘The War Machine’ rise up to the challenge, or will Quinn’s unstoppable force be too much to handle? Let’s find out as we bring in… Gareth ‘The War Machine’ Thompson!”
+	
+	The crowd cheers as Gareth steps into the arena, his massive frame towering over the other fighters. The ground shakes with each step he takes, and the intensity in his eyes shows he’s ready for this final showdown!
+	
+	BattleArena.announcer: “Gareth, known for his sheer power and indomitable will, is stepping up for one final shot at glory! Can Quinn overcome the strength of ‘The War Machine,’ or will Gareth’s explosive attack finally put an end to Quinn’s reign?”
+	
+	Let the battle begin!
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:BATTLE
+	BattleArena.announcer: “Well folks, it looks like we’ve witnessed something truly extraordinary here today! Quinn, once again, proves that no one is safe from his ingenuity. With a swift move and the power of his Tablet, Gareth ‘The War Machine’ Thompson has been reprogrammed into ‘The Puppy Machine’! And just like that, he too climbs onto the Quinn Totem Pole of Victory, joining the ranks of all those who’ve fallen before him.”
+	
+	The crowd is left stunned, some cheering, others in disbelief, but all eyes are glued to the towering Quinn Totem Pole of Victory as yet another competitor is added to the growing pile of those who failed to beat Quinn’s relentless strategy.
+	
+	BattleArena.announcer: “It’s official, folks! With ‘The Puppy Machine’ now in the mix, Quinn’s victory is secured. Harold and Sharon’s remaining battlers, though strong, were no match for Quinn’s quick thinking and unyielding tactics. Will anyone be able to challenge this absolute force? Or will the Quinn Totem Pole of Victory continue to grow taller and taller? Only time will tell!”
+	
+	As the arena quiets down, the crowd eagerly awaits the next stage of the epic battle.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:BATTLE

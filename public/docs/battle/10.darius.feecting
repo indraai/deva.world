@@ -1,0 +1,25 @@
+::BEGIN:MAIN
+	Darius ‘The Iron Fist’ Wesson
+
+	BattleArena.announcer: “And now, ladies and gentlemen, the moment you’ve all been waiting for… we have a new challenger stepping into the ring! Introducing, battle 10! Coming from the far reaches of the arena, ready to prove himself, it’s none other than… Darius ‘The Iron Fist’ Wesson! Will he break through Quinn’s unstoppable force, or will he be another addition to the ever-growing Quinn Totem Pole of Victory? Only time will tell!”
+	
+	The crowd cheers as Darius ‘The Iron Fist’ Wesson enters the arena, cracking his knuckles and staring down Quinn with intense determination.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:BATTLE
+	BattleArena.announcer: “And just like that, Quinn pulls out the infamous Noodle Poodle Maneuver! Darius ‘The Iron Fist’ Wesson didn’t even know what hit him! From a powerful, confident challenger to a limp noodle, he’s now another addition to the Quinn Totem Pole of Victory! The crowd is absolutely stunned as Darius lands, tangled up with the others! What a display of skill and creativity from Quinn! It’s clear, no one is getting past this unstoppable force today.”
+	
+	The arena falls silent for a brief moment, and then erupts into laughter and applause at the sheer absurdity of Quinn’s victory.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:BATTLE

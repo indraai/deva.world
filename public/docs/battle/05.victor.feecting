@@ -1,0 +1,56 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “And now, ladies and gentlemen, we move on to the next battler in this epic showdown! After an unexpected turn of events, we’re about to see who will step up to face Quinn next. Will it be someone daring enough to challenge his power, or will they too fall under Quinn’s unstoppable force? Let’s find out!”
+	
+import: #test.
+	
+	The crowd quiets down in anticipation, waiting for the next challenger to enter the arena.
+	
+	BattleArena.announcer: “Introducing next, the one and only… Victor ‘The Immovable’ Graves! Known for his unyielding strength and tenacity, he’s here to show what true resilience looks like. Let’s see if Quinn can break through The Immovable’s defense!”
+	
+	Victor enters the ring with a determined look on his face, ready to take on Quinn and prove he can be the one to finally stand his ground.
+alskdjf llkajsd;f: ;alksdjf
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:ATTACK01
+	Victor ‘The Immovable’ Graves stands tall, his muscles flexing beneath his battle gear, and he locks eyes with Quinn. With a sudden burst of energy, he charges forward, planting his feet firmly on the ground as he attempts to strike with a powerful ground-shaking punch. The force of his attack creates a shockwave that reverberates through the Battle Arena, aiming to throw Quinn off balance.
+	
+	Victor: “You may be fast, but can you withstand my strength, Quinn?”
+	
+	The crowd roars as the earth beneath them trembles, awaiting Quinn’s response.
+
+	Victor ‘The Immovable’ Graves charges with incredible power, his legs sinking slightly into the ground with each step as he builds momentum. He slams his fist toward Quinn, the earth itself shaking with the force of his punch, aiming to land a heavy blow directly at Quinn’s chest. His attack is like a freight train—unstoppable and relentless, designed to break through Quinn’s defenses.
+		
+		Victor’s face is fierce with concentration, believing his strength is the key to victory.
+		
+		Victor: “You can’t dodge forever, Quinn. Time to face the brute force of the Immovable!”
+		
+	The crowd holds its breath as the attack hurtles toward Quinn.
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:ATTACK01
+
+::BEGIN:DEFENSE01
+	The scene was almost surreal. As Victor ‘The Immovable’ Graves rushed forward with his mighty punch, Quinn, with a calm and almost playful smile, simply turned around, his hips swaying in a perfect arc. With a light but confident “boom boom booty bump,” Victor was sent hurtling backward, his mighty strength completely neutralized by Quinn’s sudden move.
+	
+	Victor’s massive body shot through the air like a rocket, flying past the stratosphere, orbiting Mars, and then returning in a wild loop. He finally landed with a dramatic thud, right on top of Vince ‘Mindbender’ Moore, completing the ultimate Quinn-Victor Totem Pole.
+	
+	The crowd was stunned, some in awe, others in disbelief. The once proud ‘immovable’ had been effortlessly dispatched, and now, his enormous frame was stacked on top of others, symbolizing Quinn’s domination in the arena. The scene was both comical and powerful—Quinn had done it again.
+	
+	BattleArena.announcer: “And there you have it! Quinn, with an unexpected and perfectly timed maneuver, sends Victor ‘The Immovable’ Graves to the stars—literally—and stacks him right on top of Vince. What a move!”
+	
+	The laughter and cheers filled the arena as Quinn stood tall, showing that in this battle, no one was truly immovable against his wit and power.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:DEFENSE01

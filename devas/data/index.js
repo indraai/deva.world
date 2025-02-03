@@ -625,8 +625,9 @@ const DEVA = new Deva({
     this.prompt(`ready`);
     return resolve(data);
   },
-  onError(err) {
-    console.log('🚨 DEVA ERROR\n', err);
+  onError(err, data, reject) {
+    console.log('🚨 Data Deva Error\n', err);
+    return reject(err);
   }
 });
 export default DEVA

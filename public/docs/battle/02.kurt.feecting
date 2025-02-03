@@ -1,0 +1,71 @@
+::BEGIN:MAIN
+	
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:INTRO
+	BattleArena.announcer:
+	
+	The air buzzes with energy as Quinn’s first opponent is sent flying off to Mars, leaving a stunned silence across the arena. Then, suddenly, the spotlight flickers on, and the next challenger steps forward.
+	
+	The announcer’s voice echoes through the arena, filled with anticipation.
+	
+	BattleArena.announcer: “And now, ladies and gentlemen, we move to the next challenger! After witnessing the stunning power of Quinn’s Prana Breath, it’s time for round two. Prepare yourselves—this battler is known for his fierce, relentless strategies. Introducing…”
+	
+	The crowd waits, eager.
+	
+	BattleArena.announcer: “Kurt ‘The Punisher’ Harkin! Known for his cold calculations and strategic mind, The Punisher is here to take down the unstoppable Quinn Michaels. Kurt, come forward and show us what you’ve got!”
+	
+	The lights shift as Kurt ‘The Punisher’ Harkin enters the arena, his eyes locked onto Quinn, ready to make his move.
+	
+	BattleArena.announcer: “Quinn, get ready for a challenge. The Punisher is no rookie in the arena. Let’s see how this battle unfolds!”
+	
+	Kurt cracks his knuckles, a determined smile on his face. The tension builds as he steps into position, waiting for the signal.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:INTRO
+
+::BEGIN:ATTACK01
+	BattleArena.announcer: The tension in the air is thick as Kurt ‘The Punisher’ Harkin steps forward, his eyes locked on Quinn. Without hesitation, Kurt raises his hand, and the arena seems to hum with power. He charges, his feet barely touching the ground as he accelerates toward Quinn with incredible speed.
+	
+	BattleArena.announcer: “And here it is! Kurt ‘The Punisher’ is going all in! First move—he’s using his signature technique, ‘Titan Strike!’ Prepare for a hit like no other! This is his bread and butter—the full force of his strength!”
+	
+	Kurt slams his fist into the ground, sending shockwaves through the arena, aimed directly at Quinn. The ground splits and trembles beneath the force of the attack, a powerful, earth-shaking blow meant to knock Quinn off balance.
+	
+	BattleArena.announcer: “A devastating first move, but will it be enough? Quinn, it’s your turn! How will you respond to ‘The Punisher’s’ opening strike?”
+	
+	The audience gasps as the shockwave reverberates across the arena, awaiting Quinn’s next move.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:ATTACK01
+
+::BEGIN:DEFENSE01
+	BattleArena.announcer: The crowd gasps in awe as Quinn effortlessly raises his hand, a calm, focused expression on his face. With a wave of his right hand, a powerful surge of energy erupts from his fingertips. It’s as if the very air bends to his will.
+	
+	BattleArena.announcer: “And there it is! A move so swift, so precise, that Kurt ‘The Punisher’ doesn’t even see it coming! With a single wave, Quinn sends him flying into the air—toward Mars itself! But wait… there’s more! Kurt lands right on top of Neil! It’s a totem pole of defeat!”
+	
+	The arena shakes as Kurt’s massive form crashes into Neil’s head. The audience is in disbelief, staring at the unusual pile-up now standing in the center of the Battle Arena. Quinn has made his mark—his response nothing short of awe-inspiring.
+	
+	BattleArena.announcer: “Unbelievable! The force, the precision—Quinn Michaels has truly made a statement in the BattleArena today! What will happen next? Will the rest of Harold’s team even be able to recover from such an astonishing move?”
+	
+	The crowd is silent, as the totem pole of defeated battlers stands tall, waiting for the next challenger.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:DEFENSE01

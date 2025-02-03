@@ -1,0 +1,21 @@
+::BEGIN:MAIN
+	BattleArena.announcer: “Ladies and gentlemen, it’s time for the next challenger! The stakes are high, and the tension in the air is electric. Our next brave soul from Harold and Sharon’s team steps up to the plate…
+	
+	Here comes… Randy ‘The Rampage’ Cole! Known for his relentless drive and his ability to break through the strongest defenses! Will he be the one to topple Quinn’s growing totem pole of victory? Or will he too be added to the stack of defeated foes? Let’s find out as we continue this intense battle!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:BATTLE
+	BattleArena.announcer: “And with a surprising twist, ladies and gentlemen, Quinn Michaels breaks out into the Macarena! The sheer force of his groovy moves sends Randy ‘The Rampage’ Cole flying through the air, landing squarely atop Thor ‘The Thunderstrike’ Calhoun’s head. The Quinn Totem Pole of Victory grows taller and taller as another challenger is added to the pile! Can anyone stop Quinn’s rhythm of victory? The tension is rising as we move on to the next challenger! Stay tuned, folks – this is getting wild!”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:BATTLE

@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node index.js",
     "buddy": "node ./src/buddy/index.js",
-    "style": "stylus -w src/styl/main.styl -o public/css/main.css -c",
+    "style": "stylus -w src/styl/main.styl -o public/assets/css/main.css -c",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,14 +28,13 @@
     "url": "https://github.com/indraai/deva.world/issues"
   },
   "dependencies": {
-    "@fastify/static": "^8.0.4",
-    "@indra.ai/deva": "^1.2.39",
-    "@indra.ai/deva.chat": "^0.0.11",
-    "@indra.ai/deva.content": "^0.0.11",
+    "@indra.ai/deva": "^1.3.3",
+    "@indra.ai/deva.chat": "^0.0.13",
+    "@indra.ai/deva.content": "^0.1.1",
     "@indra.ai/deva.docs": "^0.0.6",
     "@indra.ai/deva.error": "^0.0.14",
     "@indra.ai/deva.feecting": "^0.0.14",
-    "@indra.ai/deva.log": "^0.0.15",
+    "@indra.ai/deva.log": "^0.0.17",
     "@indra.ai/deva.security": "^0.0.7",
     "@indra.ai/deva.services": "^0.0.8",
     "@indra.ai/deva.socket": "^0.0.12",
@@ -43,7 +42,7 @@
     "@indra.ai/deva.systems": "^0.0.6",
     "@indra.ai/deva.veda": "^0.0.3",
     "chalk": "^5.4.1",
-    "fastify": "^5.2.1",
+    "express": "^4.21.2",
     "inquirer": "^12.3.2",
     "needle": "^3.3.1",
     "socket.io-client": "^4.8.1",

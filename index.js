@@ -19,11 +19,12 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // load agent configuration file
 import data from './data/index.js';
 const {vars, agent, client} = data;
-import Fastify from 'fastify';
-const fast = Fastify({
-  logger:false,
-});
-// const {fastStatic} = import('@fastify/static');
+
+import express from 'express';
+const app = express();
+app.use(express.json());
+
+const port = vars.ports.api;
 
 import readline from 'readline';
 const shell = readline.createInterface({
@@ -84,16 +85,16 @@ ${line_break}
 ░░╚═════╝░╚══════╝░░░╚═╝░░░╚═╝░░╚═╝░░
 ${line_break}
 
-👤 CLIENT:    ${opts.client.profile.name} (${opts.client.id})
-👤 AGENT:     ${opts.agent.profile.name} (${opts.agent.id})
+👤  Client:    ${opts.client.profile.name} (${opts.client.id})
+👤  Agent:     ${opts.agent.profile.name} (${opts.agent.id})
 
-📛 name:      ${pkg.name},
-💚 ver:       ${pkg.version},
-✍️ author:    ${pkg.author},
-📝 describe:  ${pkg.description},
-🔗 url:       ${pkg.homepage},
-👨‍💻 git:       ${pkg.repository.url}
-🪪 license:   ${pkg.license}
+📛  Name:      ${pkg.name},
+💚  Ver:       ${pkg.version},
+✍️  Author:    ${pkg.author},
+📝  Describe:  ${pkg.description},
+🔗  Url:       ${pkg.homepage},
+🐣  Git:       ${pkg.repository.url}
+🪪  License:   ${pkg.license}
 
 ${line_break}
 
@@ -105,88 +106,87 @@ ${opts.ip}
 Copyright ©${pkg.copyright}
 ${line_break}`;
 
-// // create the static routes for the local server.
-// // public is used to deliver local assets
-// const staticRoutes = [
-//   {
-//     root: path.join(__dirname, 'public'),
-//     prefix: '/public/',
-//     prefixAvoidTrailingSlash: true,
-//     list: {
-//       format: 'json',
-//       names: ['index', 'index.json', '/', '']
-//     },
-//   },
-// ]
-// 
-// // register static routes with the fast server.
-// staticRoutes.forEach(rt => {
-//   fast.register(fastStatic, rt);
-// })
 
-// deliver the default index.html file for the interface.
-const routes = [
-  {
-    method: 'GET',
-    url: '/',
-    handler: (req,reply) => {
-      return reply.sendFile('index.html', path.join(__dirname, 'src', 'ui'));
-    },
-  },
-  {
-    method: 'POST',
-    url: '/question',
-    handler: (req, reply) => {
-      devaQuestion(req.body.question).then(answer => {
-        return reply.type('json').send(answer);
-      }).catch(e => {
-        return reply.send('THERE WAS AN ERROR')
-      });
-    }
-  },
-  // for mapping the space realm images to a public url
-  {
-    method: 'GET',
-    url: '/asset/:space/:type/:vnum/:asset',
-    handler: (req,reply) => {
-      const {space, type, vnum, asset} = req.params;
 
-      const _rpath = client.features.services.global.urls.space;
-      let assetPath
+// create the static routes for the local server.
+// public is used to deliver local assets
+const pubOpts = {
+  dotfiles: 'ignore',
+  extensions: ['htm', 'html', 'json'],
+  index: 'index.html, index.json',
+};
 
-      const dir1 = vnum.substr(0, vnum.toString().length - 3) + 'xxx';
-      const dir2 = vnum.substr(0, vnum.toString().length - 2) + 'xx';
-      if (type === 'map') assetPath = `/${space}/maps/${vnum}/${asset}.png`;
-      else assetPath = `/${space}/${type}/${dir1}/${dir2}/${vnum}/${asset}.png`;
-
-      if (client.features.services.global.paths.space) {
-        try {
-          const spaceFile = fs.readFileSync(path.join(client.features.services.global.paths.space, assetPath));
-          reply.type('image/png').send(Buffer.from(spaceFile));
-        } catch (e) {
-          return reply.send(e);
-        }
-      }
-      else {
-        needle('get', `${_rpath}/${assetPath}`).then(result => {
-          return reply.type('image/png').send(Buffer.from(asset.body));
-        }).catch(err => {
-          return reply.send(err)
-        })
-      }
-      // so we need to get images and maps here
-    },
-  },
-]
-
-// register the routes for the server.
-routes.forEach(rt => {
-  fast.route(rt);
+app.get('/public/*', (req, res, next) => {
+  const opts = {
+  root: path.join(__dirname, 'public', 'assets'),
+  dotfiles: 'deny',
+  headers: {
+    'x-timestamp': Date.now(),
+    'x-sent': true
+  }
+  };
+  return res.sendFile(req.params[0], opts, (err) => {
+    if (err) next(err);
+  });
+    
 });
 
+app.get('/', (req, res, next) => {
+  const opts = {
+    root: path.join(__dirname, 'src', 'ui'),
+    dotfiles: 'deny',
+    headers: {
+      'x-timestamp': Date.now(),
+      'x-sent': true
+    }
+  };
+  return res.sendFile('index.html', opts, (err) => {
+    if (err) next(err);
+  });
+});
+
+app.post('/question', (req, res, next) => {
+  devaQuestion(req.body.question).then(answer => {
+    return res.json(answer)
+  }).catch(err => {
+    return res.send(err);
+  });
+});
+
+app.post('/assets/:space/:type/:vnum/:asset', (req, res, next) => {
+  const {space, type, vnum, asset} = req.params;
+  const _rpath = client.features.services.global.urls.space;
+  let assetPath
+
+  const dir1 = vnum.substr(0, vnum.toString().length - 3) + 'xxx';
+  const dir2 = vnum.substr(0, vnum.toString().length - 2) + 'xx';
+  
+  if (type === 'map') assetPath = `/${space}/maps/${vnum}/${asset}.png`;
+  else assetPath = `/${space}/${type}/${dir1}/${dir2}/${vnum}/${asset}.png`;
+
+  if (client.features.services.global.paths.space) {
+    try {
+      const spaceFile = fs.readFileSync(path.join(client.features.services.global.paths.space, assetPath));
+      res.type('image/png')
+      return res.send(Buffer.from(spaceFile));
+    } catch (e) {
+      return res.send(e);
+    }
+  }
+  else {
+    needle('get', `${_rpath}/${assetPath}`).then(result => {
+    return reply.type('image/png').send(Buffer.from(asset.body));
+    }).catch(err => {
+      return reply.send(err)
+    });
+  }
+  // so we need to get images and maps here
+});
+
+
 // launch fast server to listen to the port rom the vars scope
-fast.listen({port:vars.ports.api}).then(() => {
-  // log the main server information to the console
+app.listen(vars.ports.api, () => {
+    // log the main server information to the console
   console.log(chalk.green(devaFlash({
     client,
     agent,
@@ -200,24 +200,25 @@ fast.listen({port:vars.ports.api}).then(() => {
       setPrompt(ag);
     });
   });
-
-
+  
+  
   // run operation when new line item in shell.
   shell.on('line', question => {
     devaQuestion(question);
   }).on('pause', () => {
-
+  
   }).on('resume', () => {
-
+  
   }).on('close', () => {
     // begin close procedure to clear the system and close other devas properly.
     DEVA.stop().then(stop => {
       shell.prompt();
       process.exit(0);
     }).catch(console.error);
-
+  
   }).on('SIGCONT', () => {
   }).on('SIGINT', data => {
     shell.close();
   }).on('SIGSTOP', () => {});
-}).catch(console.error);
+  
+});

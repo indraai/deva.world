@@ -1,27 +1,33 @@
 // Copyright (c)2025 Quinn Michaels
 //  Main Devas include file where all the necessary Devas are included.
 
+import socket from '../../deva.space/devas/deva.socket/index.js';
 import data from './data/index.js';
-import error from '@indra.ai/deva.error';
-import log from '@indra.ai/deva.log';
-import feecting from '@indra.ai/deva.feecting';
-import docs from '@indra.ai/deva.docs';
-import socket from '@indra.ai/deva.socket';
-import security from '@indra.ai/deva.security';
-import services from '@indra.ai/deva.services';
-import support from '@indra.ai/deva.support';
-import systems from '@indra.ai/deva.systems';
+import error from '../../deva.space/devas/deva.error/index.js';
+import log from '../../deva.space/devas/deva.log/index.js';
+import feecting from '../../deva.space/devas/deva.feecting/index.js';
+import chat from '../../deva.space/devas/deva.chat/index.js';
+import docs from '../../deva.space/devas/deva.docs/index.js';
+import content from '../../deva.space/devas/deva.content/index.js';
+import security from '../../deva.space/devas/deva.security/index.js';
+import services from '../../deva.space/devas/deva.services/index.js';
+import support from '../../deva.space/devas/deva.support/index.js';
+import systems from '../../deva.space/devas/deva.systems/index.js';
+import veda from '../../deva.space/devas/deva.veda/index.js';
 const DEVA = {
+  socket,
   data,
   error,
   log,
   feecting,
+  chat,
   docs,
-  socket,
+  content,
   security,
   services,
   support,
   systems,
+  veda,
 };
 export default DEVA;
 
