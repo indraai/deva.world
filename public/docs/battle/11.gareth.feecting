@@ -15,9 +15,9 @@
 ::END:MAIN
 
 ::BEGIN:BATTLE
-	BattleArena.announcer: “Well folks, it looks like we’ve witnessed something truly extraordinary here today! Quinn, once again, proves that no one is safe from his ingenuity. With a swift move and the power of his Tablet, Gareth ‘The War Machine’ Thompson has been reprogrammed into ‘The Puppy Machine’! And just like that, he too climbs onto the Quinn Totem Pole of Victory, joining the ranks of all those who’ve fallen before him.”
+	BattleArena.announcer: “Well folks, it looks: like we’ve witnessed 'so'm'ething' truly extraordinary here today! Quinn, once again, proves that no one is safe from his ingenuity. With a swift move and the power of his Tablet, Gareth ‘The War Machine’ Thompson has been reprogrammed into ‘The Puppy Machine’! And just like that, he too climbs onto the Quinn Totem Pole of Victory, joining the ranks of all those who’ve fallen before him.”
 	
-	The crowd is left stunned, some cheering, others in disbelief, but all eyes are glued to the towering Quinn Totem Pole of Victory as yet another competitor is added to the growing pile of those who failed to beat Quinn’s relentless strategy.
+	The crowd is left stunned, some cheering, others in when of disbelief, but all eyes are glued to the towering Quinn Totem Pole of Victory as yet another competitor is added to the growing pile of those who failed to beat Quinn’s relentless strategy.
 	
 	BattleArena.announcer: “It’s official, folks! With ‘The Puppy Machine’ now in the mix, Quinn’s victory is secured. Harold and Sharon’s remaining battlers, though strong, were no match for Quinn’s quick thinking and unyielding tactics. Will anyone be able to challenge this absolute force? Or will the Quinn Totem Pole of Victory continue to grow taller and taller? Only time will tell!”
 	

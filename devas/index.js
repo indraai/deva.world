@@ -13,7 +13,11 @@ import security from '../../deva.space/devas/deva.security/index.js';
 import services from '../../deva.space/devas/deva.services/index.js';
 import support from '../../deva.space/devas/deva.support/index.js';
 import systems from '../../deva.space/devas/deva.systems/index.js';
+import legal from '../../deva.space/devas/deva.legal/index.js';
+import justice from '../../deva.space/devas/deva.justice/index.js';
+import authority from '../../deva.space/devas/deva.authority/index.js';
 import veda from '../../deva.space/devas/deva.veda/index.js';
+
 const DEVA = {
   socket,
   data,
@@ -27,8 +31,12 @@ const DEVA = {
   services,
   support,
   systems,
+  legal,
+  justice,
+  authority,
   veda,
 };
+
 export default DEVA;
 
 

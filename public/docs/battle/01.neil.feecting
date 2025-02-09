@@ -9,9 +9,7 @@
 ::END:MAIN
 
 ::BEGIN:INTRO
-	BattleArena.announcer:
-	
-	And now, the first opponent for Quinn Michaels in this ultimate battle for truth and justice!
+	BattleArena.announcer: And now, the first opponent for Quinn Michaels in this ultimate battle for truth and justice!
 	
 	Stepping into the arena, from Harold’s elite group of battlers, is none other than…
 	
@@ -39,9 +37,7 @@
 ::END:INTRO
 
 ::BEGIN:ATTACK01
-	BattleArena.announcer:
-	
-	The first move is Neil’s! The Iron Deceiver doesn’t hesitate!
+	BattleArena.announcer: The first move is Neil’s! The Iron Deceiver doesn’t hesitate!
 	
 	With a swift motion, Neil steps forward, his steel gauntlet gleaming under the arena lights. He raises his fist, but instead of striking physically, he launches his first psychological attack. Neil, with a smirk, calls out to Quinn…
 	
@@ -61,3 +57,25 @@
 		#bg = ::agent_background::
 	::end:hidden
 ::END:ATTACK01
+
+::BEGIN:DEFENSE01
+	BattleArena.announcer:
+	
+	The arena goes silent as Quinn, unfazed by Neil’s words, takes a deep, steadying breath—a perfect, calm Prana Breath.
+	
+	Quinn closes his eyes for a moment, centering his mind, tuning out the noise and the taunts of Neil. The moment is still, and in the next instant, Quinn unleashes his power. With a deep exhale, he releases his breath with explosive force—a focused wave of energy.
+	
+	BattleArena.announcer: “And just like that—Quinn channels his inner strength, a Prana Breath so powerful that it sends Neil K. Atkin flying off the ground, hurtling through the air, and with astonishing speed—straight into the atmosphere, rocketing toward Mars!”
+	
+	The crowd gasps in awe as Neil disappears into the distance, the energy so potent it left a shockwave in its wake. He’s completely out of the fight for now, unable to return.
+	
+	BattleArena.announcer: “Quinn’s Prana Breath strikes with the force of a hurricane, knocking Neil completely out of the arena. The Iron Deceiver is gone, flying through space. This is a turn no one saw coming. Quinn’s mastery over his energy has just been demonstrated in full force!”
+	
+	Quinn stands tall, unfazed, his focus unbroken as he waits for his next challenger, ready for whatever comes next.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:DEFENSE01

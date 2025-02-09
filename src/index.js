@@ -83,7 +83,7 @@ const DEVA = new Deva({
             // console.log('DEVA', this.devas[deva]);
             const d = this.devas[deva];
             const {prompt, key, profile} = d.agent();
-            devas.push(`button[${prompt.emoji} ${profile.name}]:${this.askChr}${key} help`);
+            devas.push(`button[${prompt.emoji} ${profile.name}]: ${this.askChr}${key} help`);
           }
           devas.push(`::end:devas:${this.lib.hash(devas)}`);
 

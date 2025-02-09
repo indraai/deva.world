@@ -95,6 +95,7 @@ class DevaInterface {
       agent: this.client,
     });
 
+    console.log('QUESTION', text);
     
     return new Promise((resolve, reject) => {
       // this.Clear(q);
@@ -255,6 +256,22 @@ class DevaInterface {
       text: data.html ? data.html : data.text,
     });
   }
+  
+  legal(data) {
+    console.log('LEGAL DATA', data);
+    if (data.meta.method === 'file') {
+      if (data.meta.params[2] && data.meta.params[2] === 'panel') $('#Panel').html(data.html)
+      else this.Viewer(data.html);
+      return;
+    }
+    this.Console({
+      type: data.meta.key,
+      method: data.meta.method,
+      agent: data.agent,
+      meta: data.meta,
+      text: data.html ? data.html : data.text,
+    });
+  }
 
   veda(data) {
     console.log('DOCS DATA', data);
@@ -309,36 +326,31 @@ class DevaInterface {
         e.stopPropagation();
         e.preventDefault();
         $(e.target).closest('.image').toggleClass('artwork');
-      // the event handler for the data-cmd elements.
+
+      }).on('click', '[data-law]', e => {
+        e.stopPropagation()
+        e.preventDefault();
+        const law = $(e.target).closest('[data-law]').data('law');
+        this.Question(law);
+
       }).on('click', '[data-cmd]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-cmd]').data('cmd');
         this.Question(cmd);
+
       }).on('click', '[data-prompt]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-tty]').data('tty');
         $('#Prompt').val(cmd);
         document.getElementById('Prompt').focus();
+
       }).on('click', '[data-button]', e => {
         e.stopPropagation()
         e.preventDefault();
         const cmd = $(e.target).closest('[data-button]').data('button')
         this.Question(cmd, false);
-      }).on('click', '[data-navigate]', e => {
-        e.stopPropagation()
-        e.preventDefault();
-        const nav = $(e.target).closest('[data-navigate]').data('navigate');
-        this.Question(`#mud ${nav}`, false);
-        setTimeout(() => {
-          this.Question(`#mud exits`, false);
-        }, 1500);
-      }).on('click', '[data-cloudbtn]', e => {
-        e.stopPropagation()
-        e.preventDefault();
-        const nav = $(e.target).closest('[data-cloudbtn]').data('cloudbtn');
-        this.Question(`#mud > ${nav}`, false);
       });
 
       $('#PromptForm').on('submit', e => {

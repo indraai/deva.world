@@ -552,10 +552,10 @@ const DEVA = new Deva({
     },
 
     /**************
-    method: add
+    method: mem
     params: packet
-      params[2] is the id (for edits)
     describe: add data to the knowledge base
+    example: #data mem:[id] [content to store in memory]
     ***************/
     add(packet) {
       this.context('add', `text: ${packet.q.meta.params[1]}`);
@@ -612,22 +612,48 @@ const DEVA = new Deva({
             data: idx
           })
         }).reject(err => {
-          return this.error(packet, err, reject);
+          return this.error(err, packet, reject);
         })
       });
     },
-
+    
+    extract(packet) {
+      return new Promise((resolve, reject) => {
+        try {
+          const theFile = this.lib.fs.readFileSync(`./private/data/extract/conversations.json`);
+          const theJSON = JSON.parse(theFile);
+          const theConvo = [];
+          theJSON.forEach((itm,idx) => {
+            const getToday = this.lib.getToday(itm.create_time * 1000);
+              const writeFile = `./private/data/conversations/${getToday}.json`
+              const writeData = JSON.stringify(itm, false, 2);
+              this.lib.fs.writeFileSync(writeFile, writeData);
+              this.prompt(`extract file:${writeFile}`);
+            // console.log('item', itm);
+          });
+          return resolve({
+            text: Object.keys(theJSON),
+            html: false,
+            data: Object.keys(theJSON),
+          });
+        } 
+        catch (err) {
+          return this.error(err, packet, reject);
+        }
+      });
+    }
   },
   onReady(data, resolve) {
     const {uri,database} = this.services().personal.mongo;
     this.modules.client = new MongoClient(uri);
     this.vars.database = database;
-    this.prompt(`ready`);
+    this.prompt(this.vars.messages.ready);
     return resolve(data);
   },
   onError(err, data, reject) {
-    console.log('🚨 Data Deva Error\n', err);
+    this.prompt(this.vars.messages.error);
+    console.log(err);
     return reject(err);
-  }
+  },
 });
 export default DEVA

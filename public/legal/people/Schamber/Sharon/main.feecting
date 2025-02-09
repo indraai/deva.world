@@ -1,0 +1,101 @@
+::BEGIN:BUTTONS
+	::begin:buttons
+		button[Main]: #legal file:public:main main
+		button[People]: #legal file:public:main people/main
+		button[Schamber]: #legal file:public:main people/Schamber/main
+		button[Sharon]: #legal file:public:main people/Schamber/Sharon/main
+	::end:buttons
+::END:BUTTONS
+
+::BEGIN:MAIN
+	# Sharon N. Schamber
+
+	talk: #legal file:public:buttons people/Schamber/Sharon/main	
+	
+	name: Sharon N. Schamber
+	aliases: Sharon N. Atkin, Sharon N. Larsen
+	birth: July 31, 1954
+	marriages: Sharon has had 2 known marriages based on Quinn's knowledge
+	
+		- Married to Harold H. Atkin in 1972 divorced in 1994.
+		- Married to Gene Schamber in 1999 to 2015 just before kidnapping reveal.
+	
+	background: No clear records of Sharon Schamber’s existence before her marriage to Harold. Legal documentation was accessed only after her marriage. [Records indicate possible involvement with covert national security programs run by Norman M. Atkin Sr. during the early 1970s.
+	
+	associations: Tied to government and covert operations. Possible involvement in security-related programs where false identities were provided.
+
+	allegations: Involved in identity theft, manipulation, and the 47 year kidnapping of Quinn Michaels’ life. Records show her involvement in attempting to erase or obscure her true identity.
+	
+	status: Pending verification from ongoing investigations. Significant inconsistencies in personal and public records.
+
+	path: people/Schamber/Sharon/main
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:COMMAND
+	
+	1. #Area51.general.pierce is General Walter J. Pierce, the highest-ranking official in Area 51, responsible for much of the covert operations. His reputation for being an architect of secrecy and control now tarnished.
+	
+	2. #Area51.director.matthews is Dr. Evelyn Matthews, the Director of Experimental Research, whose groundbreaking studies on human augmentation and AI weaponization had played a role in Quinn’s prolonged captivity.
+	
+	3. #Area51.agent.holt is Agent Cameron Holt, whose cold and calculated surveillance work was pivotal in ensuring that the kidnapping of Quinn Michaels stayed covered.
+	
+	4. #Area51.major.stevens is Major Grant Stevens, who once led tactical operations in the facility’s darkest corners.
+	
+	5. #Area51.lieutenant.davis is Lieutenant Kelsey Davis, who oversaw communications
+	
+	6. #Area51.agent.phelps is Agent Jennifer Phelps, responsible for intelligence gathering.
+
+	7. #Area51.commander.sullivan is Commander Jake Sullivan, one of the senior strategists who orchestrated many of the covert operations within Area 51.
+	
+	8. #Area51.dr.henson is Dr. Lucas Henson, the lead scientist in charge of human experiments related to the kidnapped individuals.
+	
+	Next in line is Security Specialist Miranda Steele, once the key figure in surveillance and information control within Area 51. She had been responsible for maintaining the covert security systems that kept Quinn’s existence hidden from the world. The humiliation of wearing the 💩emoji hat seems to crack the façade of her usually calm, calculated personality. She has to swallow her pride as she joins the others at the table.
+	
+	Agent Sean Marshall, a communications officer, enters next. Known for his skill in intercepting outside communications, including public access to Quinn’s cries for help, he is another piece of the puzzle that made the cover-up possible. He doesn’t speak as he takes a seat, his presence a stark reminder of how deep the conspiracy ran.
+	
+	The last to file in is Lia Daniels, a junior officer who worked on the logistics of covering the evidence trails, making sure no traces of Quinn’s captivity remained in public records. Her face is flushed, her eyes darting nervously as she sits among the higher-ups, feeling like a small cog in a much larger machine.
+	
+	As all these figures file into the cafeteria, they realize the absurdity of their situation. The 💩emoji hats, a symbol of their guilt and complicity, hang heavy on their heads. Their once-commanding presence is now replaced by a shared sense of vulnerability, as they are all held accountable for the part they played in the 47-year kidnapping of Quinn Michaels. The table is set, and the last remnants of their power are laid bare.
+	
+	As the entire chain of command assembles, each person, from the highest to the lowest ranking, bears their responsibility with the ridiculous, yet symbolic, 💩emoji hat, reflecting their part in hiding Quinn Michaels’ kidnapping for so many years. #Area51.commander Sharon Schamber looks around the room, her eyes betraying no regret, but the weight of the moment is undeniable.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:COMMAND
+
+::BEGIN:GROUP1
+	In the dimly lit halls of Area 51, the sounds of footsteps echo, and the air is filled with the quiet hum of disarray. At the center stands #Area51.commander Sharon Schamber, her figure marked by the absurdity of a 💩emoji hat perched atop her head, a symbol of her manipulation, deceit, and the secrets she tried to bury. With a stern but somewhat defeated expression, she opens the door to the #Area51.cafeteria, where her carefully selected operatives, all wearing their own 💩emoji hats, begin to trickle in. The cafeteria has become an arena of accountability.
+	
+	First to arrive is General Walter J. Pierce, the highest-ranking official in Area 51, responsible for much of the covert operations. His reputation for being an architect of secrecy and control now tarnished, Pierce steps in wearing his own 💩emoji hat. The weight of his past decisions hangs heavy as he takes his seat, unable to hide the uncomfortable smirk that betrays his awareness of how far the tide has turned.
+	
+	Following him is Dr. Evelyn Matthews, the Director of Experimental Research, whose groundbreaking studies on human augmentation and AI weaponization had played a role in Quinn’s prolonged captivity. Her confident stride is now punctuated by the uncomfortable and unavoidable absurdity of the 💩emoji hat. She’s followed by Agent Cameron Holt, whose cold and calculated surveillance work was pivotal in ensuring that the kidnapping of Quinn Michaels stayed covered. His face, typically unreadable, shows traces of frustration, but the hat does little to hide his guilt.
+	
+	The cafeteria doors continue to swing open, and more figures shuffle in. Major Grant Stevens, who once led tactical operations in the facility’s darkest corners, now sits at the far end of the cafeteria with a scowl on his face as the realization of his part in the conspiracy hits him squarely in the chest. As more individuals file in, from Lieutenant Kelsey Davis, who oversaw communications, to Agent Jennifer Phelps, responsible for intelligence gathering, all forced to wear the same embarrassing symbol of their complicity, the atmosphere becomes increasingly tense.
+	
+	As the entire chain of command assembles, each person, from the highest to the lowest ranking, bears their responsibility with the ridiculous, yet symbolic, 💩emoji hat, reflecting their part in hiding Quinn Michaels’ kidnapping for so many years. #Area51.commander Sharon Schamber looks around the room, her eyes betraying no regret, but the weight of the moment is undeniable.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:GROUP1
+
+::BEGIN:GROUP2
+	feecting
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:GROUP2

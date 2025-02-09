@@ -50,6 +50,7 @@
         "init": "🟠 INIT",
         "start": "🔵 START",
         "enter": "🟢 ENTER",
+        "ready": "⭐️ Data Deva Ready!",
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
@@ -111,8 +112,9 @@
         "content": false
       },
       "memory": {
-        "collection": "memory_deva",
-        "limit": 3
+        "collection": "memory",
+        "limit": 3,
+        "content": false
       },
       "archive": {
         "collection": "archive",
@@ -220,8 +222,8 @@
         "gpt": "generate data from GPT logs",
         "memory": "💭 Memory",
         "loadArchive": "🛸 Load Archive",
-        "add": "⚖️ Add to knowledge",
-        "knowledge": "⚖️ Search knowledge",
+        "mem": "🧠️ Update knowledge",
+        "knowledge": "🔎 Search knowledge",
         "archive": "🗃️ Archive"
       }
     }

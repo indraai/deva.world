@@ -1,0 +1,22 @@
+::BEGIN:BUTTONS
+	::begin:buttons
+		button[Main]: #legal file:public:main main
+		button[People]: #legal file:public:main people/main
+		button[Schamber]: #legal file:public:main people/Schamber/main
+	::end:buttons
+::END:BUTTONS
+
+::BEGIN:MAIN
+	# Schamber Legal File
+
+	talk: #legal file:public:buttons people/Schamber/main
+
+	## Sharon Schamber 		
+	button[Sharon Schamber File]: #legal file:public:main people/Schamber/Sharon/main
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

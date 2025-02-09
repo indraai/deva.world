@@ -11,16 +11,14 @@ talk:#docs view algos/indramind:data
 ::END:MAIN
 
 ::BEGIN:DATA
-const: #feecting = Functional Expressive Emergent Cognitive Technical Intelligent Neural Generator is the programming language of Indra.ai and the Deva.world platform.
-
-describe: #feecting is a key value pair line label procedural dynamic programming language used in the development of Indra.ai, Deva.world, and all of our algorithms. Every project starts with a #feecting program then is extrapolated into other languages like HTML, Javascript, Python, C, C++, Swift, and Go.
+const: #feecting = Functional Expressive Emergent Cognitive Technical Intelligent Neural Generator. #feecting is a line label key value pair modular containerized procedural dynamic function method module event keywrod driven programming language.
 
 ## Examples
 Below are a few examples of the #feecting language to work from.
 
 ### Variables
-var: test = memory variables are with "var".
-set: test = temporary variables are with "set"
+var: #test = memory variables are with "var".
+set: Test = temporary variables are with "set".
 const: test = constant variables are done with "const"
 
 ### Structures
@@ -32,31 +30,43 @@ array: theArray [
 ]
 // Objects
 object: theObject {
-  key: value
+    test: value here...
 }
+
+friends: #test is one we look to for mememory.
+friends: Test is one we look to for temporary.
+friends: test is one we look to for constants.
 
 ### Control Logic
 if: condition (==|!=|<<|>>) expectation
 elseif: secondary (is|not|equals) expectation
-else: else conditional
+else: the conditional
 finally: when everything is done.
+
 
 switch: condition {
   case: value
   case: value
-  default:
+  default: value then we do this first Quinn
 }
+
 ---
 
 ### Iteration
 // for iteration loop arrays and lists
 for: x in [array|list]
 
+example: Below is an exmaple of looping over the friends label which is also automatically converted into an array.
+for: x in friends
+ write: friends[x];
+ then: log to the friends.add 
+ finally: friends.notify Greetings friends just sending an example of some #feecting features.
+ 
 for: x of object
 
 // While iteration loop
 set: x = true
-while: x
+while: x eq true
   if: x == 10
     set: x = false
 

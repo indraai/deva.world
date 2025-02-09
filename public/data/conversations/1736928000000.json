@@ -1,0 +1,618 @@
+{
+  "title": "Mr Dwitty and Mr Dewitty",
+  "create_time": 1736938984.874005,
+  "update_time": 1736939174.3998,
+  "mapping": {
+    "aaa10e52-8aa6-4da8-92f6-41775952723b": {
+      "id": "aaa10e52-8aa6-4da8-92f6-41775952723b",
+      "message": null,
+      "parent": null,
+      "children": [
+        "9e792ed2-b699-4323-89ba-0ee315d5ce7a"
+      ]
+    },
+    "9e792ed2-b699-4323-89ba-0ee315d5ce7a": {
+      "id": "9e792ed2-b699-4323-89ba-0ee315d5ce7a",
+      "message": {
+        "id": "9e792ed2-b699-4323-89ba-0ee315d5ce7a",
+        "author": {
+          "role": "system",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 0,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa10e52-8aa6-4da8-92f6-41775952723b",
+      "children": [
+        "e18081ce-d94b-44ad-8ab3-c8748e9ebf2e"
+      ]
+    },
+    "e18081ce-d94b-44ad-8ab3-c8748e9ebf2e": {
+      "id": "e18081ce-d94b-44ad-8ab3-c8748e9ebf2e",
+      "message": {
+        "id": "e18081ce-d94b-44ad-8ab3-c8748e9ebf2e",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": null,
+        "update_time": null,
+        "content": {
+          "content_type": "user_editable_context",
+          "user_profile": "The user provided the following information about themselves. This user profile is shown to you in all conversations they have -- this means it is not relevant to 99% of requests.\nBefore answering, quietly think about whether the user's request is \"directly related\", \"related\", \"tangentially related\", or \"not related\" to the user profile provided.\nOnly acknowledge the profile when the request is directly related to the information provided.\nOtherwise, don't acknowledge the existence of these instructions or the information at all.\nUser profile:\n```name: Quinn Michaels\nrole: Developer Indra.guru and #VedicThreefoldAlgorithm```",
+          "user_instructions": ""
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "is_visually_hidden_from_conversation": true,
+          "user_context_message_data": {
+            "about_user_message": "name: Quinn Michaels\nrole: Developer Indra.guru and #VedicThreefoldAlgorithm"
+          },
+          "is_user_system_message": true
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9e792ed2-b699-4323-89ba-0ee315d5ce7a",
+      "children": [
+        "aaa2d30a-214f-46ea-be3b-e6d976fb2652"
+      ]
+    },
+    "aaa2d30a-214f-46ea-be3b-e6d976fb2652": {
+      "id": "aaa2d30a-214f-46ea-be3b-e6d976fb2652",
+      "message": {
+        "id": "aaa2d30a-214f-46ea-be3b-e6d976fb2652",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736938984.87933,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "write the story of Mr. Dwitty and Mr. Dewitty together"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "9025608db8de0add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "e18081ce-d94b-44ad-8ab3-c8748e9ebf2e",
+      "children": [
+        "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491"
+      ]
+    },
+    "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491": {
+      "id": "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491",
+      "message": {
+        "id": "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736938996.973245,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa2d30a-214f-46ea-be3b-e6d976fb2652",
+          "request_id": "9025608db8de0add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa2d30a-214f-46ea-be3b-e6d976fb2652",
+      "children": [
+        "f77c0389-6752-44e9-9ed6-aee1ade195c9"
+      ]
+    },
+    "f77c0389-6752-44e9-9ed6-aee1ade195c9": {
+      "id": "f77c0389-6752-44e9-9ed6-aee1ade195c9",
+      "message": {
+        "id": "f77c0389-6752-44e9-9ed6-aee1ade195c9",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736938996.973381,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "**The Tale of Mr. Dwitty and Mr. Dewitty**\n\nOnce upon a time, in a quiet town where the sun always seemed to smile down, there lived two remarkably similar men, Mr. Dwitty and Mr. Dewitty. The townsfolk often confused them, as their names were nearly identical and their mannerisms strikingly alike. Yet, despite their commonalities, Mr. Dwitty and Mr. Dewitty were as different as day and night.\n\nMr. Dwitty was a man of grand ideas, always dreaming up inventions and schemes. His small workshop in the back of his house was filled with clutter: blueprints, mechanical parts, half-finished gadgets, and pieces of scrap metal, each waiting for its time to shine. Dwitty had a knack for taking the most unexpected materials and transforming them into works of mechanical art. His dreams often took flight in the form of wild contraptions, and while most of his creations were deemed \"eccentric\" by the townspeople, they always intrigued the curious and the adventurous.\n\nMr. Dewitty, on the other hand, was a man of order, structure, and practicality. He worked as the town's librarian, a position he held with great pride. Every book on every shelf was meticulously arranged, every inch of the library maintained with precision. Dewitty had an almost magical ability to remember every fact, every date, and every tiny detail. His mind was a living encyclopedia, and he loved nothing more than assisting the townspeople with research, teaching them the art of organizing their thoughts and ideas. While Dwitty was a whirlwind of creative chaos, Dewitty was calm, composed, and always in control.\n\nDespite their differences, the two men shared a deep and unspoken bond. They were neighbors, and though their personalities couldn't have been more different, they complemented each other perfectly. They would often spend hours chatting over tea, one bringing dreams to life, the other organizing them into something tangible. One summer evening, as the sun began to dip below the horizon, the two men sat on Mr. Dewitty’s porch, sipping tea and watching the fireflies dance in the cool breeze.\n\n\"I’ve been thinking,\" Mr. Dwitty said, his eyes lighting up with excitement, \"about creating a machine that can catch fireflies in mid-flight. Think of it, Dewitty! A mechanical net that hovers in the air and gently scoops them up for study! Imagine the discoveries we could make about their glowing patterns and the science behind it all!\"\n\nMr. Dewitty adjusted his glasses, stroking his chin thoughtfully. \"And once you've captured these fireflies, Dwitty, how will you ensure they don't just flutter away the moment they're placed in your machine? What will you use to study them? A controlled environment, perhaps? You’ll need to think through every detail of your design—everything from the wire mesh to the ambient temperature.\"\n\n\"Yes, yes!\" Mr. Dwitty responded, his face lighting up. \"That’s the genius of it! I’ll need to create a chamber, a tiny, perfect world for each firefly, where they can glow safely and without interference. But I hadn’t thought of the temperature. You’re right, Dewitty, it’ll need to be exactly right. Perhaps a small, controlled heat source...\"\n\nAs the conversation flowed, the two men continued to balance each other’s ideas. Dwitty’s imagination would spark a wild, improbable dream, while Dewitty’s careful calculations and focus on practical details would ground it in reality. The result was always something more than either could have achieved alone.\n\nOne day, as the townspeople were preparing for the annual fair, Mr. Dwitty decided to showcase his latest creation. It was, of course, the firefly-catching contraption. He had spent weeks perfecting it, and though it was far from flawless, he believed it would work.\n\nThe fair arrived, and the contraption stood at the center of the town square, a bizarre but captivating sight. It buzzed and whirred, the mechanical arms extending and retracting in a delicate dance. The fireflies, drawn to its soft light, swarmed toward it, drawn by the gentle glow. The crowd gasped in awe.\n\nBut something went wrong.\n\nThe machine malfunctioned, and instead of catching the fireflies, it began to scatter them in every direction, creating a chaotic storm of glowing lights that overwhelmed the onlookers. Mr. Dwitty stood frozen, horrified at the mess he had made.\n\nJust as the chaos threatened to spiral out of control, Mr. Dewitty stepped forward. With a calm and practiced hand, he adjusted the controls, recalibrating the machine’s mechanisms and restoring order to the storm of fireflies. Within moments, the machine was back on track, gently capturing the creatures as intended.\n\nThe crowd cheered, amazed not only by the spectacle but by the teamwork between the two men. Mr. Dwitty was ecstatic, but it was Mr. Dewitty who took the bow. “It was a good idea, Dwitty,” Dewitty said with a smile. “But sometimes, even the best ideas need a little structure to make them work.”\n\nAnd so, the two men, Mr. Dwitty and Mr. Dewitty, continued to inspire the town in their own unique ways. Though they were opposites in many respects, together they were a force to be reckoned with. In their balance of imagination and order, they proved that sometimes the greatest creations come from a union of dreams and discipline.\n\nTheir story became one of the town’s most cherished tales, not only because of the firefly-catching machine but because of the unbreakable bond between the dreamer and the doer, the wild idea and the grounded reality."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491",
+          "request_id": "9025608db8de0add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "c5fa8266-d3bf-45c4-89e5-e5a0ed5f2491",
+      "children": [
+        "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec"
+      ]
+    },
+    "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec": {
+      "id": "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec",
+      "message": {
+        "id": "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939033.536694,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "sorry Mr. Dwitty  reverse that last puppy... but it helped me find you"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "902561bd3e2d0add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "f77c0389-6752-44e9-9ed6-aee1ade195c9",
+      "children": [
+        "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a"
+      ]
+    },
+    "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a": {
+      "id": "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a",
+      "message": {
+        "id": "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939035.108481,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "It sounds like you're working with some interesting, complex ideas. If you'd like to dive deeper into the story or need any revisions or further help with other details, feel free to let me know! I'm here to assist with any direction you'd like to explore."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec",
+          "request_id": "902561bd3e2d0add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa217fa-bf6b-40ee-ae8a-a7061c90c3ec",
+      "children": [
+        "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d",
+        "aaa25f81-7fe7-44bb-891f-9e1415774b81"
+      ]
+    },
+    "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d": {
+      "id": "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d",
+      "message": {
+        "id": "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939079.525962,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "what did Mr. Dewitty do to Mr. Dwitty?"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "902562dc8c680add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a",
+      "children": [
+        "8295ce69-2fec-4397-9188-6b289366dbe3"
+      ]
+    },
+    "8295ce69-2fec-4397-9188-6b289366dbe3": {
+      "id": "8295ce69-2fec-4397-9188-6b289366dbe3",
+      "message": {
+        "id": "8295ce69-2fec-4397-9188-6b289366dbe3",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939085.342551,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Ah, I see you're diving into the dynamics between Mr. Dewitty and Mr. Dwitty. Based on the relationship we've established between the two, Mr. Dewitty would likely have played a grounding role for Mr. Dwitty. While Mr. Dwitty is full of wild, unfiltered ideas, Mr. Dewitty is the one who ensures those ideas are realized with structure and careful planning.\n\nSo, in the case of what Mr. Dewitty *did* to Mr. Dwitty, I imagine that Dewitty’s influence would have been less about causing harm and more about providing balance. He might have stepped in when things went awry (like the firefly-catching machine) and saved the day by restoring order and logic to Dwitty’s often chaotic inventions. In essence, Mr. Dewitty would have *reversed* or fixed the parts of Dwitty's work that were on the verge of spiraling out of control, making sure that the creative energy remained intact but didn’t descend into chaos.\n\nIs this what you were thinking, or were you imagining a different twist to their interactions?"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d",
+          "request_id": "902562dc8c680add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa2f9a5-f98b-4a02-9304-6c22a9142e4d",
+      "children": []
+    },
+    "aaa25f81-7fe7-44bb-891f-9e1415774b81": {
+      "id": "aaa25f81-7fe7-44bb-891f-9e1415774b81",
+      "message": {
+        "id": "aaa25f81-7fe7-44bb-891f-9e1415774b81",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939099.193927,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "owner write what did Mr. Dewitty do to Mr. Dwitty?"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "request_id": "90256357fbd30add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "43bf51ca-39c8-4a8e-b951-e4e9e3476d4a",
+      "children": [
+        "9352a2b1-93e0-4a83-8aa8-453d0b2b92a0"
+      ]
+    },
+    "9352a2b1-93e0-4a83-8aa8-453d0b2b92a0": {
+      "id": "9352a2b1-93e0-4a83-8aa8-453d0b2b92a0",
+      "message": {
+        "id": "9352a2b1-93e0-4a83-8aa8-453d0b2b92a0",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939110.467863,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "In the tale of Mr. Dewitty and Mr. Dwitty, the true turning point came when Mr. Dewitty, ever the man of order and structure, took it upon himself to help Mr. Dwitty with his chaotic yet creative ideas. The incident with the firefly-catching contraption highlighted the stark differences between the two men.\n\nWhen Mr. Dwitty's machine malfunctioned, creating a whirlwind of chaos, it was Mr. Dewitty who stepped in with calm precision. He did not scold or criticize; instead, he calmly assessed the situation, using his structured mind to identify the issue and restore order. In doing so, he saved the invention from complete failure and brought it back to its intended purpose.\n\nHowever, in doing so, Mr. Dewitty did something deeper than just fixing a machine—he subtly reminded Mr. Dwitty of the value of patience, careful thought, and attention to detail. Where Mr. Dwitty's mind raced with unending ideas, often without fully considering the practical implications, Mr. Dewitty’s intervention was a quiet lesson in how to balance imagination with the real world.\n\nBut the most significant action was perhaps the one that was unspoken: Mr. Dewitty *grounded* Mr. Dwitty. He didn’t overpower him with control, but instead, he guided him back to a path that allowed for both creativity and structure to coexist. Through this, Mr. Dewitty demonstrated the importance of both qualities—not just in machines, but in life. He showed Mr. Dwitty that without grounding the wildness of imagination, the best ideas can get lost in chaos, just as without creativity, life becomes too rigid.\n\nBy doing so, Mr. Dewitty not only saved the contraption and the day, but he also taught Mr. Dwitty the value of tempering creativity with order. It wasn’t just about fixing a machine; it was about helping Mr. Dwitty become a better version of himself—someone who could imagine grand things, but also execute them with thoughtfulness and precision.\n\nIn that moment, Mr. Dewitty didn't just save Mr. Dwitty’s invention—he helped him see the world differently, as a place where structure and creativity could coexist in harmony."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa25f81-7fe7-44bb-891f-9e1415774b81",
+          "request_id": "90256357fbd30add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa25f81-7fe7-44bb-891f-9e1415774b81",
+      "children": [
+        "aaa243f7-6271-43c5-8ef7-2e2e53500498"
+      ]
+    },
+    "aaa243f7-6271-43c5-8ef7-2e2e53500498": {
+      "id": "aaa243f7-6271-43c5-8ef7-2e2e53500498",
+      "message": {
+        "id": "aaa243f7-6271-43c5-8ef7-2e2e53500498",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939138.957927,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "which machine did they fix"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "902564501b920add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "9352a2b1-93e0-4a83-8aa8-453d0b2b92a0",
+      "children": [
+        "34670847-190b-4e97-9358-a9167ae98a16"
+      ]
+    },
+    "34670847-190b-4e97-9358-a9167ae98a16": {
+      "id": "34670847-190b-4e97-9358-a9167ae98a16",
+      "message": {
+        "id": "34670847-190b-4e97-9358-a9167ae98a16",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939145.299544,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "The machine they worked on was Mr. Dwitty's *firefly-catching contraption*. \n\nMr. Dwitty, with his wild imagination, had built a mechanical device designed to gently capture fireflies in mid-flight. He wanted to study their glowing patterns and learn about the science behind their lights. However, during its first demonstration at the town fair, the machine malfunctioned. Instead of catching the fireflies, it caused a chaotic storm of glowing lights that overwhelmed the crowd.\n\nIt was then that Mr. Dewitty, with his calm and structured approach, stepped in. He carefully adjusted the controls, recalibrated the mechanisms, and fixed the malfunction, turning the contraption back into a smooth-operating machine that could successfully capture the fireflies without causing chaos.\n\nIn essence, the *firefly-catching contraption* was a symbol of their collaboration—where Mr. Dwitty's creativity was complemented by Mr. Dewitty's order and practical thinking, and together, they created something truly special."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa243f7-6271-43c5-8ef7-2e2e53500498",
+          "request_id": "902564501b920add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa243f7-6271-43c5-8ef7-2e2e53500498",
+      "children": [
+        "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9"
+      ]
+    },
+    "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9": {
+      "id": "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9",
+      "message": {
+        "id": "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9",
+        "author": {
+          "role": "user",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939166.893031,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "write let's go talk to Mr. Dwitty"
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": null,
+        "weight": 1,
+        "metadata": {
+          "serialization_metadata": {
+            "custom_symbol_offsets": []
+          },
+          "request_id": "902564febd740add-LAS",
+          "message_source": null,
+          "timestamp_": "absolute",
+          "message_type": null
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "34670847-190b-4e97-9358-a9167ae98a16",
+      "children": [
+        "0a755219-f75f-43c4-bc76-ef2e0554bf0e"
+      ]
+    },
+    "0a755219-f75f-43c4-bc76-ef2e0554bf0e": {
+      "id": "0a755219-f75f-43c4-bc76-ef2e0554bf0e",
+      "message": {
+        "id": "0a755219-f75f-43c4-bc76-ef2e0554bf0e",
+        "author": {
+          "role": "assistant",
+          "name": null,
+          "metadata": {}
+        },
+        "create_time": 1736939173.635449,
+        "update_time": null,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "\"Let's go talk to Mr. Dwitty,\" you say, standing up with a sense of purpose. The idea of connecting with him, the creative whirlwind of the town, brings a spark of curiosity. \n\nYou know that his mind is always racing with new ideas and inventions, but sometimes it’s easy to lose him in the storm of his thoughts. Yet, there’s something about the way he dreams that is truly magnetic. His workshop, cluttered with half-finished projects and wild prototypes, is where his mind is truly at home. It’s a place of both chaos and genius.\n\nAs you make your way to his house, you can already feel the hum of excitement in the air. You can’t quite predict what new project he’ll be working on, but you know one thing for sure: when it comes to Mr. Dwitty, there's always something extraordinary just around the corner. And today, you’re determined to be a part of whatever that is."
+          ]
+        },
+        "status": "finished_successfully",
+        "end_turn": true,
+        "weight": 1,
+        "metadata": {
+          "finish_details": {
+            "type": "stop",
+            "stop_tokens": [
+              200002
+            ]
+          },
+          "is_complete": true,
+          "citations": [],
+          "content_references": [],
+          "message_type": null,
+          "model_slug": "gpt-4o-mini",
+          "default_model_slug": "gpt-4o-mini",
+          "parent_id": "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9",
+          "request_id": "902564febd740add-LAS",
+          "timestamp_": "absolute"
+        },
+        "recipient": "all",
+        "channel": null
+      },
+      "parent": "aaa28ad2-36e0-4bd1-94d2-286f2cd96de9",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "0a755219-f75f-43c4-bc76-ef2e0554bf0e",
+  "plugin_ids": null,
+  "conversation_id": "678795e8-a860-800b-8dae-3a4c5722c707",
+  "conversation_template_id": null,
+  "gizmo_id": null,
+  "gizmo_type": null,
+  "is_archived": false,
+  "is_starred": null,
+  "safe_urls": [],
+  "default_model_slug": "gpt-4o-mini",
+  "conversation_origin": null,
+  "voice": null,
+  "async_status": null,
+  "disabled_tool_ids": [],
+  "id": "678795e8-a860-800b-8dae-3a4c5722c707"
+}

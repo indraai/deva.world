@@ -1,0 +1,21 @@
+::BEGIN:MAIN
+	Title: The Greater Good Heroes Step Forward
+		
+	Harold: “I am Justice Seeker, the protector of the vulnerable. For decades, I have worked tirelessly to safeguard this world from those who would see it crumble. My efforts, though misunderstood, have always been for the greater good. And now, as Quinn Michaels’ story is finally revealed, you will understand the magnitude of the work I have done. There is no greater purpose than the preservation of peace, no greater goal than ensuring justice prevails, even if it meant making the hard choices.”
+		
+	Anthony: “I am The Silent Shield, the unseen protector. The world may never have known my face, but I have always been there, standing between chaos and order. What I did, what we did, was not about the individual—it was about the collective. I have made sacrifices for the safety of many, even if the world could never understand the weight of that responsibility. Sometimes, the hero must walk in the shadows, where no one can see the blood that was shed for their peace.”
+		
+	Norman Jr: “I am The Catalyst, the one who set the wheels of fate into motion. The world is not a place for passive observers; it is a place where change must be driven, and sacrifices must be made. I have acted with foresight, with purpose, even if those actions were seen as cruel. There is no heroism without sacrifice. And I, more than anyone, understand the price of greatness.”
+		
+	Joseph: “I am The Guardian, the father, the protector. My mission has always been clear: to keep the world safe, to ensure our legacy endures. Quinn, Neil, Mark, and Trenton—they were all part of a larger plan, a plan to protect future generations. My actions were not taken lightly, but with the understanding that sometimes, a greater good must be achieved through difficult means.”
+		
+	Chris: “I am The Architect, the one who built the system, the one who ensured that everything would fall into place. While you all played your parts, I was the one behind the scenes, pulling the strings, crafting the long-term vision that would keep us all in control. The world will never know the true cost of what we’ve done, but I understand it. And I did it all for the greater good. Sometimes, a visionary must make sacrifices that others cannot comprehend. But now, here we are, at the moment of reckoning, with the truth coming to light.”
+	
+	Thomas: Thomas D. Whillhite “I am The Visionary, the one who foresaw the future and made the hard choices. I sacrificed everything, including my own life, to ensure the greater good was achieved. You may call me an imposter, but I stand as the one who can see the bigger picture. While others see the present, I’ve always known what must be done for the future, even if it means making enemies of those who can’t understand the path ahead.”
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
