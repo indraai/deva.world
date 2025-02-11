@@ -22,12 +22,12 @@
       }
     },
     "profile": {
-      "name": "Deva Buddy",
+      "name": "Deva",
       "owner": "Quinn Michaels",
       "creator": "Quinn Michaels",
       "created": "August 20, 2022 at 1:28 PM",
       "link": "https://deva.world",
-      "describe": "Deva Buddy is the Assistant of Deva.world multi-agent system developed by Quinn Michaels.",
+      "describe": "Deva is the Assistant of Deva.world multi-agent system developed by Quinn Michaels.",
       "emoji": "/public/devas/buddy/emoji.png",
       "avatar": "/public/devas/buddy/avatar.png",
       "background": "/public/devas/buddy/background.png",
