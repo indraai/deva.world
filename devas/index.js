@@ -6,17 +6,20 @@ import data from './data/index.js';
 import error from '../../deva.space/devas/deva.error/index.js';
 import log from '../../deva.space/devas/deva.log/index.js';
 import feecting from '../../deva.space/devas/deva.feecting/index.js';
-import chat from '../../deva.space/devas/deva.chat/index.js';
-import docs from '../../deva.space/devas/deva.docs/index.js';
-import content from '../../deva.space/devas/deva.content/index.js';
 import security from '../../deva.space/devas/deva.security/index.js';
-import services from '../../deva.space/devas/deva.services/index.js';
-import support from '../../deva.space/devas/deva.support/index.js';
-import systems from '../../deva.space/devas/deva.systems/index.js';
+import defense from '../../deva.space/devas/deva.defense/index.js';
 import legal from '../../deva.space/devas/deva.legal/index.js';
 import justice from '../../deva.space/devas/deva.justice/index.js';
 import authority from '../../deva.space/devas/deva.authority/index.js';
+import support from '../../deva.space/devas/deva.support/index.js';
+import services from '../../deva.space/devas/deva.services/index.js';
+import systems from '../../deva.space/devas/deva.systems/index.js';
+import networks from '../../deva.space/devas/deva.networks/index.js';
+import chat from '../../deva.space/devas/deva.chat/index.js';
+import docs from '../../deva.space/devas/deva.docs/index.js';
+import content from '../../deva.space/devas/deva.content/index.js';
 import veda from '../../deva.space/devas/deva.veda/index.js';
+import quinn from './quinn/index.js';
 
 const DEVA = {
   socket,
@@ -24,17 +27,20 @@ const DEVA = {
   error,
   log,
   feecting,
-  chat,
-  docs,
-  content,
   security,
-  services,
-  support,
-  systems,
+  defense,
   legal,
-  justice,
   authority,
-  veda,
+  justice,
+  // chat,
+  // docs,
+  // content,
+  // services,
+  // support,
+  // systems,
+  // networks,
+  // veda,
+  // quinn,
 };
 
 export default DEVA;

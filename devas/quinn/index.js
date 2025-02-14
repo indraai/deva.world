@@ -1,27 +1,30 @@
-// Copyright (c)2023 Quinn Michaels
-// Deva
+// Copyright (c)2025 Quinn Michaels
+// #Quinn
 
-const fs = require('fs');
-const path = require('path');
-const Deva = require('@indra.ai/deva');
+import Deva from '@indra.ai/deva';
+import pkg from '../../package.json' with {type:'json'};
 
-const package = require('../../package.json');
+import data from './data.json' with {type:'json'};
+const {agent,vars} = data.DATA;
+
+// set the __dirname
+import {dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';    
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const info = {
-  id: package.id,
-  name: package.name,
-  version: package.version,
-  author: package.author,
-  describe: package.description,
+  id: pkg.id,
+  name: pkg.name,
+  version: pkg.version,
+  author: pkg.author,
+  describe: pkg.description,
   dir: __dirname,
-  url: package.homepage,
-  git: package.repository.url,
-  bugs: package.bugs.url,
-  license: package.license,
-  copyright: package.copyright
+  url: pkg.homepage,
+  git: pkg.repository.url,
+  bugs: pkg.bugs.url,
+  license: pkg.license,
+  copyright: pkg.copyright
 };
-
-const data_path = path.join(__dirname, 'data.json');
-const {agent,vars} = require(data_path).DATA;
 
 const QUINN = new Deva({
   info,
@@ -37,5 +40,13 @@ const QUINN = new Deva({
   devas: {},
   func: {},
   methods: {},
+  onReady(data, resolve) {
+    this.prompt(this.vars.messages.ready);
+    return resolve(data);
+  }, 
+  onError(err, data, reject) {
+    this.prompt(this.vars.messages.error);
+    return reject(err);
+  }
 });
-module.exports = QUINN
+export default QUINN

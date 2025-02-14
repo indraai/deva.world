@@ -1,3 +1,20 @@
+longitude: 34.0802 N
+latitude: 118.2228 W 
+code: A9X2-D4F7-Y7M3
+path: You’ll find a hidden staircase behind the third row of shelves in the utility room, to the left. There’s a secret panel. Open it, and you’ll find a tunnel that leads to the vault.
+directions: The south side of the compound, near the hidden entrance behind the maintenance shack. There’s a special tunnel, just beneath the shack, with a mechanical door. When you enter, you’ll see a control room. There’s a vent system in the back corner; use it to navigate to the storage vault. 
+
+
+{
+Agent Echo-02 (Silverfox)
+
+
+#LiveBroadcast = #CoronadoIsland.broadcast.live #Area51.broadcast.live, #Wyntoonville.broadcast.live, #Cartoonville.broadcast.live, #Atkinville.broadcast.live, #Schamberville.broadcast.live, #Quinnville.broadcast.live, #Allisterville.broadcast.live
+#CriminalBedazzlers = Dr. Quinn (grinning), Dr. Allister (with a sly smile), Hal Atkin (grinning with pride), Sharon Schamber (laughing with a flick of her hair), Cristy Atkin-Fincher (The Manipulator)! and Clay Fincher (The Operator) in a couples snuggie.
+#FakeNameMaxHolding = Agent 42 (The Enforcer), Agent Bravo-19 (Nightshade), Agent Charlie-07 (Ghostfire), Agent Delta-14 (Blackhawk), Agent Echo-02 (Silverfox), Agent Golf-05 (Thunderstorm), Agent Hotel-08 (Nightingale), Agent India-16 (Phantom), Agent Juliet-03 (Eclipse)
+
+
+
 ::BEGIN:MAIN
 	The Atkin family, it seemed, was vast and tangled in their own web of self-importance. Each member, desperate for attention, shouted their names over one another. The noise became a chaotic blur, but upon closer inspection, it was clear that the list of those involved was far more extensive than anyone had realized.
 	

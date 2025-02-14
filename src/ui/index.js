@@ -296,9 +296,10 @@ class DevaInterface {
     // here in the processor we want to check for any strings that also match from the first index.
     const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
     const helpChk = meta.method === 'help';
+    const fileChk = meta.method === 'file';
     const featureChk = this._features.includes(meta.method);
 
-    if (helpChk) return this.Viewer(data.html);
+    if (helpChk || fileChk) return this.Viewer(data.html);
     else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor

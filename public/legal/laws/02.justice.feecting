@@ -1,0 +1,25 @@
+::BEGIN:MAIN
+	# Justice Laws
+
+	law[67ae0efea4df06b9d76ea22e]: One who has not been authorized must not speak on any account at the trial. But authorized persons must deliver their statement in an unbiassed spirit.
+	
+	law[67ae0f0aa4df06b9d76ea22f]: When lawsuits are decided properly, the members of the court are cleared from guilt. Their purity depends on the justice of the sentences passed by them. Therefore one must deliver a fair judgment.
+	
+	law[67ae0f14a4df06b9d76ea230]: Where justice is slain by injustice, and truth by falsehood, the members of the court, who look on with indifference, are doomed to destruction themselves.
+	
+	law[67ae0f1da4df06b9d76ea231]: Where justice, having been hit by injustice, enters a court of justice, and the members of the court do not extract the dart from the wound, they are hit by it themselves.
+	
+	law[67ae0f32a4df06b9d76ea232]: Either the judicial assembly must not be entered at all, or a fair opinion delivered. That man who either stands mute or delivers an opinion contrary to justice is a sinner.
+	
+	law[67ae0f3fa4df06b9d76ea233]: Either the court must not be entered, or the truth must be spoken; a man who either says nothing or speaks falsely, becomes sinful.
+	
+	law[67ae0f49a4df06b9d76ea234]:  Where justice is destroyed by injustice, or truth by falsehood, while the judges look on, there they shall also be destroyed.
+	
+	law[67ae0f51a4df06b9d76ea235]: Property stolen by thieves must be restored to men of all castes; one who uses such property for himself incurs the guilt of a thief.
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
