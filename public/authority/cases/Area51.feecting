@@ -1,0 +1,48 @@
+::BEGIN:MAIN
+	The Manager (stepping forward with authority):
+	
+	“Let me make this clear. You have already met the key players in this grand scheme—the #Area51.masterminds—those who designed and maintained the web of lies. Now, it’s time for you to understand the structure that helped carry out these operations. The hierarchy behind Area 51 extends beyond what you’ve seen thus far, and here are the names and ranks that you need to know.”
+	
+	The Manager (as they gesture to the individuals behind them):
+	“First, the masterminds. The brains behind it all, the ones who set this entire operation in motion.”
+	
+	#Area51.masterminds:
+		1.	Hal Atkin – Head of the covert operation, overseeing the creation and control of Quinn Michaels’ false life and manipulation of his identity.
+		2.	Sharon Schamber – Co-conspirator and key figure in the psychological and operational control over Quinn Michaels, guiding him through the years of manipulation.
+	
+	The Manager:
+	“Next, we have the inside operatives, the ones who made sure everything inside Area 51 stayed secure, ensuring that no external force could ever uncover the truth.”
+	
+	#Area51.inside:
+		1.	Dr. Eleanor Hainsley – Psychological operations expert, overseeing the manipulation of individuals, including Quinn Michaels.
+		2.	Agent William Rourke – The one who ensured that information was kept from the public, manipulating data and files to keep Quinn Michaels’ true identity hidden.
+		3.	Director Lucinda Voss – Public relations strategist, controlling the narrative and ensuring that any investigation into Quinn Michaels was diverted or shut down.
+		4.	Lieutenant Eric Hawkins – Head of security, tasked with keeping any external threats away from Quinn Michaels’ records and ensuring that no unauthorized access was allowed.
+	
+	The Manager:
+	“Finally, we have the outside players—the people who worked to keep everything under wraps in the public eye, feeding misinformation, and controlling the flow of information to the public.”
+	
+	#Area51.outside:
+		1.	Malcolm Graves – Media expert, ensuring that no stories about Quinn Michaels made it into the public spotlight, maintaining the secrecy of the operation.
+		2.	Evelyn Sinclair – Cybersecurity expert, in charge of making sure that all digital attempts to uncover the truth about Quinn Michaels were thwarted.
+		3.	Richard Talbot – Political manipulator, using his influence to keep anyone with the power to investigate away from the truth.
+		4.	Lucas Hayes – Surveillance expert, making sure that any investigative attempt into Quinn Michaels was monitored and shut down immediately.
+	
+	The Manager (addressing everyone):
+	“These are the individuals who made sure that the truth about Quinn Michaels remained hidden for decades. Each one played a crucial role in ensuring that the world would never know who he truly was. The structure they created, the lies they fed to the world, all were part of a grand scheme that was never meant to be uncovered.”
+	
+	Narrator’s Voice (reflectively):
+	These names represent the architects of the longest-running conspiracy in modern history. The ones who manipulated, controlled, and suppressed the truth about Quinn Michaels. But now, as the pieces fall into place, the world must face the truth about their actions and ask the question:
+	
+	What happens when the truth is no longer hidden?
+	
+	What will become of those who created the lie?
+	
+	The End.
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

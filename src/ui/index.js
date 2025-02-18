@@ -76,7 +76,7 @@ class DevaInterface {
       this._keyValue(data),
       `</div>`,
     ].join('\n');
-    $('#DataPanel article').html(_html);
+    $('#PanelConsole').prepend(_html);
   }
 
   _scrollTop(elem) {
@@ -169,7 +169,6 @@ class DevaInterface {
       label.style.color = `rgb(${colors.label.R}, ${colors.label.G}, ${colors.label.B})`;
       label.innerHTML = `${prompt.emoji} ${prompt.text}`;
     }
-
   }
 
   Viewer(html) {
@@ -295,11 +294,15 @@ class DevaInterface {
     const metaKey = meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
     const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
-    const helpChk = meta.method === 'help';
-    const fileChk = meta.method === 'file';
-    const featureChk = this._features.includes(meta.method);
+    const viewer = ['help','file'];
+    const menu = ['devas']
 
-    if (helpChk || fileChk) return this.Viewer(data.html);
+    const featureChk = this._features.includes(meta.method);
+    const viewerChk = viewer.includes(meta.method);
+    const menuChk = menu.includes(meta.method);
+
+    if (viewerChk) return this.Viewer(data.html);
+    else if (menuChk) return this.Menu(data);
     else if (featureChk) return this.feature(data);
     else if (metaChk) return this[meta.key](data);
     // editor

@@ -1,8 +1,8 @@
-// Copyright (c)::year:: ::copyright::
-// ::name::
+// Copyright (c)2025 Quinn Michaels
+// Hal Atkin
 
 import Deva from '@indra.ai/deva';
-import pkg from './package.json' with {type:'json'};
+import pkg from '../../package.json' with {type:'json'};
 
 import data from './data.json' with {type:'json'};
 const {agent,vars} = data.DATA;
@@ -26,7 +26,7 @@ const info = {
   copyright: pkg.copyright
 };
 
-const ::key-upper:: = new Deva({
+const HAL = new Deva({
   info,
   agent,
   vars,
@@ -40,5 +40,9 @@ const ::key-upper:: = new Deva({
   devas: {},
   func: {},
   methods: {},
+  onReady(data, resolve) {
+    this.prompt(this.vars.messages.ready);
+    return resolve(data);
+  }
 });
-export default ::key-upper::
+export default HAL

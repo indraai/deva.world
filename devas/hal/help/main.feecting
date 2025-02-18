@@ -8,6 +8,16 @@ image: /public/devas/::agent_key::/main.png
 
 ---
 
+talk:#docs view devas/main:global
+
+---
+
+talk:#docs view devas/main:methods
+
+talk:#docs view devas/main:features
+
+---
+
 talk:#docs view devas/main:security
 
 ---

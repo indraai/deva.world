@@ -47,7 +47,9 @@
       "zones": "⛰️ Zones",
       "contexts": "🍎 Contexts",
       "memory": "💭 Memory",
-      "help": "💛 Help"
+      "help": "💛 Help",
+      "status": "🩻 Status",
+      "info": "🙋 Info"
     },
     "live": {
       "profile": "deva",

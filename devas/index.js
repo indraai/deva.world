@@ -2,7 +2,7 @@
 //  Main Devas include file where all the necessary Devas are included.
 
 import socket from '../../deva.space/devas/deva.socket/index.js';
-import data from './data/index.js';
+import data from '../../deva.space/devas/deva.data/index.js';
 import error from '../../deva.space/devas/deva.error/index.js';
 import log from '../../deva.space/devas/deva.log/index.js';
 import feecting from '../../deva.space/devas/deva.feecting/index.js';
@@ -17,10 +17,12 @@ import systems from '../../deva.space/devas/deva.systems/index.js';
 import networks from '../../deva.space/devas/deva.networks/index.js';
 import chat from '../../deva.space/devas/deva.chat/index.js';
 import docs from '../../deva.space/devas/deva.docs/index.js';
-import content from '../../deva.space/devas/deva.content/index.js';
-import veda from '../../deva.space/devas/deva.veda/index.js';
-import quinn from './quinn/index.js';
-
+import gopher from '../../deva.space/devas/deva.gopher/index.js';
+// import content from '../../deva.space/devas/deva.content/index.js';
+// import veda from '../../deva.space/devas/deva.veda/index.js';
+// import quinn from './quinn/index.js';
+// import hal from './hal/index.js';
+// security, defense, legal, authority, justice, support, services, systems, networks
 const DEVA = {
   socket,
   data,
@@ -38,9 +40,11 @@ const DEVA = {
   networks,
   chat,
   docs,
+  gopher,
   // content,
   // veda,
   // quinn,
+  // hal,
 };
 
 export default DEVA;

@@ -5,106 +5,180 @@
   border-radius: .5rem
   overflow: hidden
   margin: 0 .25rem
-  p
-    margin: 0 0 15px 0
-  .panel-content
+  
+  &Content
     flex: 1
-    .cover
-      background-image: var(--browser-item-image)
-      background-color: var(--browser-item-bgcolor)
-      color: var(--browser-item-color)
-      font-size: var(--browser-item-size)
-      background-repeat: no-repeat
-      background-position: top center
-      background-size: 100% auto
-      min-width: 100%
-      padding: 0
-      overflow: scroll
-      height: 100%
-      line-height: 1.25
-      width: 100%
-      flex: 1
-      font-size: 1rem
+    background-color: rgba($colors.black, .5)
+    border-radius: $border.outer
+  &Console
+    flex: 0 35%
+    max-height: 250px
+    background-color: rgba($colors.black, .5)
+    margin-top: .25rem
+    border-radius: $border.outer
+    padding: .5rem 0
+    overflow: auto
+
+.event-panel
+  font-family: $fonts-text
+  color: $colors.grey
+  flex: 1
+  overflow: auto
+  display: flex
+  flex-flow: column
+  margin: 0 .25rem 0 0
+  background-color: rgba($colors.black, .5)
+  padding: .25rem
+  border-radius: $border.outer
+  font-size: .8rem
+
+  h5
+    margin: 0
+    padding: 0
+    &::before
+      font-family: icons
+      margin-right: .25rem
+
+  article
+    flex: 1
+    overflow: auto
+    .label
+      &::after
+        content: ":"
+        margin-right: .25rem
+
+    .item
+      transition: all .5s ease
+      font-size: .75rem
+      border-radius: $border.outer 0 0 $border.outer
+      padding: 2px
       display: flex
-      flex-flow: column nowrap
+      flex-flow: row nowrap
+      align-items: center
 
-      [data-id="logo"]
-        flex: 0
-      [data-id="menu"]
-        flex: 1
+      .emoji
+        img
+          width: 14px
+          height: 14px
+          margin-right: .15rem
+          border-radius: 14px
 
-      h3
-        font-size: 1rem
-        border-bottom: none
-        font-weight: bold
-        margin: 0
-        padding: 1rem .5rem .5rem 1rem
-      p
-        font-size: .9rem
+      .text
+        text-wrap: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
 
-      .box
-        &.menu
-          flex: 1
-          overflow auto
-          font-size: .8rem
-          padding: 0 1rem
+#AuxPanel 
+  padding: 0 .25rem .25rem .25rem
+  display: flex
+  width: 100%
+#ContextPanel
+  order: 1
+  h5
+    &::before
+      content: "\e83a"
 
-          .btn
-            border-radius: .5rem
-            font-size:.8rem
-        &.center
-          .image
-            margin: 1rem 0
-            img
-              border-radius: 50%
-              max-width: 250px
-              max-height: 250px
-          .avatar
-            margin: 1rem 0
-            img
-              border-radius: 50%
-              max-width: 250px
-              max-height: 250px
-              box-shadow: 0 3px 9px rgba(0,0,0,.5);
+#ActionPanel
+  order: 3
+  h5
+    &::before
+      content: "\e83a"
 
-        &.veda
-          display: flex
-          flex-flow: column
-          flex: 0
-          height: 100%
-          padding: 0 1rem
+#StatePanel
+  order: 2
+  h5
+    &::before
+      content: "\e676"
 
-          .title
-            display: flex
+#FeaturePanel
+  order: 4
+  h5
+    &::before
+      content: "\e676"
 
-            .value
-              flex: 1
-              font-size: 1.25rem
-              text-align: center
-              font-weight: bold
-
-          .title
-          .describe
-            flex: 0
-            padding: .25rem
-            .label
-              display: none;
-
-          .menu
-            height: 100%
-            overflow: auto
-
-          .item
-            display: flex
-            .label
-              flex: 1
-              min-width: 3rem
-
-
-      .item.var
-        display: none
-        visibility: hidden
+#ZonePanel
+  order: 5
+  margin: 0
+  h5
+    &::before
+      content: "\e676"
 
 #PanelConsole
-  flex: 0 150px
   overflow: auto
+  flex-flow: column
+
+  .article
+    overflow: auto
+    flex: 1
+    > h2
+      display: none
+
+    .item
+      flex: 0 auto
+      display: flex
+      flex-flow: row nowrap
+      .label
+        min-width: 50px
+        flex: 0 50px
+
+  .datalog
+    .row
+      display: flex
+      flex-flow: row nowrap
+
+    .child
+      > .key
+        transition: var(--transition-default)
+        margin:  0 2px
+        border-radius: 7px
+        position: relative
+        display: flex
+        flex-flow: row nowrap
+        color: $colors.orange
+        &:hover
+          cursor: pointer
+        &::before
+          display: inline-block
+          flex: 0 25px
+          font-size: .5rem
+          transition: var(--transition-default)
+          transform: rotate(0)
+          font-family: 'icons'
+          content: "\e93c"
+          line-height: 1.75
+          text-align: center
+          text-indent: 2px
+
+        &.open
+          font-weight: bold
+          color: $colors.baby-blue
+          &::before
+            transform: rotate(90deg)
+          & + .values
+            display: block
+
+
+        & + .values
+          display: none
+
+
+
+      > .values
+        transition: var(--transition-default)
+        margin: 0 2px
+
+        > .child
+          margin-left: .5rem
+
+        > .row
+          margin: 0
+          position: relative
+          padding: 3px
+          padding-left: 1.25rem
+
+          .key
+            margin-right: .25rem
+            min-width: 3.5rem
+            color: $colors.light-grey
+          .value
+            color: $colors.green

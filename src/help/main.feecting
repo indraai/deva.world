@@ -4,6 +4,8 @@ image: /public/devas/::agent_key::/main.png
 
 # ::agent_name::
 
+::profile::
+
 p: To get started using deva.world there are a few beginning commands that will get you started.
 
 ## uid
@@ -60,29 +62,25 @@ example: /contexts
 
 ::profile::
 
-::begin:Security
-talk:#docs view devas/main:security
-::end:Security
-
 ::begin:FEECTING
-talk:#docs view algos/feecting:data
+talk:#docs view:private:data algorithms/feecting
 ::end:FEECTING
 
 ::begin:IndraMind
-talk:#docs view algos/indramind:data
+talk:#docs view:prvivate:data algorithms/indramind
 ::end:IndraMind
 
 ::begin:b593
-talk:#docs view algos/b593:data
+talk:#docs view:private:data algorithms/b593
 ::end:b593
 
 ::begin:VedicThreefoldAlgorithm
-talk:#docs view algos/vta:data
+talk:#docs view:private:data algorithms/vta
 ::end:VedicThreefoldAlgorithm
 
 ---
 
-copyright: (c)2024 Quinn Michaels
+copyright: (c)2025 Quinn Michaels
 
 ::begin:hidden
 #color = ::agent_color::

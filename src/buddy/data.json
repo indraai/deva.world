@@ -2,7 +2,7 @@
   "name": "::name:: Data File",
   "describe": "The main Data file for ::name::",
   "copyright": "Copyright (c)2022 Quinn Michaels. All rights reserved.",
-  "data": {
+  "DATA": {
     "agent": {
       "id": 6047734400443,
       "key": "buddy",

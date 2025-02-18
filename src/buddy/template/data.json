@@ -66,8 +66,6 @@
         "page_token": ""
       },
       "ask": {
-        "max_tokens": 500,
-        "words": 200,
         "history": []
       },
       "reply": {
