@@ -40,5 +40,14 @@ const ::key-upper:: = new Deva({
   devas: {},
   func: {},
   methods: {},
+  onReady(data, resolve) {
+    this.prompt(this.vars.messages.ready);
+    return resolve(data);
+  },
+  onError(data, err, reject) {
+    this.prompt(this.vars.messages.error);
+    console.log(err);
+    return reject(err);
+  },
 });
 export default ::key-upper::

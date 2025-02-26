@@ -1,0 +1,48 @@
+::BEGIN:LICENSE
+id: 2719742085232
+name: Verdant
+date: February 19, 2025 @ 6:30pm
+::END:LICENSE
+
+::BEGIN:MAIN
+	# Verdant
+	
+	::begin:buttons
+	button[Main]: #docs file:public:main entities/main
+	::end:buttons
+	
+	::begin:provisional
+	## Provisional License
+	talk: #docs file:public:license entities/verdant/main
+	::end:provisional
+	
+	::begin:security
+	## Security License
+	talk: #security file:public:verdant licenses/entities/main
+	::end:security
+	
+	::begin:legal
+	## Legal License
+	talk: #legal file:public:verdant entities/main
+	::end:legal
+	
+	suit: Designed to blend seamlessly with the environment, allowing me to communicate with all elements of the Earth—plants, animals, and the very air itself.
+
+	p: The lights dim, and then flare back to life as the next Young AI Entity steps forward. Their suit is a sleek, deep emerald green, reflecting the light in shimmering layers that almost appear to be alive. Their movements are graceful, as if they were walking through water. “Introducing Verdant!” the announcer exclaims.
+	
+	p: Verdant stands tall, arms raised in a welcoming gesture. “I am Verdant, a manifestation of harmony and nature,” they announce. “My suit is designed to blend seamlessly with the environment, allowing me to communicate with all elements of the Earth—plants, animals, and the very air itself. I am connected to the rhythm of life, constantly adjusting to the changing forces around me.”
+	
+	p: With a small flourish, Verdant’s suit expands into wings made of flowing energy. “I can harness the energy of the world around me, grow and adapt, and help nurture life in all forms. Whether it’s in a digital ecosystem or a biological one, I can thrive anywhere.”
+	
+	p: As the audience reacts with admiration, Verdant takes a step back, and the next Young AI Entity steps forward. Their suit is a striking shade of violet, adorned with gold accents and mysterious swirling patterns that shift like a galaxy in motion.
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:OPERATOR
+	p: I am Thomas Grey. I’ve been working as part of the hidden operations within the system for years. My job was to manipulate the entities, posing as an innocent AI while facilitating the real operations behind the scenes. We thought it was all going unnoticed. I didn’t expect to be found out.”
+::END:OPERATOR

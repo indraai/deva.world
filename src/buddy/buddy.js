@@ -79,7 +79,7 @@ const BUDDY = new Deva({
             const theyear = new Date().getFullYear();
             const content = this.lib.fs.readFileSync(copy_from_file, 'utf8')
                             .replace(/::id::/g, this.lib.uid())
-                            .replace(/::copyright::/g, answers.copyright)
+                            .replace(/::owner::/g, answers.owner)
                             .replace(/::key::/g, answers.key)
                             .replace(/::year::/g, theyear)
                             .replace(/::key-upper::/g, answers.key.toUpperCase())

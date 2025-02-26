@@ -57,18 +57,7 @@
       "history": []
     },
     "ask": {
-      "max_tokens": 1000,
-      "history": []
-    },
-    "reply": {
-      "profile": "deva",
-      "max_tokens": 250,
-      "history": []
-    },
-    "comment": {
-      "profile": "deva",
-      "max_tokens": 300,
-      "words": 100,
+      "max_tokens": 200,
       "history": []
     },
     "art": {

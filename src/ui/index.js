@@ -211,13 +211,10 @@ class DevaInterface {
     }, 250);
   }
 
-  PanelConsole(key,value) {
-    if (this._console.panel.length > 20) {
-      this._console.panel = [];
-      $('#PanelConsole').html('');
-    }
-    this._console.panel.push({key,value});
-    $('#PanelConsole').prepend(`<div class="item ${key.toLowerCase()}">${emojis[key.toLowerCase()]} ${value}</div>`)
+  PanelContent(data) {
+    console.log('panel content data', data);
+    $('#PanelContent').html('');
+    $('#PanelContent').html(data.html)
   }
 
   Log(data) {
@@ -293,21 +290,17 @@ class DevaInterface {
     const { meta } = data;
     const metaKey = meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
-    const metaChk = this[metaKey] && typeof this[metaKey] === 'function';
     const viewer = ['help','file'];
-    const menu = ['devas']
+    const menu = ['devas', 'menu']
 
-    const featureChk = this._features.includes(meta.method);
-    const viewerChk = viewer.includes(meta.method);
-    const menuChk = menu.includes(meta.method);
-
-    if (viewerChk) return this.Viewer(data.html);
-    else if (menuChk) return this.Menu(data);
-    else if (featureChk) return this.feature(data);
-    else if (metaChk) return this[meta.key](data);
+    if (menu.includes(meta.params[2])) return this.PanelContent(data);    
+    if (menu.includes(meta.method)) return this.PanelContent(data);
+    if (this._features.includes(meta.method)) return this.feature(data);
+    if (viewer.includes(meta.method)) return this.Viewer(data.html);
+    if (this[metaKey] && typeof this[metaKey] === 'function') return this[meta.key](data);
     // editor
 
-    else return this.Console({
+    return this.Console({
       type: data.meta.key,
       format: data.meta.method,
       agent:data.agent,

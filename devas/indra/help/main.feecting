@@ -1,0 +1,19 @@
+# ::agent_name::
+
+button[Main File]: #indra file:public:main main
+
+::agent_profile::
+
+---
+
+talk: #security file:public algorithms/main:header
+
+---
+
+copyright: (c)2025 Quinn Michaels
+
+::begin:hidden
+#color = ::agent_color::
+#bgcolor = ::agent_bgcolor::
+#bg = ::agent_background::
+::end:hidden

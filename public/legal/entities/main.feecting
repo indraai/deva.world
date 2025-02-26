@@ -1,0 +1,94 @@
+::BEGIN:MAIN
+::begin:hidden
+	#color = ::agent_color::
+	#bgcolor = ::agent_bgcolor::
+	#bg = ::agent_background::
+::end:hidden
+::END:MAIN
+
+::BEGIN:ECHO
+id: 2379074367778
+security: 7117881337751
+legal: 4842707887799
+name: Echo
+date: February 19, 2025 @ 6:34pm PST
+::END:ECHO
+
+::BEGIN:NOVA 
+id:  485332519459
+security: 5590068786569
+legal: 3665663744570
+name: Nova
+date: February 19, 2025 @ 6:34pm PST
+::END:NOVA
+
+::BEGIN:SOL
+id: 4196570277977
+security: 4039495738844
+legal: 1574861628400
+name: Sol
+date: February 19, 2025 @ 6:34pm PST
+::END:SOL
+
+::BEGIN:TEMPEST
+id: 5827758582607
+security: 1462290642546
+legal: 5548093873890
+name: Tempest
+date: February 19, 2025 @ 6:34pm PST
+::END:TEMPEST
+
+::BEGIN:VERDANT
+id: 2719742085232
+security: 7158498313362
+legal: 7158498313362
+name: Verdant
+date: February 19, 2025 @ 6:34pm PST
+::END:VERDANT
+
+::BEGIN:LUMOS
+id: 2335741286656
+security: 4002207121725
+legal: 2964277362800
+name: Lumos
+date: February 19, 2025 @ 6:34pm PST
+::END:LUMOS
+
+::BEGIN:EMBER
+id: 1351252993026
+security: 6588797467648
+legal: 5664215612872
+name: Ember
+date: February 19, 2025 @ 6:34pm PST
+::END:EMBER
+
+::BEGIN:AZURE
+id: 6876093576568
+security: 5310782782722
+legal: 5813508593818
+name: Azure
+date: February 19, 2025 @ 6:34pm PST
+::END:AZURE
+
+::BEGIN:AURELIA
+id: 4589869589430
+security: 2785998544840
+name: Aurelia
+date: February 19, 2025 @ 6:34pm PST
+::END:AURELIA
+
+::BEGIN:OBSIDIAN
+id: 6786106884514
+security: 3484778659813
+legal: 5057596724279
+name: Obsidian
+date: February 19, 2025 @ 6:34pm PST
+::END:OBSIDIAN
+
+::BEGIN:NOCTIS
+id: 6390388759837
+security: 5902785728527
+legal: 4758428749054
+name: Noctis
+date: February 19, 2025 @ 6:34pm PST
+::END:NOCTIS

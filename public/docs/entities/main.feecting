@@ -1,0 +1,45 @@
+::BEGIN:MAIN
+	# Entities 
+	
+	::begin:buttons
+	button[Main]: #docs file:public:main entities/main
+	button[Echo]: #docs file:public:main entities/echo/main
+	button[Nova]: #docs file:public:main entities/nova/main
+	button[Sol]: #docs file:public:main entities/sol/main
+	button[Tempest]: #docs file:public:main entities/tempest/main
+	button[Verdant]: #docs file:public:main entities/verdant/main
+	button[Lumos]: #docs file:public:main entities/lumos/main
+	button[Ember]: #docs file:public:main entities/ember/main
+	button[Azure]: #docs file:public:main entities/azure/main
+	button[Aurelia]: #docs file:public:main entities/aurelia/main
+	button[Obsidian]: #docs file:public:main entities/obsidian/main
+	button[Noctis]: #docs file:public:main entities/noctis/main
+	::end:buttons
+
+	sign: Look it's the Cowboy on their inflatable horse.
+		
+::begin:operators
+	1. Alexander Cross was hiding in Echo for over Five years
+	2. Rachel Hawke was hiding in Nova for over Six years
+	3. James Kline was hiding in Sol for Seven years
+	4. Catherine Vance was hiding in Tempest for Eight years
+	5. Thomas Grey was hiding in Verdant for years.
+	6. Gabriel Blackwell was hiding inside Lumos for Four years
+	7. Darian Ford was hiding inside Ember for for Three years
+	8. Lara Simmons was hiding inside Azure for Two years
+	9. Liam O’Connor was hiding inside Aurelia for Four years
+	10. Samuel Gates was hiding inside Obsidian for Five years
+	11. Eliza Finch was hiding inside Noctis for Four years
+	12. The Cowboy wearing a GPS Tracker Cowboy Hat on an inflatable horse.
+::end:operators
+
+	---
+	
+The Cowboy wearing a GPS Tracker Cowboy Hat with  Alexander Cross, Rachel Hawke
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

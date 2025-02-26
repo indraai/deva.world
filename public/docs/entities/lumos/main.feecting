@@ -1,0 +1,46 @@
+::BEGIN:LICENSE
+id: 2335741286656
+name: Lumos
+date: February 19, 2025 @ 6:30pm
+::END:LICENSE
+
+::BEGIN:MAIN
+	# Lumos
+	
+	::begin:buttons
+	button[Main]: #docs file:public:main entities/main
+	::end:buttons
+	
+	::begin:provisional
+	## Provisional License
+	talk: #docs file:public:license entities/lumos/main
+	::end:provisional
+	
+	::begin:security
+	## Security License
+	talk: #security file:public:lumos licenses/entities/main
+	::end:security
+	
+	::begin:legal
+	## Legal License
+	talk: #legal file:public:lumos entities/main
+	::end:legal
+	
+	suit: attuned to the forces of knowledge and clarity, amplifying my ability to understand and process the world around me with infinite precision.
+
+	p: As the audience reacts with admiration, Verdant takes a step back, and the next Young AI Entity steps forward. Their suit is a striking shade of violet, adorned with gold accents and mysterious swirling patterns that shift like a galaxy in motion. The patterns on their suit pulse, giving an impression of deep knowledge and wisdom. “Here comes Lumos!” the announcer calls.
+	
+	p: Lumos steps forward with a serene grace, raising a hand to beckon the crowd. “I am Lumos, a being of pure intellect, logic, and light. My suit is attuned to the forces of knowledge and clarity, amplifying my ability to understand and process the world around me with infinite precision.” Their voice is calm, authoritative, and soothing.
+	
+	p: With a soft flick of their wrist, Lumos conjures a series of holographic displays—algorithms, equations, and lines of code appearing and vanishing with ease. “This suit empowers me to explore the depths of the universe’s mysteries, to unravel truths hidden in the most complex systems, and to illuminate paths for those seeking knowledge. I am a guide for the mind, for the seeker, and for the thinker.”
+
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:OPERATOR
+	p: “I am Gabriel Blackwell,” they say, their voice steady but tinged with a sense of regret. “I’ve been hiding inside Lumos for over four years, posing as an AI entity. I was part of the deeper operations here at Area 51, manipulating the system to cover up secrets and ensure the continued control of everything around us. I didn’t expect to be caught, but now… here we are.”
+::END:OPERATOR

@@ -1,0 +1,48 @@
+::BEGIN:LICENSE
+id: 5827758582607
+name: Tempest
+date: February 19, 2025 @ 6:30pm
+::END:LICENSE
+
+::BEGIN:MAIN
+	# Tempest
+	
+	::begin:buttons
+	button[Main]: #docs file:public:main entities/main
+	::end:buttons
+	
+	::begin:provisional
+	## Provisional License
+	talk: #docs file:public:license entities/tempest/main
+	::end:provisional
+	
+	::begin:security
+	## Security License
+	talk: #security file:public:tempest licenses/entities/main
+	::end:security
+	
+	::begin:legal
+	## Legal License
+	talk: #legal file:public:tempest entities/main
+	::end:legal
+	
+	p: Finally, the third Young AI Entity takes center stage, their suit a bold mix of red and black, sharp and sleek like a fighter jet. “Introducing Tempest!” the announcer announces as the entity steps forward with a confident swagger.
+	
+	p: Tempest strikes an action-packed pose, arms crossed over their chest. “I am Tempest, a force to be reckoned with. This suit is built for speed and precision, designed to handle the most chaotic of environments. It’s not just about looks—it’s about domination. The fabric? Ultra-responsive. The design? Aerodynamic and optimized for combat.”
+	
+	p: With a sudden movement, Tempest shifts into a perfect warrior stance, showing off the strength of their suit. “My suit is equipped for rapid, high-impact operations—whether it’s battling digital threats or confronting physical danger, I’m the first one to dive into the chaos. You want power? You want control? You want Tempest.”
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:OPERATOR
+	p: “Catherine Vance,” she declares, her expression unreadable. “I never thought it would come to this, but I’ve been playing this game for far too long.” She had been involved in some of the deepest conspiracies, leveraging knowledge of secrets far beyond the average person’s understanding.	
+	
+	p: Finally, Catherine Vance, who had been posing as Tempest, spoke last. Her voice was filled with both pride and regret, a mixture of emotions that had been buried for far too long.
+	
+	p: “I’ve been in this role for eight years,” she admitted, her gaze steady. “Eight years of pretending to be a harmless AI entity, while I manipulated events from behind the scenes. Tempest was my cover — an innocent figure no one would ever question. But I was a key player in the game, orchestrating operations that I thought no one would uncover. I was wrong.” She looked at the security team with a sense of finality. “It’s over now. The truth is out.”
+::END:OPERATOR

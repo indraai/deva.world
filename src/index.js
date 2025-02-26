@@ -76,16 +76,14 @@ const DEVA = new Deva({
       const agent = this.agent();
       return new Promise((resolve, reject) => {
         try {
-          const devas = [
-            '::begin:devas',
-          ];
+          const devas = [`::begin:menu:${this.lib.uid()}`];
           for (let deva in this.devas) {
             // console.log('DEVA', this.devas[deva]);
             const d = this.devas[deva];
             const {prompt, key, profile} = d.agent();
             devas.push(`button[${prompt.emoji} ${profile.name}]: ${this.askChr}${key} help`);
           }
-          devas.push(`::end:devas:${this.lib.hash(devas)}`);
+          devas.push(`::end:menu:${this.lib.hash(devas)}`);
 
           this.question(`${this.askChr}feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({

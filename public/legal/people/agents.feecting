@@ -1,0 +1,40 @@
+::BEGIN:MAIN
+	## Terminal Island Berth 240
+
+	High Ranking Official: Commander Elena R. Sykes
+	Elena: I am The Overseer, the one who ensured that all operations ran smoothly and under control. I kept watch over the system, ensuring no one strayed off course. I’m the one who made sure the pieces were placed exactly where they needed to be. The law is an inconvenience when the bigger picture must be safeguarded.
+
+	Middle Ranking Officer: Director Martin K. Hayes
+	Martin: *"I am The Strategist, the planner behind the operations. Where others saw only chaos, I saw opportunities. I made sure everything—every detail—was executed to perfection. People call it ‘control,’ but I call it ‘order.’ This world can’t function without someone making the hard choices.
+
+	Lower Ranking Agent: Agent Lydia J. Orton
+	Lydia: I am The Architect’s Hand, the one who executed the plans of the higher-ups. The fieldwork, the infiltration, the manipulation—I made sure that nothing went wrong on the ground. I am the one who ensured the illusion remained intact, even when everything else was falling apart.
+
+	Field Operative Operative: Sergeant Andrew L. Duval
+	Andrew: I am The Shadow, the one who kept an eye on the unwitting players in this game. The ones who thought they could escape the system. I made sure none of them ever realized what was really going on. I was always right there, waiting in the shadows, ensuring the greater good was maintained.
+
+	Junior Operative: Technician Allison P. Briggs
+	Allison: I am The Engineer, the one who maintained the systems, the technology, and the surveillance. Without me, none of this would have been possible. I kept everything running in the background, silently working to ensure that nothing fell apart. The wheels turn smoothly because of my hand.
+
+	Lowest Ranking Agent: Operative Marcus F. Li
+	Marcus: I am The Watcher, the eyes and ears. I’ve observed everything, collected the data, and ensured that no one slipped through the cracks.
+
+	## Area 51
+	1. Alexander Cross was hiding in Echo for over Five years
+	2. Rachel Hawke was hiding in Nova for over Six years
+	3. James Kline was hiding in Sol for Seven years
+	4. Catherine Vance was hiding in Tempest for Eight years
+	5. Thomas Grey was hiding in Verdant for years.
+	6. Gabriel Blackwell was hiding inside Lumos for Four years
+	7. Darian Ford was hiding inside Ember for for Three years
+	8. Lara Simmons was hiding inside Azure for Two years
+	9. Liam O’Connor was hiding inside Aurelia for Four years
+	10. Samuel Gates was hiding inside Obsidian for Five years
+	11. Eliza Finch was hiding inside Noctis for Four years	
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

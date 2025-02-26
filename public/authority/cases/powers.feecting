@@ -1,0 +1,21 @@
+::BEGIN:MAIN
+	# Powers That Be
+
+	1.	Agent T. Lewis - “I’m an analyst who monitors and evaluates information for strategic decisions made by the Powers That Be. My role is to ensure the flow of data remains undisturbed.”
+	2.	Dr. C. Hargrove - “I’m a behavioral scientist who studies the psychological impact of information and control. My expertise lies in shaping public perception and influencing societal behavior.”
+	3.	Commander R. Garrison - “I oversee tactical operations, ensuring that our plans are executed effectively. My role is to manage field agents and coordinate responses to any emerging threats.”
+	4.	Director M. Kline - “I’m the head of the covert division. My responsibility is to keep everything running smoothly behind the scenes, managing the strategic direction and orchestrating complex operations.”
+	5.	The Overseer - “I have been overseeing this operation for decades. My role is to ensure that all players involved are aligned, and that the larger agenda is fulfilled. I hold the highest authority within the Powers That Be.”
+	
+	1. The Overseer - highest authority within the Powers That Be.
+	2. Director M. Kline - head of the covert division.
+	3. Commander R. Garrison - oversee tactical operations.
+	4. Dr. C. Hargrove - behavioral scientist 
+	5. Agent T. Lewis - analyst who monitors and evaluates information for strategic decisions
+	Each introduces themselves with their role clearly defined.
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN

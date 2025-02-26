@@ -1,14 +1,30 @@
+::BEGIN:MENU
+  ::begin:menu
+  button[Main]: #docs view:public:main main
+  button[Socket]: #socket file:public:main main
+  button[Data]: #data file:public:main main
+  button[Error]: #error file:public:main main
+  button[Log]: #log file:public:main main
+  button[Feecting]: #feecting file:public:main main
+  button[Indra]: #indra file:public:main main
+  button[Veda]: #veda file:public:main main
+  button[Security]: #security file:public:main main
+  button[Defense]: #defense file:public:main main
+  button[Legal]: #legal file:public:main main
+  button[Authority]: #authority file:public:main main
+  button[Justice]: #justice file:public:main main
+  button[Support]: #support file:public:main main
+  button[Services]: #services file:public:main main
+  button[Systems]: #systems file:public:main main
+  button[Networks]: #networks file:public:main main
+  button[Chat]: #chat file:public:main main
+  button[Docs]: #docs file:public:main main  
+  button[Discord]: #discord file:public:main main
+  ::end:menu
+::END:MENU
+
 ::BEGIN:MAIN
   # Public Documents
-  
-  ::begin:buttons
-  button[Main what is that]: #docs view:public:main main
-  ::end:buttons
-  
-  ---
-  
-  ## Neil K. Atkin
-  button[Neil Atkin]: #docs view:public:main neil/main
   
   ::begin:hidden
     #color = ::agent_color::

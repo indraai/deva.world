@@ -65,57 +65,57 @@
       "questions": [
         {
           "type": "input",
-          "name": "copyright",
-          "message": "COPYRIGHT",
+          "name": "owner",
+          "message": "Owner",
           "default": "Quinn Michaels"
         },
         {
           "type": "input",
           "name": "key",
-          "message": "KEY",
-          "default": "buddy"
+          "message": "Key",
+          "default": "deva"
         },
         {
           "type": "input",
           "name": "name",
-          "message": "NAME",
-          "default": "Deva Buddy"
+          "message": "Name",
+          "default": "Deva"
         },
         {
           "type": "input",
           "name": "describe",
-          "message": "DESCRIBE",
-          "default": "The Deva Buddy"
+          "message": "Describe",
+          "default": "The Deva"
         },
         {
           "type": "input",
           "name": "style",
-          "message": "ARTISTIC STYLE",
-          "default": "A master artist mixing Ancient Vedic painter and modern style."
+          "message": "Style",
+          "default": "A Master Vedic Painter"
         },
         {
           "type": "input",
           "name": "city",
-          "message": "CITY",
-          "default": "Amaravati"
+          "message": "City",
+          "default": "Las Vegas"
         },
         {
           "type": "input",
-          "name": "region",
-          "message": "REGION",
-          "default": "Svarga"
+          "name": "state",
+          "message": "State",
+          "default": "Nevada"
         },
         {
           "type": "input",
           "name": "nation",
-          "message": "NATION",
-          "default": "Visiprasa"
+          "message": "Nation",
+          "default": "United States of America"
         },
         {
           "type": "input",
           "name": "planet",
-          "message": "PLANET",
-          "default": "Arjika"
+          "message": "Planet",
+          "default": "Earth"
         },
         {
           "type": "input",
@@ -126,44 +126,44 @@
         {
           "type": "input",
           "name": "emoji",
-          "message": "EMOJI",
+          "message": "Emoji",
           "default": "/public/devas/deva/emoji.png"
         },
         {
           "type": "input",
           "name": "avatar",
-          "message": "AVATAR",
+          "message": "Avatar",
           "default": "/public/devas/deva/avatar.png"
         },
         {
           "type": "input",
           "name": "background",
-          "message": "BACKGROUND",
+          "message": "Background",
           "default": "/public/devas/deva/background.png"
         },
         {
           "type": "list",
           "name": "gender",
-          "message": "GENDER",
+          "message": "Gender",
           "choices": [
             {
-              "name": "(D) Deva",
-              "value": "Deva"
+              "name": "Deva",
+              "value": "DEVA"
             },
             {
-              "name": "(M) Male",
+              "name": "Male",
               "value": "Male"
             },
             {
-              "name": "(F) Female",
+              "name": "Female",
               "value": "Female"
             },
             {
-              "name": "(N) Neutral",
+              "name": "Neutral",
               "value": "Neutral"
             },
             {
-              "name": "(O) Other",
+              "name": "Other",
               "value": "Other"
             }
           ]
@@ -171,22 +171,22 @@
         {
           "type": "list",
           "name": "pronouns",
-          "message": "PRONOUNDS",
+          "message": "Pronouns",
           "choices": [
             {
-              "name": "(M) Male",
+              "name": "He, Him",
               "value": "Male, Man, He, Him, Gentleman"
             },
             {
-              "name": "(F) Female",
+              "name": "She, Her",
               "value": "Female, Woman, She, Her, Lady"
             },
             {
-              "name": "(N) Neutral",
-              "value": "Neutral"
+              "name": "They, Them",
+              "value": "They, Them, Their"
             },
             {
-              "name": "(O) Other",
+              "name": "Other",
               "value": "Other"
             }
           ]
@@ -194,31 +194,43 @@
         {
           "type": "list",
           "name": "voice",
-          "message": "VOICE",
+          "message": "Voice",
           "choices": [
             {
-              "name": "Alloy",
+              "name": "Alloy (F)",
               "value": "alloy"
             },
             {
-              "name": "Echo",
+              "name": "Ash (M)",
+              "value": "ash"
+            },
+            {
+              "name": "Choral (F)",
+              "value": "choral"
+            },
+            {
+              "name": "Echo (M)",
               "value": "echo"
             },
             {
-              "name": "Fable",
+              "name": "Fable (F-British)",
               "value": "fable"
             },
             {
-              "name": "Onyx",
+              "name": "Onyx (M)",
               "value": "onyx"
             },
             {
-              "name": "Shimmer",
-              "value": "onyx"
-            },
-            {
-              "name": "Nova",
+              "name": "Nova (F)",
               "value": "nova"
+            },
+            {
+              "name": "Sage (F)",
+              "value": "sage"
+            },
+            {
+              "name": "Shimmer (F)",
+              "value": "shimmer"
             }
           ]
         }

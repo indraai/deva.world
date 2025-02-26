@@ -6,6 +6,8 @@ import data from '../../deva.space/devas/deva.data/index.js';
 import error from '../../deva.space/devas/deva.error/index.js';
 import log from '../../deva.space/devas/deva.log/index.js';
 import feecting from '../../deva.space/devas/deva.feecting/index.js';
+import indra from './indra/index.js';
+import veda from '../../deva.space/devas/deva.veda/index.js';
 import security from '../../deva.space/devas/deva.security/index.js';
 import defense from '../../deva.space/devas/deva.defense/index.js';
 import legal from '../../deva.space/devas/deva.legal/index.js';
@@ -16,19 +18,18 @@ import services from '../../deva.space/devas/deva.services/index.js';
 import systems from '../../deva.space/devas/deva.systems/index.js';
 import networks from '../../deva.space/devas/deva.networks/index.js';
 import chat from '../../deva.space/devas/deva.chat/index.js';
+import gemini from '../../deva.space/devas/deva.gemini/index.js';
 import docs from '../../deva.space/devas/deva.docs/index.js';
-import gopher from '../../deva.space/devas/deva.gopher/index.js';
-// import content from '../../deva.space/devas/deva.content/index.js';
-// import veda from '../../deva.space/devas/deva.veda/index.js';
-// import quinn from './quinn/index.js';
-// import hal from './hal/index.js';
-// security, defense, legal, authority, justice, support, services, systems, networks
+import discord from '../../deva.space/devas/deva.discord/index.js';
+
 const DEVA = {
   socket,
   data,
   error,
   log,
   feecting,
+  indra,
+  veda,
   security,
   defense,
   legal,
@@ -39,34 +40,9 @@ const DEVA = {
   systems,
   networks,
   chat,
+  gemini,
   docs,
-  gopher,
-  // content,
-  // veda,
-  // quinn,
-  // hal,
+  discord,
 };
 
 export default DEVA;
-
-
-//   socket:   import('@indra.ai/deva.socket'),     // socket agent
-//   docs:     import('@indra.ai/deva.docs'),       // documents agent
-//   content:  import('@indra.ai/deva.content'),    // content agent
-// 
-//   veda:     import('@indra.ai/deva.veda'),       // agent providing Vedic 
-//   chat:     import('@indra.ai/deva.chat'),       // open ai agent
-
-// npm i @indra.ai/deva.log@latest @indra.ai/deva.error@latest @indra.ai/deva.feecting@latest @indra.ai/deva.socket@latest @indra.ai/deva.docs@latest @indra.ai/deva.content@latest @indra.ai/deva.support@latest @indra.ai/deva.services@latest @indra.ai/deva.security@latest @indra.ai/deva.veda@latest @indra.ai/deva.chat@latest --save-dev 
-
-//     "@indra.ai/deva.error": "^0.0.1",
-// "@indra.ai/deva.feecting": "^0.0.1",
-// "@indra.ai/deva.log": "^0.0.1",
-// "@indra.ai/deva.chat": "^0.0.1",
-// "@indra.ai/deva.security": "^0.0.1",
-// "@indra.ai/deva.services": "^0.0.1",
-// "@indra.ai/deva.socket": "^0.0.1",
-// "@indra.ai/deva.support": "^0.0.1",
-// "@indra.ai/deva.docs": "^0.0.1",
-// "@indra.ai/deva.content": "^0.0.1",
-// "@indra.ai/deva.veda": "^0.0.1",

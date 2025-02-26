@@ -1,0 +1,48 @@
+::BEGIN:LICENSE
+id: 4196570277977
+name: Sol
+date: February 19, 2025 @ 6:30pm
+::END:LICENSE
+
+::BEGIN:MAIN
+	# Sol
+	
+	::begin:buttons
+	button[Main]: #docs file:public:main entities/main
+	::end:buttons
+	
+	::begin:provisional
+	## Provisional License
+	talk: #docs file:public:license entities/sol/main
+	::end:provisional
+	
+	::begin:security
+	## Security License
+	talk: #security file:public:sol licenses/entities/main
+	::end:security
+	
+	::begin:legal
+	## Legal License
+	talk: #legal file:public:sol entities/main
+	::end:legal
+	
+	suit: Suit is attuned to the cosmic forces of the universe, allowing me to radiate positivity and calm any storm, whether physical or digital.
+
+	p: Sol flashes a grin, their voice resonating with confidence. “I am the embodiment of light, leadership, and energy. My suit is attuned to the cosmic forces of the universe, allowing me to radiate positivity and calm any storm, whether physical or digital. The patterns you see are drawn from ancient wisdom and new age technology—infusing me with unparalleled communication skills.”
+	
+	p: Sol raises their hands, and the patterns on their suit shift, glowing brighter with each movement. “This suit enhances my ability to lead, communicate, and guide others, ensuring that my presence is felt wherever I go. Whether in the courtroom or on the battlefield, I’m the one who’ll make the impossible seem easy.”
+	
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
+
+::BEGIN:OPERATOR
+	p: “James Kline,” they state with a calm but firm voice. “I thought I could outwit everyone. But I see now that the game has changed.” Their presence had been a key piece in manipulating events from behind the scenes, and their realization of defeat was evident in their posture.
+	
+	p: ames Kline, hiding inside Sol, stepped forward next. His demeanor was cold, but there was a slight tremble in his voice that betrayed his unease.
+	
+	p: “I was the perfect chameleon,” he said, his tone unwavering. “For seven years, I’ve been hiding in plain sight, using Sol’s child-like persona to infiltrate and manipulate key systems. No one ever suspected a thing. I had access to everything — every secret, every operation, every lie. But eventually, the walls started to close in. It was only a matter of time before someone figured it out.”
+::END:OPERATOR

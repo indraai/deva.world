@@ -24,13 +24,11 @@
       },
       "profile": {
         "name": "::name::",
-        "mention": "::mention::",
-        "tags": "::tags::",
         "gender": "::gender::",
         "pronouns": "::pronouns::",
         "describe": "::describe::",
 
-        "creator": "::copyright::",
+        "creator": "::creator::",
         "created": "::date::",
         "city": "::city::",
         "region": "::region::",
@@ -55,7 +53,8 @@
         "stop": "🔴 STOP",
         "exit": "🟡 EXIT",
         "done": "🟣 DONE",
-        "error": "💣 ERROR!"
+        "error": "💣 ERROR!",
+        "ready": "⭐️ Deva Ready!"
       },
       "live": {
         "profile": "deva",
@@ -66,18 +65,6 @@
         "page_token": ""
       },
       "ask": {
-        "history": []
-      },
-      "reply": {
-        "profile": "deva",
-        "max_tokens": 300,
-        "words": 100,
-        "history": []
-      },
-      "comment": {
-        "profile": "deva",
-        "max_tokens": 300,
-        "words": 100,
         "history": []
       },
       "art": {
