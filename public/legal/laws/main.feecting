@@ -1,15 +1,12 @@
-::BEGIN:BUTTONS
-	::begin:buttons
-	button[Main Laws]: #legal file:public:main laws/main
-	button[Basic Laws]: #legal file:public:main laws/01.basic
-	::end:buttons
-::END:BUTTONS
-button[Basic Laws]: #legal file:public:main laws/01.basic
+::BEGIN:MENU
+	::begin:menu
+	button[Basic Laws]: #legal file laws/01.basic:main
+	button[Justice Laws]: #legal file laws/02.justice:main
+	::end:menu
+::END:MENU
 
 ::BEGIN:MAIN
 	# Deva.world Laws
-
-	talk: #legal file:public:buttons laws/main
 
 	p: Main laws of the Deva.world system.
 		

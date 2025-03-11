@@ -1,0 +1,6 @@
+for: x in {$:value} {
+	{$:feecting}
+}
+func: l(args) {
+	$:feecting
+}

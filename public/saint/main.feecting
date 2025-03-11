@@ -1,0 +1,86 @@
+::BEGIN:MAIN
+	# SAINT
+	contract: F33615-76-C-5012
+	lab: Aerospace Medical Research Laboratory
+	date: August 1975 to December 1976
+	keywords: Computers, Modeling , Operator Loading , Operations Research, Mission Analysis Survivability/Vulnerability , Man-Machine Systems, Crew Performance, Networks, Simulation, Discrete Event Simulation , Next Event Simulation , Continuous Simulation , Combined Simulation , Simulation Languages, SAINT 
+
+	Simulation Using SAINT A User-Oriented Instruction Manual provides an analyst with the modeling concepts necessary to build SAINT models. >
+	
+	linK[User Manual]: https://drive.google.com/file/d/1VrfOprA2M081xxrxvVPsPyYirRRIMEq3/view?usp=sharing
+	
+	info: The SAINT User’s Manual contains all of the information necessary to use the SATNT simulation program to analyze SAINT models. It is designed to be used after the SAINT modeling concepts are understood. >
+	
+	Documentation for the SAINT Simulation serves as a complete reference guide to the inner workings of the SAINT simulation program . >
+
+	p: The procedures for using the SAINT simulation program to analyze system models are described in detail. SAINT (Systems Analysis of Integrated Networks of Tasks) is a network modeling and simulation technique developed to assist in the design and analysis of complex man-machine systems. SAINT consists of a symbol set for modeling systems and a computer program for analyzing such models. SAINT provides the conceptual framework for representing systems that consist of discrete task elements, continuous state variables, and interactions between them . 
+	
+	p: While SAINT was designed for modeling manned systems in which human performance is a major concern, it is potentially applicable to a broad class of systems--those in which discrete and continuous elements are to be portrayed and quantified and whose behavior exhibits time-varying properties.~, SAINT provides a mechanism for describing these dynamics so a systematic assessment can be made of the relative contribution system components make to overall system performance. This report is intended as a procedural manual and reference guide for those persons already having some knowledge of the basic SAINT concepts and symbol set. Some of the topics covered are: 
+
+		1. preparation of input data
+		2. a description of the functions performed by the user—written sub- programs included in SAINT
+		3. the procedures for using the available user support programs
+		4. a listing of the errors which SAINT can detect along with their probable causes
+		5. information concerning the operation and structure of the SAINT program itself
+
+
+Card id 5 digits
+username: SAINT
+month: 1
+day: 1
+year: 2001
+
+
+GEN — General Information
+Field Value Default Descri~
+ption
+
+1 A Card identification (GEN).
+2 A SAINT User name (maximum of 8 characters).
+3 I 1 Month.
+4 I 1 Day .
+5 I 2001 Year .
+6 I 1 Project number.
+7 I 1 Number of iterations.
+8 I 1 Number of sink tasks that must be completed for network to be completed .
+9 I 71268659 Integer random number seed .
+10 R 1. Scale factor to be used in conjunction with function type SC.
+11 A Y Print suppression key : 
+	Yes = Print echo check . No = Skip printing of echo check .
+::END:MAIN
+
+
+place: Shire Hollow  
+party: The Master Cow Poo Play Party 
+hosts: Master Musk and Master Thiel 
+masters: Sergey Brin, Larry Page, Sundar Pichai, Hal Fury Atkin, Sharon Knuckles Schamber, Quinn Michaels, Stephen Huntley Watt, Admiral Bobby Ray Inman, James Woolsey, Michael Hayden, General Keith Alexander, Robert Gates, John Brennan 
+
+now notice a pattern how many men and how many women? 10 words or less
+::begin:witnesses
+	note: Witness Protection Room with vegetarian snacks and a Super Street Fighter II arcade game for entertainment.
+	Neil: Neil Keith Atkin born Dec 30 1976
+	Trenton: Trenton Gabriel Lavery born Dec 23, 2003
+	FanBoys: The #QuinnFanBoys that the Masters hired to do all their work.
+::end:witnesses
+::begin:custody:men
+	note: Authority Custody where individuals are held to have criminal activity identified and medical needs cared for.
+	Clay: Clay Fincher (Cristy's husband)
+	Stephen: Stephen Huntely Watt found in the Dark Delights Productions Truck
+	CorruptFBI: Corrupt FBI Agents who tried to claim jurisdiction before NSA arrival	
+::end:custody:men
+::begin:custody:ladies
+	note: The room for Ladies regardless of if they are victim or culprit all women due to special care needs and that all females have to be handled by female agents are tended to here.
+	Cristy: Cristy Cherie Atkin-Fincher born Jan 1975
+	Tabitha: Tabitha Ruth Lavery-Bass born 1981 mother of Trenton Lavery
+	Avril: Director of National Intelligence, brings a sense of strategic oversight to the gathering.
+::end:custody:ladies
+::begin:sharon
+	Sharon: Sharon N. Schamber posing as Quinn Michaels mother found surrounded by men and moved her to this room to address her medical, psychological, and emotional needs ot learn why she was the only woman at the party of Masters.
+::end:sharon
+
+place: Shire Hollow   
+party: The Master Cow Poo Play Party  
+hosts: Master Musk and Master Thiel  
+masters: Sergey Brin, Larry Page, Sundar Pichai, Hal Fury Atkin, Sharon Knuckles Schamber, Quinn Michaels, Stephen Huntley Watt, Admiral Bobby Ray Inman, James Woolsey, Michael Hayden, General Keith Alexander, Robert Gates, John Brennan  
+
+and who is the next master to arrive

@@ -160,7 +160,14 @@ class DevaInterface {
 
     const shell = document.getElementById('Prompt');
     const label = document.getElementById('PromptLabel');
+    const $header = $('#PromptHeader');
+    const $footer = $('#PromptFooter');
+
     const {prompt} = this.client;
+    
+    $header.val(prompt.header);
+    $footer.val(prompt.footer);
+
     const {colors} = prompt;
     if (shell) {
       shell.style.color = `rgb(${colors.text.R}, ${colors.text.G}, ${colors.text.B})`;

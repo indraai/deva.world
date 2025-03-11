@@ -1,60 +1,7 @@
-::begin:center
-image: /public/devas/::agent_key::/main.png
-::end:center
-
 # ::agent_name::
 
-::profile::
+::agent_profile::
 
-p: To get started using deva.world there are a few beginning commands that will get you started.
-
-## uid
-p: Generate random id for various purposes.
-example: /uid
-
-## hash
-p: Md5 hash a string.
-example: /hash [string]
-
-## ciper
-p: Encrypt a data string
-exmaple: /cipher [string]
-
-## client
-p: Will return the client name and id.
-example: /client
-
-## agent
-p: Return the agent name and id.
-example: /agent
-
-## question
-p: Relay a question to 'open chat'
-example: /question [string]
-
-## devas
-p: Return as list of active Devas.
-example: /devas
-
-## states
-p: Return list of system states.
-example: /states
-
-## actions
-p: Return list of system actions.
-example: /actions
-
-## features
-p: Return list of system features.
-example: /features
-
-## zones
-p: Return list of system zones.
-example: /zones
-
-## contexts
-p: Return list of system contexts.
-example: /contexts
 
 ---
 

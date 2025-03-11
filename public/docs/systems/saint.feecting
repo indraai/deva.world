@@ -1,0 +1,129 @@
+::BEGIN:MAIN
+	const: SAINT = Systems Analysis of Integrated Networks of Tasks, Discrete Event Simulation, Discrete Task-Oriented Model Component, Integration of Continuous Processes, Resource and Information Modeling, Task Execution, Information Flow and Resource Management, Resource Attributes, System Attributes, Task Performance and Time, Moderator functions, Task Queuing, Contingency Handling, Decision-Making, Custom Functions, Modeling Complex Relationships, Task Time Adjustments, Dynamic Resource Allocation, Task Clearing, Resource Clearing, Simulation of Complex Systems, State Variables, Numerical Integration, Simulated Time, Continuous State Variable Model Component, Machine Independence, System-Specific Random Number Generators, Data Input and Error Checking, Modular Code, Formatting and Output
+	
+	const: DTOMC = Discrete Task-Oriented Model Component
+	const: CSTVMV = Continuous State Variable Model Component
+	
+	## Summary 
+	
+	p: SAINT is a network modeling and simulation technique for design and analysis of complex man-machine systems. SAINT provides the conceptual framework for representing systems that consist of discrete task elements, continuous state variables, and interactions between them. It provides a mechanism	for combining human performance models and dynamic system behaviors in a single modeling structure. SAINT facilitates an assessment of the contribution that system components make to overall system performance.
+
+	## Introduction 
+	
+	p: SAINT is a computer simulation tool for modeling and analyzing manmachine systems. While SAINT was designed for modeling manned systems in which human performance is a major concern, it is potentially applicable to to a broad class of problems--those in which discrete and continuous elements are to be portrayed and the behavior exhibits time varying properties. SAINT	provides a mechanism for describing these dynamics so analyses can be performed.
+	
+	p: SAINT evolved from two separate technologies. Task analysis and the Monte Carlo simulation of operator performance under workload stress as represented by Siegel and Wolf (ref. 1) were the origin for the human factors development. Many of the features eventually incorporated into SAINT were identified as requirements based upon experience in applying this technology.
+	
+	p: The second origin of SAINT was in the GASP family of simulation techniques. The earliest version of SAINT was an incorporation of the Siegel-Wolf model in a modified P-GERT package. The subsequent evolution of SAINT adapted features of GASP IV and allowed SAINT to become a flexible,	sophisticated, combined modeling technique where networks of discrete events	could be modeled along with the dynamics of continuous processes.
+	
+	p: It is this ability to combine models of dynamics (e.g., aircraft equations of motion) with models of discrete activity sequences (e.g., operator actions) that permits the systems analyst to describe both hardware and human performance in the context of a single model. This affords the system engineer the opportunity to analyze system effectiveness and quantify the relative contributions of man and machine.
+	
+	## Concepts
+	
+	p: For the discrete event simulation, a graphical-network approach to modeling is taken, whereby a user of SAINT describes the system to be analyzed via a network model and auxiliary descriptions (e.g., equipment and operator performance parameters). A symbol set has been devised for diagraming the discrete task network. The SAINT computer simulation program accepts a description of the network to be simulated and automatically performs an analysis to obtain statistical estimates of system performance. For the continuous process representation, the user is expected to provide FORTRAN statements of the relevant state equations to be solved. Mechanisms are provided for creating an interaction between the discrete and continuous components of the model.
+	
+	## Discrete Task-Oriented Model Component
+	
+	p: The discrete task-oriented component of the SAINT model consists of nodes and branches, each node representing a task. Tasks are described by a set of characteristics (e.g., performance time duration, priority, resource requirements). Branches connecting the nodes indicate precedence relations and are used to model the sequencing and looping requirements among the tasks. Complex precedence relations have been designed into SAINT to allow predecessor-suc-cessor relationships which are deterministic, probabilistic, and conditional.
+	
+	p: Resources, either human operators or hardware equipment, perform the tasks in accordance with the network prescribed precedence relations, subject to resource availability. The precedence relations also indicate the flow of information through the network. Information is organized into packets, with each packet containing attributes that characterize the information being processed. The information packet can characterize items flowing through the network, or any other concept related to network flow. When a task is completed, the information packet residing at the task is transmitted along each precedence branch selected. Information attribute values can be assigned or modified at any task in the network and can influence both task performance times and task branching relations.
+	
+	p: Resources perform tasks either individually or in groups. Each resource included in a SAINT model is described by a set of attributes. These attributes are also organized into packets, with each packet characterizing a particular resource. Examples of operator attributes include such parameters as level of training, age, height, etc. Machine reliability is an example of an equipment attribute. Resource attributes are used in conjunction with the task descriptions in order to make a general network model resource-specific. The initial values of these user-defined resource attributes are assigned prior to the start of the simulation. The values may be dynamically changed at any task in the network and can be used as parameters in determining both task performance times and precedence relations.
+	
+	p: In many instances it may be desirable to specify attributes which are not directly applicable to an information-oriented or resouce-oriented characterization. These attributes are global in nature and do not flow through or move about the network as information and resource packets do. Temperature and time remaining in a mission are examples of model parameters which may be characterized as system attributes. Just as with information and resource attributes, system attributes may influence the task network performance and flow. Each task in a SAINT network has two requirements which must be satisfied before the task can be performed. First, a specified number of predecessor tasks must be completed before the task is released. Second, once the task has been released, the resources required to perform the task must be avail-
+	able (that is, not be busy performing other tasks). All tasks which have been released (all predecessor requirements have been satisfied) but whose required resources are not available are ranked in a queue according to their priority. Task priority may be assigned at the start of the simulation and may change dynamically as a function of system parameters and contingencies.
+	
+	p: When the required resources become available with task completions, the tasks in the waiting queue are started. The time to perform a task may be specified as a random variable defined by a probability distribution. SAINT supplies the user with 11 different distributions (Normal, Gamma, Beta, Weibull, etc.).	Frequently the task performance time is also a function of the type of task, the resource or resources performing the task, the status of the system, or the condition of the environment at the time the task is executed. SAINT provides for the specification of factors which influence task performance via user-written moderator functions. It is presumed the modeler can describe (e.g., by least squares techniques) the functional relationshps between a set of conditions and a performance parameter or attribute of interest. 
+	
+	p: For example, one might hypothesize that fatigue affects operator performance such that the average task time increases as a function of mission duration. Re search data must be obtained to postulate the functional form of this relationship and fit a curve to these results. This empirically derived relationship can then be implemented in SAINT as a moderator function to determine the possible impact fatigue could have on operator performance. In addition to	moderator functions, user-written functions can be developed for specifying attribute assignments. Both types of functions are written in FORTRAN or a FORTRAN-compatible language.
+	
+	p: Contingencies, decision making, and emergency conditions can be represented via SAINT'S flexible attribute assignment and branching logic. SAINT provides two additional mechanisms for modeling system performance.
+
+	## Task Modification 
+	
+	p: The first of these is termed task modification.. This feature enables the user to modify task parameters as a function of ongoing system events. For example, consider a task which may require repetition due to a possibility of failure on the first attempt. The second time the task is performed the performance time may be significantly smaller than the initial execution. SAINT provides for the modification of the task time distribution after the initial attempt. Other task parameters can be modified in a similar fashion.
+	
+	## Clearing 
+	
+	p: The second SAINT modeling construct of interest is "clearing". Both tasks and resources can be cleared. "Task" clearing halts a specified task in progress, contingent on the completion of another task. "Resource" clearing halts whatever task t$e specified resource is performing. Both types of clearing may specify an additional task to be signaled. As an example, consider the simulation of an emergency condition in which all operators must stop
+	their ongoing activites to assist in the emergency operations. This situation is best modeled in SAINT with resource clearing. The onset of the unexpected event would "free-up" (clear) the operators. Concurrently, emergency handling tasks would be signaled for initiation (and release if all other precedents were satisfied). Task and resource clearing provide dynamic realism in man machine simulation modeling. The network symbol used to diagram a task in a SAINT model is illustrated in Figure 1. The input side of the node reflects the precedence requirements for releasing a task. The number of requirements for releasing a task the first time is on the top (PR1) and the number of requirements for releasing a task on subsequent times is on the bottom (PR2).
+	
+	## Task Symbol 
+
+	p: The center portion of the task symbol contains all task description information, such as performance time characteristics, statistics to be collected, and attributes to be assigned. It is subdivided into rows, with each row containing a specific type of descriptive information about the task. Further, 'each row is divided into two parts. The left-hand part contains the task description code. It is used to identify the type of information that appears in the right-hand part of the row, and can be any of the 17 available codes shown in Table I.
+	
+	p: The LABL permits an eight character identifier to be associated with this node to depict the nature of the tasklactivity represented. The TIME parameters indicate the distribution type and parameter values for the characterization of task duration. If activity times are known to be a function of specifiable factors (e.g., task, system, or information attributes), a moderator function (MODF) may be employed (as a FORTRAN subroutine) to generate the activity duration instead of generating a time value by Monte Carlo methods. If Monte Carlo methods are employed (via TIME specification), a modification can  effected during model execution by using the DMOD feature to identify an alternate distribution and/or parameter set when specified event conditions prevail.
+	
+	p: RESR may be used to specify the type and quantity of resources and whether multiple resources imply substitution ("or") rather than conjoint ("and") requirements. If priority (PRTY) is a concern, it can be specified a priori and subsequently manipulated dynamically during model execution. Since infor mation packets can arrive at a task from several sources, but only one will exit, it is necessary to specify which incoming packet will be passed along, INCM. The default condition for processing information packets is to simply pass the last one arriving at the node. If different predecessor completions are required in order for the task to be released, the DIFF option must be specified. Otherwise the multiple occurrence of any predecessor may cause the task to be prematurely released. When two or more tasks have identical completion times, it is necessary to specify which will take precedence (PREC) over the others. User-defined task characteristics (UTCH) permit the user to specify additional attributes of a task (e.g., difficulty, complexity, etc.), and these attributes can be modified upon task execution.
+	
+	---
+	
+	## Information resources
+	
+	p: Information resource, and system attributes can be assigned or updated (ATAS) upon task release, start, or completion as required. The statistics to be collected (STAT) are described in subsequent discussion. A particular task can be used to mark the start point (MARK) for timing how long it takes to traverse a path to some other task of interest. The MARK feature allows elapsed time computations within the network (e.g., time between events). Task and resource clearing operations are established by specifying the appropriate parameters associated with the TCLR and RCLR mnemonics. Upon completion of a task, SWIT allows a switch or flag to be set for subsequent examination in the continuous state variable component of the model. The REGL mnemonic is used as a device for regulating values employed in the continuous process model, where a task is permitted to alter a state variable, for example.
+	
+	p: By selectively using these description codes, only the information necessary to describe a task need be shown on the task symbol. In this manner, any or all of the task description codes can be specified for a particular task. If more than the four rows provided are required for a complete description, the user simply adds the necessary number of additional rows to the bottom of the task description portion of the task symbol.
+	
+	p: The output side of the node contains the task number (TSK). In addition, the shape of the output side indicates the branching operation to be performed upon task completion. It specifies the process to be employed in selecting
+	the successor tasks whose precedence requirements should be reduced by one.
+	
+	p: The four branching types included in SAINT are deterministic, probabilistic, conditional take-first, and conditional take-all.
+
+	p: When deterministic branching is specified, the number of requirements for all successor tasks is reduced by one. For probabilistic branching, each branch emanating from the task has an associated probability of selection.
+	
+	p: These probabilities may be specified directly or obtained from information, operator or system attributes. Only a single successor task is selected. For conditional take-first branching, each branch has an associated condition,
+	and the branches are ordered. Each condition is tested in the prescribed order, and the first branch whose condition is satisfied is selected. Conditional take-all branching operates in the same manner, but selects all branches whose conditions are satisfied. Conditions may be based on task completions, simulated time, or attribute values.
+	
+	p: The above discussion only included the basic task node symbology. Additional symbolism is available for task modification, task signaling as a result of task or resource clearing, task signaling resulting from a threshold crossing, and state variable monitors.
+	
+	## Continuous State Variable Model Component
+
+	p: The second component of a SAINT model is the state variable description. The SAINT user defines these state variables by writing the algebraic, difference, or differential equations that govern their time-dependent behavior. 
+	
+	p: The The SAINT user writes the state variable equations in a FORTRAN subroutine (subroutine STATE). State variables represented by algebraic or difference equations are defined in subroutine STATE as SS(*) variables.
+	Those represented by differential equations are written in terms of DD(*) variables. SAINT employs a Runge-Kutta-England (RICE) numerical algorithm to integrate the equations of subroutine STATE written in terms of the DD(*) variables. The RKE algorithm obtains a solution to a set of simultaneous first order ordinary differential equations. Higher order differential equations can be modeled by placing the equations in canonical form. Subroutine STATE can be used to model state variables using a combination of DD(') and
+	SS(') variables.
+	
+	p: In SAINT, simulated time is advanced in accordance with the type of system being modeled. If no state variables are included, simulated time is advanced from one task completion to the next. When state variables are included in the model, time is also incremented in steps between scheduled task completions for the purpose of updating the values of the state variables. The step size is a function of user-specified accuracy requirements, use of state variables in SAINT is optional.
+
+	p: The SAINT user writes the state variable equations in a FORTRAN subroutine (subroutine STATE). State variables represented by algebraic or difference equations are defined in subroutine STATE as SS(*) variables. Those represented by differential equations are written in terms of DD(*) variables. SAINT employs a Runge-Kutta-England (RICE) numerical algorithm to integrate the equations of subroutine STATE written in terms of the DD(*) variables. The RKE algorithm obtains a solution to a set of simultaneous first order ordinary differential equations. Higher order differential equations can be modeled by placing the equations in canonical form. Subroutine STATE can be used to model state variables using a combination of DD(') and SS(') variables.
+
+	p: In SAINT, simulated time is advanced in accordance with the type of system being modeled. If no state variables are included, simulated time is advanced from one task completion to the next. When state variables are included in the model, time is also incremented in steps between scheduled task completions for the purpose of updating the values of the state variables. The step size is a function of user-specified accuracy requirements.
+	
+	## Discrete and Continuous Component Interactions
+	
+	p: The interactions between tasks and state variables are initiated either by tasks being completed or by state variables crossing specified threshold values. Upon the completion of a task, state variables may be discretely regulated by increasing or decreasing their values. In addition, task completions can change the values of logical variables which can be used to alter state variable equation forms or the network structure. In this manner the
+	discrete task-oriented component of the model affects the continuous state variable component.
+	
+	p: Threshold crossings by state variables can signal or initiate tasks. Thus the values of state variables can influence task performance characteristics and precedence relations. Threshold crossings can also change the values of logical variables which, in turn, can be used to alter equation forms or
+	change task precedence.
+	
+	p: As an example of discrete and continuous component interactions, consider a system in which a pilot must keep the aircraft altitude within specified constraints. The pilot's inputs might be modeled as discrete tasks and the aircraft dynamics as continuous state variables. When the altitude state vari able crosses the allowable threshold value, the corresponding discrete pilot makes the appropriate input and regulates the state variable(s) which determine altitude. Thus, through this component interaction, the aircraft altitude is brought back within acceptable limits.
+	
+	## Statistical Output 
+	
+	Once the model has been built, the modeler can impose a data collection structure to obtain information about his description of the system as it is exercised. A variety of data can be obtained; these fall into four major categories. The first type of output is a statistical description of the execution of specific nodes or collections of nodes. There are sixteenpdsdble combinations of interval and task completion statistics that one can collect using the built-in features of SAINT. Since users can create their own functions for updating attributes and for moderating network parameters, it has been necessary to allow the user to collect his own statistics on those parts of the model which cannot be predefined because the user creates them himself.
+	
+	p: SAINT supplies statistical subroutines for collecting data on user-supplied parts of the model. Tabular summaries of the computed descriptive statistics can then be generated to portray the results of a single iteration, a set of iterations, or a series of iterated runs showing the trends induced by some
+	systematic variation of run conditions.
+	
+	p: A second type of output which SAINT provides is resource utilization statistics. Information on the busy/idle status for both the human resources as well 8s the equipment resources is automatically presented at the completion of each simulation run. These statistics can be employed in evaluating workload and system capacity issues.
+	
+	p: The third type of output is a graphic portrayal of the probability and cumulative density functions for a distributed variable. These histograms provide a quick look at the shape of the data. An experienced user can store the actual values on an external device; later, the data can be fed to a plotting package for reproducible drawings.
+	
+	p: Time traces of the state variables are a fourth type of output. Up to 10 variables can be plotted on the same graph with user specified scale factors and plotting symbols. Multiple graphs can be generated. Tabled values of the variables can also be obtained. The tabulated plot provided by SAINT equips the user to quickiy examine the results of his simulation run.
+	
+	
+	## The SAINT Program
+	
+	p: Development of the SAINT simulation package was completed in 1977 and is fully documented. SAINT was developed in ANSI standard FORTRAN and, consequently, is machine-independent. The user, however, must supply his own system-specific random number generator. The task network data is punched on cards in free-form. SAINT includes an extensive input errorchecking feature to assist users in debugging their models. For production runs, users can select a more efficient non-error-checking version of SAINT. A separate FORTRAN program has been devised to create a source module with the CaMMON blocks sized to the problem being run. SAINT also includes provisions that allow formatting model outputs so they can be processed by available statistical analysis packages.
+	
+	## SAINT Philosophy
+	
+	p: The SAINT philosophy is to seperate the modeling process from the analysis process. A graphical approach to modeling is taken in which the system to be analyzed is represented by a network model . The network model facilitates communication regarding the characteristics of the system and also serves as the basi s for subsequent system analysi s.
+	::begin:hidden
+		#color = ::agent_color::
+		#bgcolor = ::agent_bgcolor::
+		#bg = ::agent_background::
+	::end:hidden
+::END:MAIN
