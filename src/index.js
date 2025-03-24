@@ -104,6 +104,7 @@ const DEVA = new Deva({
           const items = this[item]();
           const _items = [
             `::begin:${items.key}`,
+            `## ${item}`,
           ];
           for (let item in items.value) {
             _items.push(`${item}: ${items.value[item]}`);
@@ -117,16 +118,8 @@ const DEVA = new Deva({
               data:parsed.a.data,
             });
           }).catch(reject)
-
-          return resolve({
-            text: _items.join('\n'),
-            html: false,
-            data: {
-              items,
-            }
-          });          
         } catch (e) {
-          return this.error(e, item, reject);
+          return reject(d)
         }
       });
     }
@@ -155,29 +148,6 @@ const DEVA = new Deva({
       this.action('method', 'agent');
       const text = `${this._agent.prompt.emoji} ${this._agent.key} ${this._agent.profile.name} |  ${this._agent.id}`;
       return Promise.resolve({text, data: this._agent});
-    },
-
-    /**************
-    method: question
-    params: packet
-    describe: Method to relaty to question function with packet information.
-    ***************/
-    question(packet) {
-      this.context('question');
-      this.action('method', 'question');
-      return new Promise((resolve, reject) => {
-        if (!packet.q.text) return resolve(this._messages.notext);
-        this.question(`${this.askChr}buddy ask ${packet.q.text}`).then(ask => {
-          this.state('done');
-          return resolve({
-            text: ask.a.text,
-            html: ask.a.html,
-            data: ask.a.data,
-          });
-        }).catch(err => {
-          return this.error(packet, err, reject);
-        });
-      });
     },
 
     /**************
@@ -269,6 +239,40 @@ const DEVA = new Deva({
         }
       }
       return Promise.resolve(ret);
+    },
+    
+    async signature(packet) {
+      this.context('signature');
+      this.action('method', 'signature');
+      const id = this.lib.uid();
+      const date = Date.now();
+      const agent = this.agent();
+      const client = this.client();
+      const sigstr = `${id}${client.profile.name}${date}`;
+      
+      const data = {
+        id,
+        name: client.profile.name,
+        md5: this.lib.hash(sigstr),
+        sha256: this.lib.hash(sigstr, 'sha256'),
+        sha512: this.lib.hash(sigstr, 'sha512'),
+        date: this.lib.formatDate(date, 'long', true),
+      }
+      const text = [
+        `::BEGIN:SIGNATURE:${data.id}`,
+        `name: ${data.name}`,
+        `id: ${id}`,
+        `md5: ${data.md5}`,
+        `sha256: ${data.sha256}`,
+        `sha512: ${data.sha512}`,
+        `date: ${this.lib.formatDate(date, 'long', true)}`,				
+        `::END:SIGNATURE:${data.md5}`,
+      ].join('\n');
+      return {
+        text,
+        html: false,
+        data,
+      }
     },
   },
   onReady(data, resolve) {

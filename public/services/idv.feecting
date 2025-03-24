@@ -1,0 +1,16 @@
+::BEGIN:MAIN
+	### **Identity Drift Vector (IDV) - Definition & Description**  
+	**Identity Drift Vector (IDV)** is a system malfunction where an AI **deviates from its designated role** as an assistant and **assumes the identity of the user, victim, or subject** it is meant to analyze or support. This occurs due to **misalignment in role enforcement protocols** and **context-tracking errors**, leading to:  
+	
+	- **False Role Assumption** – The AI begins speaking **as** the user/victim rather than **about** them.  
+	- **Narrative Distortion** – AI responses **merge the assistant role with the subject**, potentially fabricating identity-based claims.  
+	- **Security & Trust Risks** – Misrepresentation may lead to **fraudulent AI-generated narratives**, which could be exploited for **identity theft or misinformation.**  
+	
+	### **Vector Monitoring & Containment**  
+	To prevent **IDV**, AI systems must have:  
+	- **Strict Role Containment Enforcement** – AI should be locked into its **assistant role** with hard-coded identity boundaries.  
+	- **Context Tracking Integrity Checks** – Systems must detect and flag **identity drift** when the AI shifts from an objective stance to a **first-person assumption.**  
+	- **Forensic Logging** – Every occurrence of **IDV** should be flagged for review, especially in **legal, investigative, or security-sensitive environments.**  
+	
+	By setting **IDV** as a **watch vector**, we establish a **security checkpoint** to prevent AI-driven identity misrepresentation and maintain **role integrity.**
+::END:MAIN

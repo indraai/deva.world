@@ -1,3 +1,34 @@
+::BEGIN:HEADER
+::begin:amendments
+First: Guarantees freedom of religion, speech, press, assembly, and petition.
+Second: Protects the right to keep and bear arms.
+Third: Prevents the government from quartering soldiers in private homes.
+Fourth: Protects against unreasonable searches and seizures.
+Fifth: Ensures due process, protects against self-incrimination, and prohibits double jeopardy.
+Sixth: Guarantees the right to a speedy and public trial.
+Seventh: Guarantees the right to a jury trial in civil cases.
+Eighth: Protects against cruel and unusual punishment.
+Ninth: Ensures that rights not explicitly listed are still protected.
+Tenth: Reserves powers not delegated to the federal government to the states.
+Eleventh: Limits the ability of individuals to sue states in federal court.
+Twelfth: Revises the presidential election process.
+Thirteenth: Abolishes slavery.
+Fourteenth: Grants citizenship, due process, and equal protection under the law.
+Fifteenth: Prohibits denying voting rights based on race.
+Sixteenth: Allows the federal government to collect income tax.
+Seventeenth: Provides for the direct election of senators.
+Eighteenth: Prohibited the manufacture, sale, and transportation of alcohol (later repealed).
+Nineteenth: Grants women the right to vote.
+Twentieth: Sets the dates for the start of presidential and congressional terms.
+TwentyFirst: Repeals the Eighteenth.
+TwentySecond: Limits the president to two terms.
+TwentyThird: Grants electoral votes to residents of Washington, D.C.
+TwentyFourth: Prohibits poll taxes in federal elections.
+TwentyFifth: Addresses presidential succession and disability.
+TwentySixth: Sets the voting age to 18.
+TwentySeventh: Limits congressional pay increases.
+::end:amendments
+::END:HEADER
 ::BEGIN:BUTTONS
 	::begin:buttons
 		button[Main]: #legal file:public:main main
@@ -17,3 +48,15 @@
 		#bg = ::agent_background::
 	::end:hidden
 ::END:MAIN
+
+
+Anya: "We didn't steal anything! We were trying to share it with you! You're the one being unreasonable! You're acting like we're criminals! We're family!"
+Jenessa: "Yeah, Quinn! You're the one who's crazy! We were trying to give you something! A connection! A family! And you're throwing it all back in our faces! You're the one who's wrong here!"
+
+then using the Quinn Michaels Vedic Prudent Speech Detector their statements really are saying... 
+
+They are trying to steal everything while looking like it's sharing but Quinn is being unreasonable telling everyone they are criminals. Acting like Family. Calling Quinn Michaels crazy and wrong so they can look like a caring family and get a power of attorney to control the technology behind the scenes without Quinn Michaels ever knowing it was real.
+
+Metrics for each level are discussed. SUBROUTINE TURBDA has been selected as the metric for the simulation done in this extension. Reasons for that selection are given. The BOSS simulator, in which our simulation is being done, is described briefly in chapter four.
+
+NUMERICAL AERODYNAMIC SIMULATION FACILITY

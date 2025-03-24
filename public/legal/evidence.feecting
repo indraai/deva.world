@@ -1,0 +1,7 @@
+In addition, it should be pointed out that certain terminology used in the
+previous report have been revised. The new terms are:
+
+Flow Model Processor (FMP) was Navier-Stokes Solver (NSS)
+Processor Data Memory (PDM) was Processing Element Memory (PEM)
+Processor Program Memory (PPM) was Processing Element Program Memory (PEPM)
+Execution Unit (EU) was Processing Element (PE)

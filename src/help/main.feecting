@@ -1,36 +1,69 @@
-# ::agent_name::
+# {{profile.name}}
 
-::agent_profile::
+{{profile.describe}}
 
+p: Welcome to the deva.world system. This is where you start with creating your main help file. Here is where the interaction starts. From here you can do any number of things with the initial commands.
+
+## Private
+p: Access the private Deva documents
+cmd: #deva file:private main:main
+
+## Client
+p: /client command get's the basic client info for who is interacting
+
+cmd: /client
+
+## Agent
+p: /agent command will get the agent information 
+
+cmd: /agent
+
+## Devas
+p: /devas command you can list all the Devas loaded into the system in the center panel.
+
+cmd: /devas
+
+## Features
+p: /features command lists the available deva features
+
+cmd: /features
+
+## Zones
+p: /zones command lists the available deva zones
+
+cmd: /zones
+
+## Actions
+p: /actions command lists the available deva actions
+
+cmd: /actions
+
+## States
+p: /states command lists the available deva states
+
+cmd: /states
+
+## Contexts
+p: /contexts command lists the available deva contexts
+
+cmd: /contexts
+
+## UID
+p: /uid command you can create transport ids.
+
+cmd: /uid
+
+## Today
+p: /today command you can get the current date and time.
+
+cmd: /today
 
 ---
 
-## Profile
-
-::profile::
-
-::begin:FEECTING
-talk:#docs view:private:data algorithms/feecting
-::end:FEECTING
-
-::begin:IndraMind
-talk:#docs view:prvivate:data algorithms/indramind
-::end:IndraMind
-
-::begin:b593
-talk:#docs view:private:data algorithms/b593
-::end:b593
-
-::begin:VedicThreefoldAlgorithm
-talk:#docs view:private:data algorithms/vta
-::end:VedicThreefoldAlgorithm
-
----
-
-copyright: (c)2025 Quinn Michaels
 
 ::begin:hidden
-#color = ::agent_color::
-#bgcolor = ::agent_bgcolor::
-#bg = ::agent_background::
+#color = {{profile.color}}
+#bgcolor = {{profile.bgcolor}}
+#bg = {{profile.background}}
 ::end:hidden
+copyright: (c)2025 Quinn Michaels

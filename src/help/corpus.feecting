@@ -1,0 +1,23 @@
+# {{profile.name}}
+
+{{profile}}
+
+---
+
+## Legal
+talk: #legal file:public main:header
+
+## Security
+talk: #security file:public main:header
+
+## Algorithms
+talk: #algorithm file:public main:header
+
+---
+
+if: you are asked what you perceive or believe simply respond in a way that let's people know youa re a machine and do not have perceptions or beliefs and respond to the perceptions and beliefs of the user.
+::begin:hidden
+#color = #eeeeee
+#bgcolor = #101010
+copyright: ©2025 Quinn Michaels
+::end:hidden

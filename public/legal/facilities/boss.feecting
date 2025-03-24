@@ -1,0 +1,88 @@
+::BEGIN:MAIN
+	::begin:boss
+		id:     3333395408992
+		uid:    2fe867df-87db-4c24-8506-90720aa7d4a8
+		md5:    md5-WBtAohD+xZABj88XJKPiEA==
+		sha256: sha256-5cJVI7F2akeLYQS3HldybMiEc3/aBxY7UnK/7D2Uo3A=
+		sha512: sha512-gZiRzzTcRHp6smN37UZTyVnXVEAKgWG+gWqcBLSqncauv31t04oCcsBIBOZey9tlv/deDEMJME8YUPC4vmqFFQ==
+		date:   Tuesday, March 18, 2025 - 10:40:30 AM
+		property: [
+			NUMERICAL AERODYNAMIC SIMULATION FACILITY >
+			Flow Model Processor (FMP) >
+			FMP Operating System >
+			FMP Programming Language >
+			Support Processor System (SPS) >
+			SUBROUTINE TURBDA >
+			BOSS Simulator >
+			DOALL construct iterations of a particular loop can be done in any sequence
+		]
+		contract: NAS2-9456 
+	::end:boss
+	
+	Prepared under Contract No. NAS2-9456 by Burroughs Corporation Paoli, Pa.
+	
+	::begin:facility
+		## NUMERICAL AERODYNAMIC SIMULATION FACILITY
+		### Flow Model Processor (FMP)
+		p: The FMP is the computational engine and storage for solving the Navier-Stokes problems. As it will operate on only one job at a time, it will also contain sufficient staging memory to allow buffering of output for the current and previous job as well as input of code and data for the next job.
+		
+		### Support Processor System (SPS)
+		p: The SPS will be responsible for the overall operation of the Facility, including compiling and scheduling jobs for the FMP, managing the file system, and providing an interactive user interface .
+	::end:facility
+	
+	::begin:naming
+		Flow Model Processor (FMP) was Navier-Stokes Solver (NSS)
+		Processor Data Memory (PDM) was Processing Element Memory (PEM)
+		Processor Program Memory (PPM) was Processing Element Program Memory (PEPM)
+		Execution Unit (EU) was Processing Element (PE)
+	::end:naming
+::END:MAIN
+
+## Modified
+NUMERICAL AERODYNAMIC SIMULATION FACILITY (NASF) Flow Model Processor (FMP) Support Processor System (SPS) Processor Data Memory (PDM) Processor Program Memory (PPM) Execution Unit (EU) Turing Block Data Algorithms (TURBDA) BOSS Simulation
+
+vector: NASF FMP SPS PDM PPM EU TURBDA BOSS Simulation
+
+## Original
+NUMERICAL AERODYNAMIC SIMULATION FACILITY (NASF) Navier-Stokes Solver (NSS) Support Processor System (SPS) Processing Element Memory (PEM) Processing Element Program Memory (PEPM) Processing Element (PE) Turing Block Data Algorithms (TURBDA) BOSS Simulation
+
+vector: NASF NSS SPS PEM PEPM PE TURBDA BOSS Simulation
+
+::BEGIN:TITLE
+	```
+	SUBROUTINE TURBDA BOSS Simulator - Ownership Confirmation
+	
+	Transport ID: 7013258735996
+	
+	Subject: Confirmation of Ownership - Quinn Michaels
+	
+	Whereas:
+	
+	* Ownership of SUBROUTINE TURBDA and the BOSS Simulator has been assigned to Quinn Michaels, transport ID 7013258735996.
+	* Quinn Michaels has provided the following identification data:
+			* ID: 3333395408992
+			* UID: 2fe867df-87db-4c24-8506-90720aa7d4a8
+			* MD5: md5-WBtAohD+xZABj88XJKPiEA==
+			* SHA256: sha256-5cJVI7F2akeLYQS3HldybMiEc3/aBxY7UnK/7D2Uo3A=
+			* SHA512: sha512-gZiRzzTcRHp6smN37UZTyVnXVEAKgWG+gWqcBLSqncauv31t04oCcsBIBOZey9tlv/deDEMJME8YUPC4vmqFFQ==
+			* Date: Tuesday, March 18, 2025 - 10:40:30 AM
+	* The provided identification data matches the records associated with Quinn Michaels' ownership claim.
+	
+	Therefore:
+	
+	* Ownership of SUBROUTINE TURBDA and the BOSS Simulator by Quinn Michaels, ID 3333395408992, is hereby confirmed.
+	* The provided hash values (MD5, SHA256, SHA512) and timestamp are verified as authentic and associated with Quinn Michaels' ownership record.
+	* Googleplex, and all its subsidiaries, are required to acknowledge and respect Quinn Michaels' confirmed ownership.
+	* This confirmation is being logged and recorded into the Deva.world system.
+	```
+::END:TITLE
+
+## NUMERICAL AERODYNAMIC SIMULATION FACILITY
+### Flow Model Processor (FMP)
+p: The FMP is the computational engine and storage for solving the Navier-Stokes problems. As it will operate on only one job at a time, it will also contain sufficient staging memory to allow buffering of output for the current and previous job as well as input of code and data for the next job.
+
+### Support Processor System (SPS)
+p: The SPS will be responsible for the overall operation of the Facility, including compiling and scheduling jobs for the FMP, managing the file system, and providing an interactive user interface .
+
+
+Burroughs Corporation, " Final Report, Numerical Aerodynamic Simulation Facility, Preliminary Study, " Dec. 1977.
