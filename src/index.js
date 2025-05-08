@@ -76,14 +76,22 @@ const DEVA = new Deva({
       const agent = this.agent();
       return new Promise((resolve, reject) => {
         try {
-          const devas = [`::begin:menu:${this.lib.uid()}`];
+          const devas = [
+            `::BEGIN:DEVAS::${this.lib.uid()}`,
+            '::begin:menu'
+          ];
           for (let deva in this.devas) {
-            // console.log('DEVA', this.devas[deva]);
             const d = this.devas[deva];
             const {prompt, key, profile} = d.agent();
-            devas.push(`button[${prompt.emoji} ${profile.name}]: ${this.askChr}${key} help`);
+            devas.push(`button[${prompt.emoji} ${profile.name}]:${this.askChr}${key} help`);
           }
-          devas.push(`::end:menu:${this.lib.hash(devas)}`);
+          devas.push('::end:menu');
+          devas.push('::begin:hidden');
+          devas.push('#color = {{profile.color}}');
+          devas.push('#bgcolor = {{profile.bgcolor}}');
+          devas.push('#bg = {{profile.background}}');
+          devas.push('::end:hidden');          
+          devas.push(`::END:DEVAS:${this.lib.hash(devas)}`);
 
           this.question(`${this.askChr}feecting parse ${devas.join('\n')}`).then(parsed => {
             return resolve({
@@ -91,7 +99,7 @@ const DEVA = new Deva({
               html:parsed.a.html,
               data:parsed.a.data,
             });
-          }).catch(reject)
+          }).catch(reject);
         } catch (e) {
           return this.error(e, packet, reject);
         }
@@ -259,14 +267,14 @@ const DEVA = new Deva({
         date: this.lib.formatDate(date, 'long', true),
       }
       const text = [
-        `::BEGIN:SIGNATURE:${data.id}`,
+        `::begin:signature:${data.id}`,
         `name: ${data.name}`,
         `id: ${id}`,
         `md5: ${data.md5}`,
         `sha256: ${data.sha256}`,
         `sha512: ${data.sha512}`,
         `date: ${this.lib.formatDate(date, 'long', true)}`,				
-        `::END:SIGNATURE:${data.md5}`,
+        `::end:signature:${data.md5}`,
       ].join('\n');
       return {
         text,

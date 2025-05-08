@@ -30,7 +30,9 @@ $maxw = 640px
   flex-flow: column nowrap
   position: relative
 
-  .box
+  .box           
+    &.law 
+      margin: .75rem 0
     &.data
       padding: 1.5rem 0
 
@@ -53,19 +55,20 @@ $maxw = 640px
     &.profile 
       padding: .5rem 1rem
       border-radius: 1rem
+      margin: 1rem
       background-color: rgba($colors.black, .5)
       
       &::before 
         display: block
         content: "Profile"
         font-size: 1.5rem
-        color: $colors.green
+        color: var(--browser-item-color)
       
       .item 
-        margin: .25rem 0
+        margin: .5rem 0
         .label 
           width: 5rem
-          background-color: rgba($colors.green, .5)
+          background-color: var(--browser-item-color)
           border-radius: .5rem
           color: $colors.darkest-grey
           margin-right: 1rem
@@ -93,7 +96,8 @@ $maxw = 640px
       display: flex
       flex-flow: row nowrap
       margin: .1rem 0 .1rem 0
-
+      &.law 
+        margin: 1rem 0
       &.cmd
         padding: .5rem 0
       &.indent1

@@ -12,7 +12,7 @@
   "scripts": {
     "start": "node index.js",
     "buddy": "node ./src/buddy/index.js",
-    "style": "stylus -w src/styl/main.styl -o public/assets/css/main.css -c",
+    "style": "stylus -w src/styl/main.styl -o assets/css/main.css -c",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +28,7 @@
     "url": "https://github.com/indraai/deva.world/issues"
   },
   "dependencies": {
-    "@indra.ai/deva": "^1.4.22",
+    "@indra.ai/deva": "^1.5.23",
     "@indra.ai/deva.chat": "^0.0.13",
     "@indra.ai/deva.content": "^0.1.1",
     "@indra.ai/deva.docs": "^0.0.6",

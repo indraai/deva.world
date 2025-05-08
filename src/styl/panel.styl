@@ -10,6 +10,18 @@
     flex: 1
     background-color: rgba($colors.black, .5)
     border-radius: $border.outer
+    overflow: hidden
+    .cover 
+      height: 100%
+      background-image: var(--browser-item-image)
+      background-color: var(--browser-item-bgcolor)
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      color: var(--browser-item-color)
+      padding: 1rem .5rem
+      h2 
+        padding: 0
+        margin: 0
   &Console
     flex: 0 35%
     max-height: 250px
@@ -91,14 +103,14 @@
       content: "\e676"
 
 #FeaturePanel
-  order: 4
+  order: 5
+  margin: 0
   h5
     &::before
       content: "\e676"
 
 #ZonePanel
-  order: 5
-  margin: 0
+  order: 4
   h5
     &::before
       content: "\e676"

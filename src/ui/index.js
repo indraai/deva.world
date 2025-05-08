@@ -87,15 +87,13 @@ class DevaInterface {
   }
 
   Question(text, log=true) {
-
+    $('.event-panel > article').empty();
     if (log) this.Console({
       type: 'question',
       format: 'client',
       text,
       agent: this.client,
     });
-
-    console.log('QUESTION', text);
     
     return new Promise((resolve, reject) => {
       // this.Clear(q);
@@ -110,10 +108,6 @@ class DevaInterface {
         return reject(err);
       });
     });
-  }
-
-  Log() {
-    return Promise.resolve(this._formatLog());
   }
 
   // the keyvalue pair processor for output into html of recursive structures.
@@ -226,7 +220,7 @@ class DevaInterface {
 
   Log(data) {
     if (!this._console[data.key]) return;
-    const selector = `.event-panel.${data.key} article`;
+    const selector = `.event-panel.${data.key} > article`;
     const {colors} = data.agent.prompt;
     const html = [
       `<div class="item ${data.key} ${data.value}" data-id="${data.id}" data-hash="${data.hash}">`,
@@ -236,10 +230,6 @@ class DevaInterface {
       '</div>',
     ].join('\n');
 
-    if (this._console[data.key].length > this.history_count) {
-      this._console[data.key].shift();
-      $(`${selector} .item`).last().remove();
-    }
     this._console[data.key].push(data);
     $(selector).prepend(html)
   }
@@ -293,12 +283,11 @@ class DevaInterface {
 
   processor(data) {
     if (!data.text) return;
-    console.log('processor', data);
     const { meta } = data;
     const metaKey = meta.key;
     // here in the processor we want to check for any strings that also match from the first index.
-    const viewer = ['help','file'];
-    const menu = ['devas', 'menu']
+    const viewer = ['help','file', 'laws'];
+    const menu = ['devas', 'menu', 'books', 'book']
 
     if (menu.includes(meta.params[2])) return this.PanelContent(data);    
     if (menu.includes(meta.method)) return this.PanelContent(data);
@@ -316,8 +305,6 @@ class DevaInterface {
     });
 
   }
-
-
 
   Init(socket) {
     return new Promise((resolve, reject) => {
@@ -377,6 +364,7 @@ class DevaInterface {
       socket.on('socket:devacore', data => {
         this.Log(data)
       });
+
       return resolve();
     });
   }

@@ -114,9 +114,9 @@ const pubOpts = {
   index: 'index.html, index.json',
 };
 
-app.get('/public/*', (req, res, next) => {
+app.get('/assets/*', (req, res, next) => {
   const opts = {
-  root: path.join(__dirname, 'public', 'assets'),
+  root: path.join(__dirname, 'assets'),
   dotfiles: 'deny',
   headers: {
     'x-timestamp': Date.now(),
@@ -151,7 +151,7 @@ app.post('/question', (req, res, next) => {
   });
 });
 
-app.post('/assets/:space/:type/:vnum/:asset', (req, res, next) => {
+app.post('/space/:space/:type/:vnum/:asset', (req, res, next) => {
   const {space, type, vnum, asset} = req.params;
   const _rpath = client.features.services.global.urls.space;
   let assetPath

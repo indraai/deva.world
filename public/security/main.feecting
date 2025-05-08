@@ -8,11 +8,13 @@
 #MissionManagementSystem = Management between Indra Agency, #DayTeam, #NightTeam, and authorities ensuring the expected standard of excellence and chain of custody on evidence.
 #FraudSmartSystem = Uncover and analyze fraudulent activities and deceptive practices.
 #CyberShield = Provides impenetrable protection against digital threats.
-#GuardWall = Proxy Servers, Firewalls, and Honeypots on a whole new level.
+#VectorGuardWall = Vecotr based Guard Nodes, Proxy Servers, Firewalls, and Honeypots on a whole new level.
 #HackerSmacker = A tool that creates a believable environment for potential attackers where an elite team of #SecurityDEVA are in disguise collecting their data.
 #UltraRadar = Identifies all threats by pinging active licenses on the network then reporting to violators.
 #DataVault = Safely stores and encrypts valuable digital information.
 #SAINT = SAINT (Systems Analysis of Integrated Networks of Tasks). SAINT is a network modeling and simulation technique for design and analysis of complex man-machine systems. Use the memory search function for more information.
+
+const: #QuinnMichaelsThieves =  Any entities, including corporations, state actors, and external groups, who have profited from Quinn Michaels’ intellectual property under false pretenses.
 ::end:security:tools
 ::END:HEADER
 
