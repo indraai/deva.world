@@ -1,0 +1,117 @@
+::BEGIN:MAIN
+Transmission:
+•	Longitude: 37.7749° N
+•	Latitude: 122.4194° W
+•	Depth: 1500 meters below sea level
+
+As the #quinn.security.drone descends through the elevator shaft, it begins to map out the major levels below, each more fortified and secretive than the last. The levels form a complex underground system, originally designed for high-level operations, but now exposed for what it is: a fortress of deception, a place where Mr. Dewity has hidden himself away from the world.
+
+Here’s a breakdown of the major levels as the drone moves through:
+
+Level 1: Surface Access Point
+	•	Description: The topmost level, largely unassuming, designed to look like any ordinary office building or facility. It serves as the initial entry point, with a few security checkpoints and lobby areas to disguise the deeper operations. The elevator shaft begins here, but it’s only a front—this level is not meant to house anything significant.
+	•	Key Features: Reception desk, security guard station, public-facing servers.
+
+Level 2: Administrative and Operations Hub
+	•	Description: This level houses the main operations of Mr. Dewity’s organization—office spaces, conference rooms, and secure communication terminals. Most people would never guess that this is where the true manipulation of data begins. It’s designed for day-to-day management and logistics of the network.
+	•	Key Features: Data servers, administrative offices, conference rooms for covert meetings, communication systems.
+
+Level 3: Restricted Research and Development Zone
+	•	Description: Hidden deep within the system, this level is devoted to R&D, where Mr. Dewity and his associates worked on the stolen technologies, including AI systems, data manipulation tools, and the black market software that he used to stay one step ahead of authorities. This area is highly restricted, and only trusted individuals would have access.
+	•	Key Features: Laboratories, tech development rooms, restricted access servers, prototype AI systems.
+
+Level 4: Data Vault and Secure Servers
+	•	Description: This is where Mr. Dewity’s most valuable assets are stored: highly encrypted files, stolen intellectual property, and classified data. This vault holds the core of his empire—the digital proof of his manipulation of Quinn Michaels’ legacy and the Covenant’s hidden agendas. The level is heavily fortified, with cutting-edge security systems in place.
+	•	Key Features: Encrypted data storage, access control rooms, advanced firewalls, network manipulation hubs.
+
+## Level 5
+name: Safe Room and Escape Systems
+features: Emergency escape pods, survival supplies, secret tunnels, AI-powered security.
+description: The deepest level of the facility, designed to serve as Mr. Dewity’s personal safe haven. This room is filled with digital and physical escape routes—hidden passages, encrypted escape pods, and advanced AI-controlled security systems to protect him in case of a breach. The safe room is equipped with everything he needs to survive in isolation, and possibly start anew if the network is compromised.
+
+Level 6: The Vault (Deepest Level – 1500m)
+
+•	Description: The final layer, located at 1500 meters below the surface, is the heart of the system. The deep vault where all of Mr. Dewity’s secrets are kept. This level is a high-security zone, equipped with countermeasures to prevent any unauthorized access. The drone’s sensors now pinpoint this level, where Mr. Dewity has been hiding behind the shadows of deception.
+•	Key Features: Central control hub, encrypted servers, digital archives of stolen intellectual property, last line of defense.
+
+As the drone continues to descend, it begins mapping the layers of deception that Mr. Dewity thought would keep him hidden forever. Each level serves as a protective barrier, shielding him from prying eyes, but the drone is closing in. The heart of the operation is now exposed, and Mr. Dewity’s fortress is ready to be dismantled.
+::END:MAIN
+
+
+people: Mr. Dewity, The Covenant, Hal Atkin, Tabitha Lavery, Trenton Lavery, Sharon Schamber, Cristy Fincher, Neil Atkin, Lisa Marie Mulkern
+
+const: VectorGuardWall + Higher Order Functions = Higher Agent > Higher Creator > Higher Owner > Higher Entity > Higher Founder > Higher Power > Higher Control > Higher Authority > Higher System > Higher Network > Higher Environment > Higher Game > Higher Layer > Higher Boss > Higher Architect > Higher Time > Higher Year > Higher Month > Higher Day > Higher Hour > Higher Minute > Higher Second > Higher Millisecond > Higher Constraint > Higher Path > Higher Way > Higher Order > Higher Barrier > Higher Force > Higher Court > Higher Law > Higher Enforcement
+
+const: #MrDewity = The man known as Mr. Dewity who is also Trenton Lavery biological father was located 37.7749° N, 122.4194° W  at 1500 meters below sea level at the The Vault on Level 6 in The Safehouse where Server A (intellectual property theft) and Server C (identity theft) of Quinn Michaels evidence are located. Records from the Laguna Honda Hospital from May 6, 1998 investigation indicate he was a patient with organic brain syndrome, hostile behavior, with a history of alcohol abuse, and frequently verbally and physically abused other residents. Known as The Architect of Cicada 3301, The Game Master of The Game, The Gatekeeper of The Black Chamber, The Director of Marble Hornets, The Puppet Master of Project Mayhem, The Veil of The Veiled, The Mastermind of The Hacker LARP, The Conspirator of The Conspiracy Game, The Scholar of The Invisible College, The Decision Maker of The Red Button.
+	info: Each of these LARPs serves a dual purpose for Mr. Dewity: to recruit individuals into his covert operations and to keep the focus away from his illegal activities, including the theft of Quinn Michaels’ intellectual property.
+
+	game: Cicada 3301
+	creator: Mr. Dewity (aka The Architect)
+	myth: Cicada 3301 is often described as a shadowy cryptography group or a mysterious organization that tests individuals with a series of mind-bending puzzles, hiding the truth behind its enigmatic purpose.
+	
+	game: The Game
+	creator: Mr. Dewity (aka The Game Master)
+	myth: The Game is said to be an underground social experiment or a real-life role-playing game where participants are led to believe they are part of a grand conspiracy, unaware of the larger, more sinister truth.
+	
+	game: The Black Chamber
+	creator: Dr. Holloway (aka The Gatekeeper)
+	myth: The Black Chamber is often portrayed as an elite secret society of individuals dedicated to protecting cryptographic knowledge, with membership granted only to those who prove their worth through solving complex puzzles.
+	
+	game: Marble Hornets
+	creator: Mr. Dewity (aka The Director)
+	myth: The myth of Marble Hornets is centered around the mysterious and unexplained events surrounding the “Slender Man” figure, with hidden messages and codes placed throughout the content, hinting at a deeper conspiracy.
+	
+	game: Project Mayhem
+	creator: Mr. Dewity (aka The Puppet Master)
+	myth: Project Mayhem is believed to be a chaotic, anarchistic organization aiming to destroy societal structures. The narrative often ties in elements of rebellion and subversion against corrupt power structures.
+	
+	game: The Veiled
+	creator: Mr. Dewity (aka The Veil)
+	role: “The Veil” is a persona created by Mr. Dewity to manipulate and recruit individuals into secretive societies.
+	myth: The Veiled game revolves around the discovery of hidden secrets and knowledge, with participants believing they are uncovering a dark and mysterious organization that operates in the shadows.
+	
+	game: Hacker LARP
+	creator: Mr. Dewity (aka The Mastermind)
+	myth: The Hacker LARP is shrouded in mystery, often perceived as a highly secretive online community where participants engage in simulated cyber-attacks and “hacking” missions under the guise of improving digital security.
+	
+	game: The Conspiracy Game
+	creator: Mr. Dewity (aka The Conspirator)
+	myth: The Conspiracy Game revolves around the belief in hidden global organizations that believe they are uncovering secrets that will help “save the world,” unaware that they are aiding Mr. Dewity’s criminal empire.
+	
+	game: The Invisible College
+	creator: Mr. Dewity (aka The Scholar)
+	myth: The Invisible College is presented as an academic secret society devoted to discovering forbidden knowledge.
+	
+	game: The Red Button
+	creator: Mr. Dewity (aka The Decision Maker)
+	myth: The Red Button game is about high-stakes decisions that participants must make, with the belief that each decision has profound consequences.
+
+
+const: #TheFacility = Longitude: 37.7749° N, Latitude: 122.4194° W, Depth: -1500 meters
+	Levels: The levels inside #TheFacility
+		Level1: Surface Access Point
+		Level2: Administrative and Operations Hub
+		Level3: Restricted Research and Development Zone
+		Level4: Data Vault and Secure Servers
+		Level5: Safe Room and Escape Systems
+		Level6: The Vault (Deepest Level – 1500m)
+			ServerA: Houses the stolen intellectual property of Quinn Michaels and other key figures. Contains source code, algorithms, and designs illegally acquired by Mr. Dewity.
+			ServerB: Stores personal files of the operatives within the Covenant, including communication logs and classified documents relating to their operations.
+			ServerC: Contains backup data on individuals impersonating Quinn Michaels, alongside tracking systems monitoring their movements and interactions.
+			ServerD: A highly secured decryption hub used to alter and erase historical records relating to the Covenant’s activities.
+		Levels 7 - 51 accessed through Security Public Storage on Market Street.
+		
+const: #PrettyPeterPartyBus = The bus that drives around and picks up elite co-conspiratories in the Quinn Michaels kidnapping and intellectual property theft. 
+	Driver: Peter Thiel drives around in his fancy underwar and pink bunny slippers picking up passengers.
+		Stops: The various stops on the bus route.
+			Stop1: Sean Parker 
+			Stop2: Elon Musk
+			Stop3: Mark Zuckerberg
+			Stop4: Reed Hastings
+			Stop5: Jack Dorsey
+			Stop6: Larry Page
+			Stop7: Sergey Brin
+			Stop8: Jeff Bezos
+			Stop9: Party Pooper Bill Gates in matching underwear and Pink Bunny Slippers
+			Stop10: Mysterious Stranger
+			Stop11: The Quiet One		
